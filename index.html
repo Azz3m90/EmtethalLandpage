@@ -9,8 +9,50 @@
     />
     <link rel="icon" href="assets/imgs/logo.png" type="image/png" />
     <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/fontawesome/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/css/mdb.min.css" />
+    <link rel="stylesheet" href="assets/css/flag-icons.min.css" />
     <link href="assets/css/main.css" rel="stylesheet" />
+
     <title>Emtethal</title>
+    <style>
+      .counter-section {
+        padding: 3rem 0;
+      }
+      .counter-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 150px;
+      }
+      .counter-icon {
+        font-size: 2.5rem;
+        color: #50aa3e;
+        margin-bottom: 1rem;
+      }
+      .counter-value {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+      }
+      .counter-text {
+        font-size: 1rem;
+        color: #666;
+        text-align: center;
+      }
+      @media (max-width: 767px) {
+        .counter-item {
+          margin-bottom: 2rem;
+        }
+        .counter-value {
+          font-size: 1.25rem;
+        }
+        .counter-text {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navigation">
     <!-- PRELOADER STARTS
@@ -32,17 +74,23 @@
 			========================================================================= -->
     <!-- NAVIGATION STARTS
 			========================================================================= -->
-    <nav
-      id="navigation"
-      class="navbar navbar-expand-lg navbar-light fixed-top bg-light"
-    >
+    <!-- HTML for the enhanced navbar -->
+    <nav id="navigation" class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand white-logo" href="#"
-          ><img src="assets/imgs/logo-white.png" class="img-fluid" alt=""
-        /></a>
-        <a class="navbar-brand black-logo" href="#"
-          ><img src="assets/imgs/logo.png" class="img-fluid" alt=""
-        /></a>
+        <a class="navbar-brand white-logo" href="#">
+          <img
+            src="assets/imgs/logo-white.png"
+            class="img-fluid logo-img"
+            alt="Logo"
+          />
+        </a>
+        <a class="navbar-brand black-logo" href="#">
+          <img
+            src="assets/imgs/logo.png"
+            class="img-fluid logo-img"
+            alt="Logo"
+          />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -55,96 +103,271 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="nav navbar-nav ms-auto">
+          <ul class="navbar-nav ms-auto align-items-center">
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#home"
-                title="Emtethal Home - Hospitality Compliance Platform"
-                >Home</a
-              >
+              <a class="nav-link" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#about"
-                title="About Emtethal - Quality Management Experts"
-                >About</a
-              >
+              <a class="nav-link" href="#problemsToSolve">Challenges</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item dropdown">
               <a
-                class="nav-link"
-                href="#problemsToSolve"
-                title="Hospitality Compliance Challenges"
-                >Challenges</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#services"
-                title="Emtethal Solutions - Smart Compliance Tools"
-                >services</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#targets"
-                title="Who We Serve - Restaurants, Hotels, Cafés"
-                >Sectors</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#howItWorks"
-                title="How Emtethal Works - Streamlined Compliance"
-                >How It Works</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
+                class="nav-link dropdown-toggle"
                 href="#platform"
-                title="Emtethal Platform - Role-Based Compliance Tools"
-                >Platform</a
+                id="platformDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                Platform
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="platformDropdown">
+                <li>
+                  <a class="dropdown-item" href="#howItWorks">How It Works</a>
+                </li>
+                <li><a class="dropdown-item" href="#Keys">Why Emtethal</a></li>
+                <li>
+                  <a class="dropdown-item" href="#marketPositioning"
+                    >Market Positioning</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#roadmap">Road Map</a></li>
+              </ul>
             </li>
-            <li class="nav-item">
+            <li class="nav-item dropdown">
               <a
-                class="nav-link"
-                href="#Keys"
-                title="Why Choose Emtethal - Key Differentiators"
-                >Why Emtethal</a
+                class="nav-link dropdown-toggle"
+                href="#services"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                <li><a class="dropdown-item" href="#targets">Sectors</a></li>
+              </ul>
             </li>
-            <li class="nav-item">
+            <li class="nav-item dropdown">
               <a
-                class="nav-link"
-                href="#roadmap"
-                title="Emtethal Roadmap - Future of Compliance"
-                >Roadmap</a
+                class="nav-link dropdown-toggle"
+                href="#about"
+                id="aboutDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                About
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                <li><a class="dropdown-item" href="#team">Team</a></li>
+              </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#team" title="Meet the Emtethal Team"
-                >Team</a
-              >
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item dropdown">
               <a
-                class="nav-link"
-                href="#contact"
-                title="Contact Emtethal - Get in Touch"
-                >Contact</a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="languageDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
+                <i class="fi fi-gb"></i>
+              </a>
+              <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="languageDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item d-flex align-items-center"
+                    href="./index.html"
+                  >
+                    <i class="fi fi-gb me-2"></i> English
+                    <i class="fa fa-check text-success ms-auto"></i>
+                  </a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a
+                    class="dropdown-item d-flex align-items-center"
+                    href="./index-ar.html"
+                  >
+                    <i class="fi fi-sa me-2"></i> Arabic
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
+    <!-- Custom CSS for the enhanced navbar -->
+    <style>
+      /* General Navbar Styling */
+      .navbar {
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        transition: all 0.3s ease;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .navbar.nav-bg {
+        background: linear-gradient(135deg, #ffffff, #f8f9fa);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        padding: 10px 0;
+      }
+
+      /* Logo Styling */
+      .navbar-brand {
+        position: relative;
+        padding: 0;
+      }
+
+      .logo-img {
+        max-height: 40px;
+        transition: opacity 0.3s ease;
+      }
+
+      .white-logo {
+        display: block;
+        opacity: 1;
+      }
+
+      .black-logo {
+        display: none;
+        opacity: 0;
+      }
+
+      .nav-bg .white-logo {
+        display: none;
+        opacity: 0;
+      }
+
+      .nav-bg .black-logo {
+        display: block;
+        opacity: 1;
+      }
+
+      /* Nav Links */
+      .navbar-nav .nav-link {
+        color: #333;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        transition: color 0.3s ease, transform 0.2s ease;
+      }
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+        color: #50aa3e;
+        transform: translateY(-2px);
+      }
+
+      /* Dropdown Styling */
+      .dropdown-menu {
+        background: #fff;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 10px 0;
+        min-width: 180px;
+        margin-top: 5px;
+      }
+
+      .dropdown-item {
+        color: #333;
+        font-size: 14px;
+        padding: 8px 20px;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+
+      .dropdown-item:hover {
+        background: #50aa3e;
+        color: #fff;
+      }
+
+      .dropdown-divider {
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+
+      /* Language Dropdown */
+      #languageDropdown + .dropdown-menu {
+        right: 0;
+        left: auto;
+        min-width: 150px;
+      }
+
+      .dropdown-item.d-flex {
+        gap: 10px;
+      }
+
+      .fi {
+        font-size: 1.2rem;
+      }
+
+      .fa-check {
+        font-size: 1rem;
+      }
+
+      /* Toggler Icon */
+      .navbar-toggler {
+        border: none;
+        padding: 10px;
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(80, 170, 62, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 991.98px) {
+        .navbar-nav {
+          text-align: center;
+          padding: 20px 0;
+          background: #fff;
+          border-radius: 8px;
+          margin-top: 10px;
+        }
+
+        .navbar-nav .nav-link {
+          padding: 12px 0;
+          font-size: 16px;
+        }
+
+        .dropdown-menu {
+          text-align: center;
+          box-shadow: none;
+          border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        #languageDropdown + .dropdown-menu {
+          right: auto;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 90%;
+          max-width: 200px;
+        }
+      }
+
+      @media (max-width: 575.98px) {
+        .logo-img {
+          max-height: 35px;
+        }
+
+        .navbar-nav .nav-link {
+          font-size: 14px;
+        }
+      }
+    </style>
+
     <!-- NAVIGATION ENDS
 			========================================================================= -->
     <!-- SLIDER STARTS
@@ -542,71 +765,6 @@
     </section>
     <!-- /.. SLIDER ENDS
 			========================================================================= -->
-    <!-- ABOUT US STARTS
-			========================================================================= -->
-    <section class="home-intro" id="about">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-lg-6">
-            <div class="herotext">
-              <h6>/Who we are</h6>
-              <h2>
-                We are Emtethal – your partners in quality and compliance within
-                the hospitality industry
-              </h2>
-              <h5 class="pt-2">
-                Founded in 2024 by a team of experts in technology and quality
-                assurance, Emtethal is a Saudi-based platform built to lead
-                quality and compliance management in the hospitality sector.
-                <br />
-                Emtethal is an advanced digital platform that enables food
-                establishments to meet the highest quality and compliance
-                standards with ease and efficiency.
-                <br />
-                Our idea was born out of a real need in the Saudi market. We
-                observed the daily challenges faced by hospitality businesses in
-                inspection, documentation, and follow-up processes. So, we built
-                a solution that transforms paper-based procedures into a smart,
-                digital experience.
-              </h5>
-            </div>
-            <div class="row pt-4">
-              <div class="col-12 col-md-6 block">
-                <div class="icon">
-                  <i class="las la-award"></i>
-                </div>
-                <div class="detail pt-2">
-                  <h4>Vision</h4>
-                  <p>
-                    To become the leading platform for quality and compliance
-                    management in the hospitality industry across the region.
-                  </p>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 block">
-                <div class="icon">
-                  <i class="lar la-heart"></i>
-                </div>
-                <div class="detail pt-2">
-                  <h4>Mission</h4>
-                  <p>
-                    We help food establishments build a sustainable culture of
-                    quality through smart tools, interactive training, and
-                    accurate reporting—transforming compliance from a burden
-                    into a competitive advantage.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-5 offset-lg-1 pt-4 pt-lg-0">
-            <img src="assets/imgs/about/pic1.png" class="img-fluid" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /. ABOUT US ENDS
-			========================================================================= -->
 
     <!-- The Problem We Solve STARTS -->
     <section class="home-services light-grey-bg" id="problemsToSolve">
@@ -618,31 +776,257 @@
               <h2>
                 Regulatory fines and inspection notes are constantly on the rise
               </h2>
-              <div class="row pt-3 text-center">
-                <div class="col-12 col-md-4 mb-2">
-                  <h5 class="mb-0">
-                    SAR 12.4 million in fines<br class="d-md-none" />
-                    during H2 2024
-                  </h5>
-                </div>
-                <div class="col-12 col-md-4 mb-2">
-                  <h5 class="mb-0">
-                    Over 541,000<br class="d-md-none" />
-                    inspection visits
-                  </h5>
-                </div>
-                <div class="col-12 col-md-4 mb-2">
-                  <h5 class="mb-0">
-                    10,000 violations<br class="d-md-none" />
-                    in Q1 2024
-                  </h5>
+              <div class="container counter-section">
+                <div class="row text-center justify-content-center">
+                  <div class="col-12 col-sm-6 col-md-4">
+                    <article class="box-counter">
+                      <div class="box-counter-main">
+                        <i
+                          class="fas fa-money-bill-wave icon"
+                          style="color: #28a745"
+                        ></i>
+                      </div>
+                      <div class="box-counter-content">
+                        <div class="counter-wrapper">
+                          <span
+                            class="counter counter-value"
+                            data-target="12400000"
+                            >0</span
+                          >
+                          <span class="small small_top">SAR</span>
+                        </div>
+                        <div class="box-counter-title">Fines H2 2024</div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4">
+                    <article class="box-counter">
+                      <div class="box-counter-main">
+                        <i
+                          class="fas fa-search icon"
+                          style="color: #28a745"
+                        ></i>
+                      </div>
+                      <div class="box-counter-content">
+                        <div class="counter-wrapper">
+                          <span
+                            class="counter counter-value"
+                            data-target="541000"
+                            >0</span
+                          >
+                        </div>
+                        <div class="box-counter-title">
+                          Inspection visits H2 2024
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4">
+                    <article class="box-counter">
+                      <div class="box-counter-main">
+                        <i
+                          class="fas fa-exclamation-triangle icon"
+                          style="color: #28a745"
+                        ></i>
+                      </div>
+                      <div class="box-counter-content">
+                        <div class="counter-wrapper">
+                          <span
+                            class="counter counter-value"
+                            data-target="10000"
+                            >0</span
+                          >
+                        </div>
+                        <div class="box-counter-title">Violations Q1 2024</div>
+                      </div>
+                    </article>
+                  </div>
                 </div>
               </div>
+              <!-- Counter Animation Script -->
+              <script>
+                function animateCounter() {
+                  const counters = document.querySelectorAll(".counter-value");
+                  const speed = 200; // Animation speed
+
+                  counters.forEach((counter) => {
+                    const updateCount = () => {
+                      const target = +counter.getAttribute("data-target");
+                      const count = +counter.innerText.replace(/[^0-9]/g, "");
+                      const increment = target / speed;
+
+                      if (count < target) {
+                        counter.innerText = Math.ceil(
+                          count + increment
+                        ).toLocaleString();
+                        setTimeout(updateCount, 10);
+                      } else {
+                        counter.innerText = target.toLocaleString();
+                      }
+                    };
+
+                    counter.updateCount = updateCount; // Store function for later use
+                  });
+
+                  // Observe the counter section
+                  const counterSection =
+                    document.querySelector(".counter-section");
+                  const observer = new IntersectionObserver(
+                    (entries) => {
+                      if (entries[0].isIntersecting) {
+                        counters.forEach((counter) => counter.updateCount());
+                        observer.disconnect();
+                      }
+                    },
+                    { threshold: 0.3 } // Trigger when 30% of section is visible
+                  );
+
+                  observer.observe(counterSection);
+                }
+
+                // Initialize observer when page loads
+                window.addEventListener("load", animateCounter);
+              </script>
+              <!-- Counter Styles -->
+              <style>
+                .box-counter {
+                  width: 250px;
+                  height: 120px;
+                  padding: 20px;
+                  text-align: left;
+                  background: #f9f9f9;
+                  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+                  border-radius: 4px;
+                  margin: 15px auto;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                }
+
+                .box-counter .box-counter-content {
+                  margin-top: 10px;
+                }
+
+                .box-counter .box-counter-title {
+                  position: relative;
+                  padding-left: 30px;
+                  font-size: 12px;
+                  font-weight: 400;
+                  line-height: 1.33;
+                  letter-spacing: 0.01em;
+                  text-transform: argumentation;
+                  margin-top: 10px;
+                }
+
+                .box-counter .box-counter-title:before {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  top: 7px;
+                  width: 20px;
+                  height: 1px;
+                  background: #c4c4c4;
+                }
+
+                .box-counter .box-counter-main {
+                  display: flex;
+                  align-items: flex-start;
+                  position: relative;
+                }
+
+                .box-counter .box-counter-main .icon {
+                  font-size: 30px;
+                  color: #28a745;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                }
+
+                .box-counter .counter-wrapper {
+                  display: inline-flex;
+                  align-items: baseline;
+                  max-width: 200px; /* Prevent overflow */
+                }
+
+                .box-counter .counter-value {
+                  font-size: 28px; /* Larger size */
+                  font-weight: 300;
+                  line-height: 1.2;
+                  letter-spacing: 0.01em;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+
+                .box-counter .small {
+                  font-size: 12px;
+                  margin-left: 5px;
+                }
+
+                .box-counter .small_top {
+                  position: relative;
+                  top: 0;
+                }
+
+                .text-center .box-counter {
+                  margin-left: auto;
+                  margin-right: auto;
+                }
+
+                @media (min-width: 1200px) {
+                  .box-counter {
+                    width: 280px;
+                    height: 105px;
+                    padding: 25px;
+                  }
+
+                  .box-counter .counter-value {
+                    font-size: 32px; /* Even larger on bigger screens */
+                  }
+
+                  .box-counter .small {
+                    font-size: 14px;
+                  }
+
+                  .box-counter .box-counter-title {
+                    font-size: 13px;
+                    padding-left: 35px;
+                  }
+
+                  .box-counter .box-counter-title:before {
+                    width: 25px;
+                    top: 8px;
+                  }
+
+                  .box-counter .box-counter-main .icon {
+                    font-size: 34px;
+                  }
+
+                  .box-counter .counter-wrapper {
+                    max-width: 220px;
+                  }
+                }
+
+                .context-dark .box-counter,
+                .bg-gray-700 .box-counter,
+                .bg-primary .box-counter {
+                  background: rgba(0, 0, 0, 0.15);
+                  box-shadow: none;
+                }
+
+                .context-dark .box-counter-title:before,
+                .bg-gray-700 .box-counter-title:before,
+                .bg-primary .box-counter-title:before {
+                  background: rgba(255, 255, 255, 0.4);
+                }
+              </style>
             </div>
           </div>
         </div>
 
         <div class="row pt-5">
+          ­
+
           <div class="col-12">
             <div class="herotext text-center">
               <h4 class="pb-3">Key Challenges</h4>
@@ -672,205 +1056,7 @@
         </div>
       </div>
     </section>
-
     <!--  The Problem We Solve ENDS -->
-    <!-- SERVICES STARTS -->
-    <section class="home-services light-grey-bg" id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="herotext text-center">
-              <h6>/The Solution – What We Offer</h6>
-              <h2>
-                Emtethal = Smart Compliance<br class="d-none d-lg-block" />
-                <!--for hospitality and food businesses-->
-              </h2>
-              <h5 class="pt-2">
-                We help you simplify compliance, automate reporting, and boost
-                team accountability
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="row text-center pt-5">
-          <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-clipboard-check"></i></div>
-            <h2>Digital Checklists</h2>
-            <p>
-              Access ready-made checklists that match local regulations. Create
-              and manage them in one place.
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-search-location"></i></div>
-            <h2>Inspections Anywhere</h2>
-            <p>
-              Perform inspections on any device. Detect issues fast. Log and
-              track results in real time.
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-chart-bar"></i></div>
-            <h2>Performance Tracking</h2>
-            <p>
-              Monitor trends across branches and teams. Analyze quality scores.
-              Spot weak areas before they cost you.
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-user-cog"></i></div>
-            <h2>Role-Based Access</h2>
-            <p>
-              Assign tasks by role. Give each user the right tools. Keep
-              everyone accountable and informed.
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-graduation-cap"></i></div>
-            <h2>Built-In Training</h2>
-            <p>
-              Train teams using integrated, interactive content. Keep everyone
-              aligned with evolving standards.
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-file-alt"></i></div>
-            <h2>Regulatory Reports</h2>
-            <p>
-              Generate reports aligned with authority formats. Share them
-              directly during audits or inspections.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /.. SERVICES ENDS -->
-    <!-- targets
-			========================================================================= -->
-    <!-- targets
-======================================================================== -->
-    <section class="home-intro" id="targets">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-lg-6">
-            <div class="herotext">
-              <h6>/Who we serve</h6>
-              <h2>
-                We support hospitality businesses that need smart, reliable
-                quality management
-              </h2>
-              <h5 class="pt-2">We primarily serve:</h5>
-            </div>
-
-            <div class="row pt-4">
-              <div class="col-12 col-md-6 block">
-                <div class="icon">
-                  <i class="las la-utensils"></i>
-                </div>
-                <div class="detail pt-2">
-                  <h4>Restaurants & Cafés</h4>
-                  <p>Independent and chain businesses</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 block">
-                <div class="icon">
-                  <i class="las la-hotel"></i>
-                </div>
-                <div class="detail pt-2">
-                  <h4>Hotels & Tourism</h4>
-                  <p>Hospitality and travel-based services</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 block">
-                <div class="icon">
-                  <i class="las la-briefcase"></i>
-                </div>
-                <div class="detail pt-2">
-                  <h4>SMBs</h4>
-                  <p>Businesses without in-house QA teams</p>
-                </div>
-              </div>
-              <div class="col-12 col-md-6 block">
-                <div class="icon">
-                  <i class="las la-rocket"></i>
-                </div>
-                <div class="detail pt-2">
-                  <h4>Growing Operations</h4>
-                  <p>Teams that need automation and scale</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-lg-5 offset-lg-1 pt-4 pt-lg-0">
-            <img src="assets/imgs/about/pic1.png" class="img-fluid" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- /. targets ENDS
-			========================================================================= -->
-    <!-- How it works STARTS -->
-    <section class="home-services light-grey-bg" id="howItWorks">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="herotext text-center">
-              <h6>/How It Works</h6>
-              <h2>Streamline your compliance in five simple steps</h2>
-              <h5 class="pt-2">
-                From setup to ongoing improvement—we guide every stage
-              </h5>
-            </div>
-          </div>
-        </div>
-        <div class="row text-center pt-5">
-          <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-search"></i></div>
-            <h2>Initial Assessment</h2>
-            <p>
-              We review your establishment's current processes and compliance
-              status.
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-sliders-h"></i></div>
-            <h2>System Customization</h2>
-            <p>
-              We tailor the platform to fit your business type, size, and
-              operations.
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-users-cog"></i></div>
-            <h2>Staff Training</h2>
-            <p>
-              Your team learns how to use the tools effectively through guided
-              training.
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-6 block">
-            <div class="icon"><i class="las la-clipboard-list"></i></div>
-            <h2>Ongoing Inspections</h2>
-            <p>
-              Conduct regular inspections, log results, and monitor team
-              performance.
-            </p>
-          </div>
-          <div class="col-12 col-md-6 col-lg-6 block">
-            <div class="icon"><i class="las la-chart-line"></i></div>
-            <h2>Reports & Insights</h2>
-            <p>
-              Access performance data and get practical improvement suggestions
-              anytime.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- /.. HOW it works ENDS -->
     <!-- FEATURES STARTS
 			========================================================================= -->
     <section class="home-features pt-xl-0 pb-0" id="platform">
@@ -1016,6 +1202,64 @@
     </section>
     <!-- /.. FEATURES ENDS
 			========================================================================= -->
+    <!-- How it works STARTS -->
+    <section class="home-services light-grey-bg" id="howItWorks">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="herotext text-center">
+              <h6>/How It Works</h6>
+              <h2>Streamline your compliance in five simple steps</h2>
+              <h5 class="pt-2">
+                From setup to ongoing improvement—we guide every stage
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center pt-5 justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-search"></i></div>
+            <h2>Initial Assessment</h2>
+            <p>
+              We review your establishment's current processes and compliance
+              status.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-sliders-h"></i></div>
+            <h2>System Customization</h2>
+            <p>
+              We tailor the platform to fit your business type, size, and
+              operations.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-users-cog"></i></div>
+            <h2>Staff Training</h2>
+            <p>
+              Your team learns how to use the tools effectively through guided
+              training.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-clipboard-list"></i></div>
+            <h2>Ongoing Inspections</h2>
+            <p>
+              Conduct regular inspections, log results, and monitor team
+              performance.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-chart-line"></i></div>
+            <h2>Reports & Insights</h2>
+            <p>
+              Access performance data and get practical improvement suggestions
+              anytime.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Key Differentiators STARTS
 ======================================================================== -->
     <section class="pricing" id="Keys">
@@ -1095,10 +1339,49 @@
     </section>
     <!-- /.. Key Differentiators ENDS
 ======================================================================== -->
+    <!-- Our Roadmap STARTS
+======================================================================== -->
 
+    <section class="home-services light-grey-bg" id="roadmap">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="herotext text-center">
+              <h6>/Our Roadmap</h6>
+              <h2>Focused on integration and strategic growth</h2>
+              <h5 class="pt-2">
+                Building what matters to deliver compliance, efficiency, and
+                scale
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center pt-5">
+          <div class="col-12 col-md-6 col-lg-6 block">
+            <div class="icon"><i class="las la-project-diagram"></i></div>
+            <h2>Regulatory Integration</h2>
+            <p>
+              Direct technical integration with key regulatory bodies to
+              automate data exchange and reduce manual compliance.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 block">
+            <div class="icon"><i class="las la-handshake"></i></div>
+            <h2>Strategic Partnerships</h2>
+            <p>
+              Partnering with industry leaders and service providers to enhance
+              value and reach for regulated businesses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /.. Our Roadmap ENDS
+======================================================================== -->
     <!-- Market Positioning
 ======================================================================== -->
-    <section class="home-features pt-xl-0 pb-0">
+    <section class="home-features pt-xl-0 pb-0" id="marketPositioning">
       <div class="container-fluid ps-md-0">
         <div class="row">
           <div class="col-12 col-lg-6 col-xl-6 col-xxl-6 ps-0 pe-0">
@@ -1154,47 +1437,211 @@
     </section>
     <!-- Market Positioning ENDs
 ======================================================================== -->
-    <!-- Our Roadmap STARTS
-======================================================================== -->
-
-    <section class="home-services light-grey-bg" id="roadmap">
+    <!-- SERVICES STARTS -->
+    <section class="home-services light-grey-bg" id="services">
       <div class="container">
         <div class="row">
           <div class="col-12">
             <div class="herotext text-center">
-              <h6>/Our Roadmap</h6>
-              <h2>Focused on integration and strategic growth</h2>
+              <h6>/The Solution – What We Offer</h6>
+              <h2>
+                Emtethal = Smart Compliance<br class="d-none d-lg-block" />
+                <!--for hospitality and food businesses-->
+              </h2>
               <h5 class="pt-2">
-                Building what matters to deliver compliance, efficiency, and
-                scale
+                We help you simplify compliance, automate reporting, and boost
+                team accountability
               </h5>
             </div>
           </div>
         </div>
         <div class="row text-center pt-5">
-          <div class="col-12 col-md-6 col-lg-6 block">
-            <div class="icon"><i class="las la-project-diagram"></i></div>
-            <h2>Regulatory Integration</h2>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-clipboard-check"></i></div>
+            <h2>Digital Checklists</h2>
             <p>
-              Direct technical integration with key regulatory bodies to
-              automate data exchange and reduce manual compliance.
+              Access ready-made checklists that match local regulations. Create
+              and manage them in one place.
             </p>
           </div>
-          <div class="col-12 col-md-6 col-lg-6 block">
-            <div class="icon"><i class="las la-handshake"></i></div>
-            <h2>Strategic Partnerships</h2>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-search-location"></i></div>
+            <h2>Inspections Anywhere</h2>
             <p>
-              Partnering with industry leaders and service providers to enhance
-              value and reach for regulated businesses.
+              Perform inspections on any device. Detect issues fast. Log and
+              track results in real time.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-chart-bar"></i></div>
+            <h2>Performance Tracking</h2>
+            <p>
+              Monitor trends across branches and teams. Analyze quality scores.
+              Spot weak areas before they cost you.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-user-cog"></i></div>
+            <h2>Role-Based Access</h2>
+            <p>
+              Assign tasks by role. Give each user the right tools. Keep
+              everyone accountable and informed.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-graduation-cap"></i></div>
+            <h2>Built-In Training</h2>
+            <p>
+              Train teams using integrated, interactive content. Keep everyone
+              aligned with evolving standards.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-file-alt"></i></div>
+            <h2>Regulatory Reports</h2>
+            <p>
+              Generate reports aligned with authority formats. Share them
+              directly during audits or inspections.
             </p>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- /.. Our Roadmap ENDS
+    <!-- /.. SERVICES ENDS -->
+    <!-- targets
+			========================================================================= -->
+    <!-- targets
 ======================================================================== -->
 
+    <section class="home-intro" id="targets">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6">
+            <div class="herotext">
+              <h6>/Who we serve</h6>
+              <h2>
+                We support hospitality businesses that need smart, reliable
+                quality management
+              </h2>
+              <h5 class="pt-2">We primarily serve:</h5>
+            </div>
+            <div class="container">
+              <div class="row pt-4">
+                <div class="col-12 col-md-6 block">
+                  <div class="icon">
+                    <i class="fas fa-utensils"></i>
+                  </div>
+                  <div class="detail pt-2">
+                    <h6>Restaurants & Cafés</h6>
+                    <p>Independent and chain businesses</p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 block">
+                  <div class="icon">
+                    <i class="fas fa-hotel"></i>
+                  </div>
+                  <div class="detail pt-2">
+                    <h6>Hotels & Tourism</h6>
+                    <p>Hospitality and travel-based services</p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 block">
+                  <div class="icon">
+                    <i class="fas fa-briefcase"></i>
+                  </div>
+                  <div class="detail pt-2">
+                    <h6>SMBs</h6>
+                    <p>Businesses without in-house QA teams</p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 block">
+                  <div class="icon">
+                    <i class="fas fa-rocket"></i>
+                  </div>
+                  <div class="detail pt-2">
+                    <h6>Growing Operations</h6>
+                    <p>Teams that need automation and scale</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-5 offset-lg-1 pt-4 pt-lg-0">
+            <img src="assets/imgs/about/pic1.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /. targets ENDS
+			========================================================================= -->
+
+    <!-- ABOUT US STARTS
+			========================================================================= -->
+    <section class="home-intro" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6">
+            <div class="herotext">
+              <h6>/Who we are</h6>
+              <h2>
+                We are Emtethal – your partners in quality and compliance within
+                the hospitality industry
+              </h2>
+              <h5 class="pt-2">
+                Founded in 2024 by a team of experts in technology and quality
+                assurance, Emtethal is a Saudi-based platform built to lead
+                quality and compliance management in the hospitality sector.
+                <br />
+                Emtethal is an advanced digital platform that enables food
+                establishments to meet the highest quality and compliance
+                standards with ease and efficiency.
+                <br />
+                Our idea was born out of a real need in the Saudi market. We
+                observed the daily challenges faced by hospitality businesses in
+                inspection, documentation, and follow-up processes. So, we built
+                a solution that transforms paper-based procedures into a smart,
+                digital experience.
+              </h5>
+            </div>
+            <div class="row pt-4">
+              <div class="col-12 col-md-6 block">
+                <div class="icon">
+                  <i class="las la-award"></i>
+                </div>
+                <div class="detail pt-2">
+                  <h4>Vision</h4>
+                  <p>
+                    To become the leading platform for quality and compliance
+                    management in the hospitality industry across the region.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 block">
+                <div class="icon">
+                  <i class="lar la-heart"></i>
+                </div>
+                <div class="detail pt-2">
+                  <h4>Mission</h4>
+                  <p>
+                    We help food establishments build a sustainable culture of
+                    quality through smart tools, interactive training, and
+                    accurate reporting—transforming compliance from a burden
+                    into a competitive advantage.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 offset-lg-1 pt-4 pt-lg-0">
+            <img src="assets/imgs/about/pic1.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /. ABOUT US ENDS
+			========================================================================= -->
     <!-- TEAM STARTS
 			========================================================================= -->
     <section class="team light-grey-bg mt-3" id="team">
@@ -1207,257 +1654,341 @@
             </div>
           </div>
         </div>
-        <div class="team-carousel pt-5">
-          <div class="block">
-            <div class="pic pb-4">
-              <img
-                src="assets/imgs/team/Abdulrahman.svg"
-                class="img-fluid"
-                alt="Abdulrahman"
-              />
+        <div class="team-hierarchy pt-5">
+          <!-- Leadership Level -->
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    src="assets/imgs/team/Abdulrahman.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Abdulrahman"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Abdulrahman Joud</h3>
+                  <h6 class="text-muted">Co-founder & CEO</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-dribbble"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-behance"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="details">
-              <h2>Abdulrahman Joud</h2>
-              <h6>Co-founder & CEO</h6>
-              <ul class="socialmedia pt-2">
-                <li>
-                  <a href=""><i class="lab la-twitter"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-dribbble"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-behance"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="block">
-            <div class="pic pb-4">
-              <img
-                src="assets/imgs/team/Abdullah.svg"
-                class="img-fluid"
-                alt="Abdullah"
-              />
-            </div>
-            <div class="details">
-              <h2>Abdullah Joud</h2>
-              <h6>Co-founder & CTO</h6>
-              <ul class="socialmedia pt-2">
-                <li>
-                  <a href=""><i class="lab la-linkedin-in"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-twitter"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-dribbble"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="block">
-            <div class="pic pb-4">
-              <img
-                src="assets/imgs/team/Abdelhamid.svg"
-                class="img-fluid"
-                alt="Abdelhamid"
-              />
-            </div>
-            <div class="details">
-              <h2>Dr. Abdelhamid Hashem</h2>
-              <h6>Quality Advisor</h6>
-              <ul class="socialmedia pt-2">
-                <li>
-                  <a href=""><i class="lab la-twitter"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-dribbble"></i></a>
-                </li>
-              </ul>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    src="assets/imgs/team/Abdullah.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Abdullah"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Abdullah Joud</h3>
+                  <h6 class="text-muted">Co-founder & CTO</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-dribbble"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="block">
-            <div class="pic pb-4">
-              <img
-                src="assets/imgs/team/Maram.svg"
-                class="img-fluid"
-                alt="Maram"
-              />
+          <!-- Senior Level -->
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    src="assets/imgs/team/Abdelhamid.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Abdelhamid"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Dr. Abdelhamid Hashem</h3>
+                  <h6 class="text-muted">Quality Advisor</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-dribbble"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="details">
-              <h2>Maram Ali</h2>
-              <h6>Project Manager</h6>
-              <ul class="socialmedia pt-2">
-                <li>
-                  <a href=""><i class="lab la-twitter"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-dribbble"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="block">
-            <div class="pic pb-4">
-              <img src="assets/imgs/team/Yamen.svg" class="img-fluid" alt="" />
-            </div>
-            <div class="details">
-              <h2>Yamen Bayer</h2>
-              <h6>Software Engineer</h6>
-              <ul class="socialmedia pt-2">
-                <li>
-                  <a href=""><i class="lab la-twitter"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-dribbble"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="block">
-            <div class="pic pb-4">
-              <img
-                src="assets/imgs/team/Moataz.svg"
-                class="img-fluid"
-                alt="Moataz"
-              />
-            </div>
-            <div class="details">
-              <h2>Moataz Omar</h2>
-              <h6>Software Engineer</h6>
-              <ul class="socialmedia pt-2">
-                <li>
-                  <a href=""><i class="lab la-twitter"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-dribbble"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-behance"></i></a>
-                </li>
-              </ul>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    src="assets/imgs/team/Maram.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Maram"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Maram Ali</h3>
+                  <h6 class="text-muted">Project Manager</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-dribbble"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="block">
-            <div class="pic pb-4">
-              <img
-                src="assets/imgs/team/Abdelmasih.svg"
-                class="img-fluid"
-                alt="Abdelmasih"
-              />
+          <!-- Team Members Level -->
+          <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    src="assets/imgs/team/Yamen.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Yamen"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Yamen Bayer</h3>
+                  <h6 class="text-muted">Software Engineer</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-dribbble"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="details">
-              <h2>Abdelmasih Rafaat</h2>
-              <h6>Software Engineer</h6>
-              <ul class="socialmedia pt-2">
-                <li>
-                  <a href=""><i class="lab la-linkedin-in"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-twitter"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-dribbble"></i></a>
-                </li>
-              </ul>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    src="assets/imgs/team/Moataz.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Moataz"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Moataz Omar</h3>
+                  <h6 class="text-muted">Software Engineer</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-dribbble"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-behance"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="block">
-            <div class="pic pb-4">
-              <img
-                src="assets/imgs/team/Azzam.svg"
-                class="img-fluid"
-                alt="Azzam"
-              />
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    src="assets/imgs/team/Abdelmasih.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Abdelmasih"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Abdelmasih Rafaat</h3>
+                  <h6 class="text-muted">Software Engineer</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-dribbble"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="details">
-              <h2>Azzam Ali</h2>
-              <h6>Software Engineer</h6>
-              <ul class="socialmedia pt-2">
-                <li>
-                  <a href=""><i class="lab la-twitter"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-dribbble"></i></a>
-                </li>
-              </ul>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    src="assets/imgs/team/Azzam.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Azzam"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Azzam Ali</h3>
+                  <h6 class="text-muted">Software Engineer</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-dribbble"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="block">
-            <div class="pic pb-4">
-              <img
-                src="assets/imgs/team/Sarah.svg"
-                class="img-fluid"
-                alt="Sarah"
-              />
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    src="assets/imgs/team/Sarah.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Sarah"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Sarah Hussein</h3>
+                  <h6 class="text-muted">UX/UI Designer</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-dribbble"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="details">
-              <h2>Sarah Hussein</h2>
-              <h6>UX/UI Designer</h6>
-              <ul class="socialmedia pt-2">
-                <li>
-                  <a href=""><i class="lab la-twitter"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-dribbble"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="block">
-            <div class="pic pb-4">
-              <img
-                src="assets/imgs/team/unkown.svg"
-                class="img-fluid"
-                alt="unkown"
-              />
-            </div>
-            <div class="details">
-              <h2>Saleh Ghalayini</h2>
-              <h6>Go-To-Market Consultant</h6>
-              <ul class="socialmedia pt-2">
-                <li>
-                  <a href=""><i class="lab la-twitter"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-facebook-f"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="lab la-dribbble"></i></a>
-                </li>
-              </ul>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    src="assets/imgs/team/unkown.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Saleh"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Saleh Ghalayini</h3>
+                  <h6 class="text-muted">Go-To-Market Consultant</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-dribbble"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <style>
+        .team-hierarchy .team-card {
+          background: #fff;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 20px;
+          transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .team-hierarchy .team-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .team-hierarchy .pic img {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          border: 3px solid #f8f9fa;
+        }
+        .team-hierarchy .details h3 {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+          color: #333;
+        }
+        .team-hierarchy .details h6 {
+          font-size: 1rem;
+          margin-bottom: 1rem;
+        }
+        .team-hierarchy .socialmedia li {
+          margin: 0 10px;
+        }
+        .team-hierarchy .socialmedia a {
+          color: #555;
+          font-size: 1.2rem;
+          transition: color 0.3s;
+        }
+        .team-hierarchy .socialmedia a:hover {
+          color: #007bff;
+        }
+        @media (max-width: 768px) {
+          .team-hierarchy .pic img {
+            width: 120px;
+            height: 120px;
+          }
+          .team-hierarchy .details h3 {
+            font-size: 1.2rem;
+          }
+          .team-hierarchy .details h6 {
+            font-size: 0.9rem;
+          }
+        }
+      </style>
     </section>
 
     <!-- /.. TEAM ENDS
@@ -1646,16 +2177,16 @@
           <div class="col-12">
             <ul class="socialmedia">
               <li>
-                <a href=""><i class="lab la-twitter"></i></a>
+                <a href="#"><i class="lab la-twitter"></i></a>
               </li>
               <li>
-                <a href=""><i class="lab la-facebook-f"></i></a>
+                <a href="#"><i class="lab la-linkedin-in"></i></a>
               </li>
               <li>
-                <a href=""><i class="lab la-behance"></i></a>
+                <a href="#"><i class="lab la-youtube"></i></a>
               </li>
               <li>
-                <a href=""><i class="lab la-dribbble"></i></a>
+                <a href="#"><i class="lab la-instagram"></i></a>
               </li>
             </ul>
           </div>
@@ -1794,5 +2325,7 @@
     <script src="assets/js/contact-form/contact-form.js"></script>
     <!-- CUSTOM JS -->
     <script src="assets/js/script.js"></script>
+    <!--Languages-->
+    <script src="assets/js/mdb.min.js"></script>
   </body>
 </html>
