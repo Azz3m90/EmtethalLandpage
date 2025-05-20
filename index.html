@@ -163,44 +163,39 @@
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
-            <li class="nav-item dropdown">
+            <!-- Language Switch Button -->
+            <li class="nav-item">
               <a
-                class="nav-link dropdown-toggle"
+                id="language-switch"
+                class="nav-link d-flex align-items-center"
                 href="#"
-                id="languageDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
               >
-                <i class="fi fi-gb"></i>
+                <i id="language-flag" class="fi fi-gb me-2"></i>
+                <span id="language-text">العربية</span>
               </a>
-              <ul
-                class="dropdown-menu dropdown-menu-end"
-                aria-labelledby="languageDropdown"
-              >
-                <li>
-                  <a
-                    artifact_id="27e3cb77-e6a1-43ac-86d0-22a034f821fa"
-                    title="Enhanced Navbar"
-                    contentType="text/html"
-                    class="dropdown-item d-flex align-items-center"
-                    href="./index.html"
-                  >
-                    <i class="fi fi-gb me-2"></i> English
-                    <i class="fa fa-check text-success ms-auto"></i>
-                  </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a
-                    class="dropdown-item d-flex align-items-center"
-                    href="./index-ar.html"
-                  >
-                    <i class="fi fi-sa me-2"></i> Arabic
-                  </a>
-                </li>
-              </ul>
             </li>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const langSwitch = document.getElementById("language-switch");
+                const flagIcon = document.getElementById("language-flag");
+                const langText = document.getElementById("language-text");
+
+                const isArabic = window.location.pathname.includes("-ar");
+
+                if (isArabic) {
+                  // Currently in Arabic, show English switch
+                  langSwitch.href = "./index.html";
+                  flagIcon.className = "fi fi-gb me-2";
+                  langText.textContent = "English";
+                } else {
+                  // Currently in English, show Arabic switch
+                  langSwitch.href = "./index-ar.html";
+                  flagIcon.className = "fi fi-sa me-2";
+                  langText.textContent = "العربية";
+                }
+              });
+            </script>
           </ul>
         </div>
       </div>
@@ -440,9 +435,6 @@
           overflow-y: auto;
           padding: 15px;
           margin-top: 5px;
-          background: #fff;
-          border: 1px solid #e9ecef;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-nav .nav-item {
@@ -977,7 +969,7 @@
       <div class="container">
         <div class="row justify-content-between align-items-start g-4">
           <div class="col-12 col-lg-6">
-            <div class="pe-lg-4">
+            <div class="herotext pe-lg-4">
               <h6 class="herotext text-uppercase mb-3">/Role-Based Features</h6>
               <h2 class="mb-3 text-white">
                 Purpose-built tools for every team role
@@ -1167,8 +1159,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(8px);
+
         z-index: 0;
       }
 
