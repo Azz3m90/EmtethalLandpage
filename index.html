@@ -1566,21 +1566,20 @@
     </section>
     <!-- TEAM ENDS -->
     <!-- CONTACT US STARTS -->
+    <style>
+      .force-right {
+        text-align: right !important;
+      }
+    </style>
     <section class="contact-us light-grey-bg" id="contact">
       <div class="container">
-        <div class="row text-right">
+        <div class="row">
           <div class="col-12 col-lg-8">
-            <div class="herotext pb-4">
-              <h6
-                class="herotext d-flex justify-content-center d-md-block text-md-start"
-              >
-                /تواصل معنا
-              </h6>
-              <h2
-                class="d-flex justify-content-center d-md-block text-md-start"
-              >
-                أخبرنا هنا
-              </h2>
+            <div class="herotext pb-4 force-right">
+              <h2 id="contact-heading">تواصل معنا</h2>
+              <p>
+                هل لديك سؤال أو استفسار؟ أرسل لنا رسالتك وسنرد عليك في أقرب وقت.
+              </p>
             </div>
             <form
               action="process.php"
@@ -1624,13 +1623,13 @@
                   rows="5"
                 ></textarea>
               </div>
-              <div class="text-center text-md-start">
+              <div class="force-right">
                 <button
                   type="submit"
                   value="Submit"
                   name="submitf"
                   id="submitf"
-                  class="btn btn-primary px-4 py-2 mt-2"
+                  class="btn btn-primary px-4 py-2 mt-2 force-right"
                 >
                   إرسال الرسالة
                 </button>
@@ -1638,6 +1637,7 @@
             </form>
           </div>
         </div>
+
         <div
           class="row text-center text-md-start pt-3 gy-4 d-md-flex"
           dir="rtl"
