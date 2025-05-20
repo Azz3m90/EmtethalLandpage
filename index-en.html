@@ -8,6 +8,59 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="icon" href="assets/imgs/logo.png" type="image/png" />
+
+    <meta
+      name="description"
+      content="Emtethal offers smart compliance solutions for food and hospitality businesses in Saudi Arabia, ensuring SFDA compliance and quality management."
+    />
+    <meta
+      name="keywords"
+      content="compliance software, SFDA compliance, Saudi hospitality, quality management, food safety Saudi Arabia"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Emtethal" />
+    <!-- Open Graph Tags -->
+    <meta
+      property="og:title"
+      content="Emtethal - Compliance Solutions for Saudi Hospitality"
+    />
+    <meta
+      property="og:description"
+      content="Streamline SFDA compliance and quality management for restaurants, hotels, and SMBs in Saudi Arabia with Emtethal's smart platform."
+    />
+    <meta
+      property="og:image"
+      content="https://www.emtethal.com/assets/imgs/logo.png"
+    />
+    <meta property="og:url" content="https://www.emtethal.com" />
+    <meta property="og:type" content="website" />
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Emtethal - Compliance Solutions for Saudi Hospitality"
+    />
+    <meta
+      name="twitter:description"
+      content="Streamline SFDA compliance and quality management for restaurants, hotels, and SMBs in Saudi Arabia with Emtethal's smart platform."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.emtethal.com/assets/imgs/logo.png"
+    />
+    <!-- Canonical and Hreflang -->
+    <link rel="canonical" href="https://www.emtethal.com/index.html" />
+    <link
+      rel="alternate"
+      hreflang="en-sa"
+      href="https://www.emtethal.com/index.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="ar-sa"
+      href="https://www.emtethal.com/index-ar.html"
+    />
+    <link rel="icon" href="assets/imgs/logo.png" type="image/png" />
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/fontawesome/fontawesome.min.css" />
     <link rel="stylesheet" href="assets/css/mdb.min.css" />
@@ -18,45 +71,29 @@
       rel="stylesheet"
     />
 
-    <title>Emtethal</title>
-    <style>
-      .counter-section {
-        padding: 3rem 0;
+    <title>Emtethal - SFDA Compliance Solutions Saudi Arabia</title>
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Emtethal",
+        "description": "Smart compliance solutions for food and hospitality businesses in Saudi Arabia, ensuring SFDA compliance and quality management.",
+        "url": "https://www.emtethal.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Riyadh",
+          "addressCountry": "SA"
+        },
+        "email": "info@emtethal.com",
+        "logo": "https://www.emtethal.com/assets/imgs/logo.png",
+        "sameAs": [
+          "https://twitter.com/emtethal",
+          "https://www.linkedin.com/company/emtethal",
+          "https://www.instagram.com/emtethal"
+        ]
       }
-      .counter-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 150px;
-      }
-      .counter-icon {
-        font-size: 2.5rem;
-        color: #50aa3e;
-        margin-bottom: 1rem;
-      }
-      .counter-value {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #333;
-      }
-      .counter-text {
-        font-size: 1rem;
-        color: #666;
-        text-align: center;
-      }
-      @media (max-width: 767px) {
-        .counter-item {
-          margin-bottom: 2rem;
-        }
-        .counter-value {
-          font-size: 1.25rem;
-        }
-        .counter-text {
-          font-size: 0.9rem;
-        }
-      }
-    </style>
+    </script>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navigation">
     <!-- PRELOADER STARTS
@@ -83,18 +120,18 @@
       <div class="container-fluid">
         <a class="navbar-brand white-logo" href="#">
           <img
-            loading="lazy"
             src="assets/imgs/logo-white.png"
             class="img-fluid logo-img"
             alt="Logo"
+            loading="lazy"
           />
         </a>
         <a class="navbar-brand black-logo" href="#">
           <img
-            loading="lazy"
             src="assets/imgs/logo.png"
             class="img-fluid logo-img"
             alt="Logo"
+            loading="lazy"
           />
         </a>
         <button
@@ -195,322 +232,26 @@
       </div>
     </nav>
 
-    <!-- Custom CSS for the enhanced navbar -->
-    <style>
-      /* General Navbar Styling */
-      .navbar {
-        backdrop-filter: blur(10px);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 15px 0;
-        transition: all 0.3s ease;
-        font-family: "Poppins", sans-serif;
-        overflow: visible; /* Prevent clipping of dropdown */
-      }
-
-      .navbar.nav-bg {
-        background: linear-gradient(135deg, #ffffff, #f8f9fa);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        padding: 10px 0;
-      }
-
-      /* Logo Styling */
-      .navbar-brand {
-        position: relative;
-        padding: 0;
-      }
-
-      .logo-img {
-        max-height: 40px;
-        transition: opacity 0.3s ease;
-      }
-
-      .white-logo {
-        display: block;
-        opacity: 1;
-      }
-
-      .black-logo {
-        display: none;
-        opacity: 0;
-      }
-
-      .nav-bg .white-logo {
-        display: none;
-        opacity: 0;
-      }
-
-      .nav-bg .black-logo {
-        display: block;
-        opacity: 1;
-      }
-
-      /* Nav Links */
-      .navbar-nav .nav-link {
-        color: #333;
-        font-size: 15px;
-        font-weight: 500;
-        text-transform: uppercase;
-        padding: 10px 15px;
-        transition: color 0.3s ease, transform 0.2s ease;
-        display: flex;
-        align-items: center;
-      }
-
-      .navbar-nav .nav-link:hover,
-      .navbar-nav .nav-link.active {
-        color: #50aa3e;
-        transform: translateY(-2px);
-      }
-
-      /* Sub-Nav Styling */
-      .has-sub-nav {
-        position: relative;
-      }
-
-      .sub-nav {
-        list-style: none;
-        padding: 10px 0;
-        margin: 0;
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        min-width: 180px;
-        z-index: 1000;
-      }
-
-      .has-sub-nav:hover .sub-nav {
-        display: block;
-      }
-
-      .sub-nav-item {
-        padding: 8px 20px;
-      }
-
-      .sub-nav-link {
-        color: #333;
-        font-size: 14px;
-        font-weight: 400;
-        text-transform: none;
-        display: block;
-        transition: background 0.2s ease, color 0.2s ease;
-      }
-
-      .sub-nav-link:hover {
-        background: #50aa3e;
-        color: #fff;
-      }
-
-      /* Sub-Nav Icon */
-      .sub-nav-icon {
-        font-size: 0.8rem;
-        transition: transform 0.2s ease;
-      }
-
-      .has-sub-nav:hover .sub-nav-icon {
-        transform: rotate(180deg);
-      }
-
-      /* Language Dropdown */
-      #languageDropdown + .dropdown-menu {
-        right: 0;
-        left: auto;
-        min-width: 150px;
-        z-index: 1050; /* Higher z-index to ensure visibility */
-        max-height: none; /* Remove height restrictions */
-        overflow: visible; /* Prevent clipping */
-        padding: 10px 0; /* Improved padding */
-        border: none; /* Clean appearance */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-      }
-
-      .dropdown-item.d-flex {
-        gap: 10px;
-      }
-
-      .fi {
-        font-size: 1.2rem;
-      }
-
-      .fa-check {
-        font-size: 1rem;
-      }
-
-      /* Ensure Navbar Collapse Doesn't Clip */
-      .navbar-collapse {
-        overflow: visible; /* Prevent dropdown clipping */
-      }
-
-      /* Toggler Icon */
-      .navbar-toggler {
-        border: none;
-        padding: 10px;
-      }
-
-      .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(80, 170, 62, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-      }
-
-      /* Responsive Adjustments for Tablet and Below */
-      @media (max-width: 991.98px) {
-        .navbar-nav {
-          text-align: center;
-          padding: 20px 0;
-          background: #fff;
-          border-radius: 8px;
-          margin-top: 10px;
-        }
-
-        .navbar-nav .nav-link {
-          padding: 12px 0;
-          font-size: 16px;
-        }
-
-        .has-sub-nav {
-          position: static;
-        }
-
-        .sub-nav {
-          position: static;
-          display: block;
-          background: #f8f9fa;
-          box-shadow: none;
-          border-radius: 0;
-          margin: 5px 0;
-        }
-
-        .sub-nav-item {
-          padding: 5px 0;
-        }
-
-        .sub-nav-link {
-          font-size: 14px;
-          padding: 8px 20px;
-        }
-
-        .sub-nav-link:hover {
-          background: none;
-          color: #50aa3e;
-        }
-
-        .has-sub-nav:hover .sub-nav-icon {
-          transform: none;
-        }
-
-        #languageDropdown + .dropdown-menu {
-          right: auto;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 90%;
-          max-width: 200px;
-          z-index: 1050; /* Maintain high z-index */
-        }
-      }
-
-      /* Mobile-Specific Adjustments */
-      @media (max-width: 575.98px) {
-        .navbar {
-          padding: 10px 0;
-        }
-
-        .logo-img {
-          max-height: 30px;
-        }
-
-        .navbar-toggler {
-          padding: 8px;
-        }
-
-        .navbar-nav {
-          max-height: 80vh;
-          overflow-y: auto;
-          padding: 15px;
-          margin-top: 5px;
-        }
-
-        .navbar-nav .nav-item {
-          margin: 5px 0;
-        }
-
-        .navbar-nav .nav-link {
-          font-size: 15px;
-          padding: 10px 0;
-          color: #333;
-          border-bottom: 1px solid #e9ecef;
-        }
-
-        .has-sub-nav .nav-link {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        .sub-nav {
-          display: none;
-          background: #f9f9f9;
-          margin: 0;
-          padding: 10px 15px;
-        }
-
-        .has-sub-nav.active .sub-nav {
-          display: block;
-        }
-
-        .sub-nav-item {
-          padding: 5px 0;
-        }
-
-        .sub-nav-link {
-          font-size: 14px;
-          padding: 8px 0;
-          color: #555;
-        }
-
-        .sub-nav-link:hover {
-          color: #50aa3e;
-          background: none;
-        }
-
-        .sub-nav-icon {
-          font-size: 0.9rem;
-        }
-
-        .has-sub-nav.active .sub-nav-icon {
-          transform: rotate(180deg);
-        }
-
-        #languageDropdown + .dropdown-menu {
-          width: 80%;
-          max-width: 180px;
-          z-index: 1050; /* Ensure visibility on mobile */
-        }
-      }
-    </style>
     <!-- NAVIGATION ENDS
 			========================================================================= -->
     <!-- SLIDER STARTS
 			========================================================================= -->
     <section id="home">
       <!-- Video Background -->
-      <video
-        id="background-video"
-        autoplay
-        loop
-        muted
-        playsinline
-        loading="lazy"
-      >
-        <source
-          src="assets/imgs/slider/b34a2528b7c96953d12bbfaa438dffa38b715691.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-      <!-- Overlay -->
-      <div class="video-overlay"></div>
+      <div class="video-container">
+        <video
+          id="background-video"
+          loop
+          muted
+          playsinline
+          poster="assets/imgs/slider/preview.webp"
+        >
+          <source src="assets/imgs/slider/background.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+
       <!-- Text Content -->
       <div class="content">
         <!-- Slide 1 -->
@@ -518,39 +259,19 @@
           <h1 class="title">Emtethal</h1>
           <p class="description">
             Smart Solutions for Quality and Compliance Management in the Food
-            and Hospitality Sector
+            and Hospitality Sector
           </p>
         </div>
       </div>
-      <!-- Video Controls -->
-      <div class="video-controls" hidden>
-        <button id="play-pause-btn" class="control-btn">⏸️</button>
-        <button id="mute-btn" class="control-btn">🔇</button>
-      </div>
     </section>
-
     <script>
-      const video = document.getElementById("background-video");
-      const playPauseBtn = document.getElementById("play-pause-btn");
-      const muteBtn = document.getElementById("mute-btn");
-
-      // Play/Pause control
-      playPauseBtn.addEventListener("click", () => {
-        if (video.paused) {
-          video.play();
-          playPauseBtn.textContent = "⏸️";
-        } else {
-          video.pause();
-          playPauseBtn.textContent = "▶️";
-        }
-      });
-
-      // Mute/Unmute control
-      muteBtn.addEventListener("click", () => {
-        video.muted = !video.muted;
-        muteBtn.textContent = video.muted ? "🔇" : "🔊";
+      window.addEventListener("DOMContentLoaded", () => {
+        const video = document.getElementById("background-video");
+        video.setAttribute("autoplay", "");
+        video.load();
       });
     </script>
+
     <!-- /.. SLIDER ENDS
 			========================================================================= -->
 
@@ -673,7 +394,6 @@
                 // Initialize observer when page loads
                 window.addEventListener("load", animateCounter);
               </script>
-
             </div>
           </div>
         </div>
@@ -1078,10 +798,10 @@
           <div class="col-12 col-lg-6 position-relative overflow-hidden">
             <div class="image-blur-wrapper">
               <img
-                loading="lazy"
                 src="assets/imgs/features/big.jpg"
                 class="img-fluid w-100 h-100 object-fit-cover"
                 alt="Market Positioning"
+                loading="lazy"
               />
               <div class="image-overlay"></div>
             </div>
@@ -1221,7 +941,7 @@
             </div>
 
             <div class="row sectors">
-              <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+              <div class="col-12 col-md-6 col-lg-3 text-center mb-1">
                 <div
                   class="d-flex flex-column align-items-center justify-content-center"
                 >
@@ -1288,7 +1008,7 @@
           </div>
         </div>
       </div>
-
+    </section>
     <!-- /. targets ENDS
 ========================================================================= -->
 
@@ -1313,10 +1033,10 @@
           </div>
           <div class="col-12 col-lg-5 offset-lg-1 pt-4 pt-lg-0">
             <img
-              loading="lazy"
               src="assets/imgs/about/pic1.png"
               class="img-fluid"
               alt="About Emtethal"
+              loading="lazy"
             />
           </div>
         </div>
@@ -1393,10 +1113,10 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
-                    loading="lazy"
                     src="assets/imgs/team/Abdulrahman.svg"
                     class="img-fluid rounded-circle"
                     alt="Abdulrahman"
+                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1423,10 +1143,10 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
-                    loading="lazy"
                     src="assets/imgs/team/Abdullah.svg"
                     class="img-fluid rounded-circle"
                     alt="Abdullah"
+                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1456,10 +1176,10 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
-                    loading="lazy"
                     src="assets/imgs/team/Abdelhamid.svg"
                     class="img-fluid rounded-circle"
                     alt="Abdelhamid"
+                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1486,10 +1206,10 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
-                    loading="lazy"
                     src="assets/imgs/team/Maram.svg"
                     class="img-fluid rounded-circle"
                     alt="Maram"
+                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1516,10 +1236,10 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
-                    loading="lazy"
                     src="assets/imgs/team/Sarah.svg"
                     class="img-fluid rounded-circle"
                     alt="Sarah"
+                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1546,10 +1266,10 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
-                    loading="lazy"
                     src="assets/imgs/team/unkown.svg"
                     class="img-fluid rounded-circle"
                     alt="Saleh"
+                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1579,10 +1299,10 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
-                    loading="lazy"
                     src="assets/imgs/team/Yamen.svg"
                     class="img-fluid rounded-circle"
                     alt="Yamen"
+                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1609,10 +1329,10 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
-                    loading="lazy"
                     src="assets/imgs/team/Mutaz.jpg"
                     class="img-fluid rounded-circle"
                     alt="Moataz"
+                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1639,10 +1359,10 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
-                    loading="lazy"
                     src="assets/imgs/team/Abdelmasih.svg"
                     class="img-fluid rounded-circle"
                     alt="Abdelmasih"
+                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1669,10 +1389,10 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
-                    loading="lazy"
                     src="assets/imgs/team/Azzam.svg"
                     class="img-fluid rounded-circle"
                     alt="Azzam"
+                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1698,11 +1418,10 @@
           </div>
         </div>
       </div>
-
     </section>
     <!-- TEAM ENDS
 			========================================================================= -->
-  
+
     <!-- CONTACT US STARTS
 ========================================================================= -->
     <section class="contact-us light-grey-bg" id="contact">
@@ -1921,7 +1640,7 @@
     <script src="assets/lib/jquery-1.12.4/jquery.min.js"></script>
     <!--BOOTSTRAP JS-->
     <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
-  
+
     <!-- PRELOADER -->
     <script src="assets/lib/preloader/sPreloader.js"></script>
     <!-- OWL CAROUSEL -->
