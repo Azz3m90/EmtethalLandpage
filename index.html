@@ -57,7 +57,7 @@
       .fas,
       .las,
       .lar {
-        margin-left: 10px;
+        margin-left: 0px;
         margin-right: unset;
       }
       .accordion-button::after {
@@ -164,7 +164,7 @@
                   >
                 </li>
                 <li class="sub-nav-item">
-                  <a class="sub-nav-link" href="#roadmap">خارطة الطريق</a>
+                  <a class="sub-nav-link" href="#roadmap"> نعمل على</a>
                 </li>
               </ul>
             </li>
@@ -409,10 +409,10 @@
       <div class="container">
         <div class="row justify-content-between align-items-start g-4">
           <div class="col-12 col-lg-6">
-            <div class="herotext ps-lg-4">
-              <h6 class="herotext text-uppercase mb-3">/ميزات حسب الدور</h6>
-              <h2 class="mb-3 text-dark">أدوات مصممة لكل دور في فريقك</h2>
-              <h5 class="fw-normal mb-0 text-dark">
+            <div class="herotext rtl-align">
+              <h6 class="text-uppercase mb-3 text-light">/ميزات حسب الدور</h6>
+              <h2 class="mb-3 text-light">أدوات مصممة لكل دور في فريقك</h2>
+              <h5 class="fw-normal mb-0 text-light">
                 كل دور يحصل على الأدوات اللي يحتاجها للتشغيل، المراقبة، وتحسين
                 الجودة والامتثال لحظيًا
               </h5>
@@ -645,12 +645,23 @@
             </div>
           </div>
         </div>
+        <style>
+          .rtl-align {
+            direction: rtl;
+            text-align: right;
+          }
+        </style>
+
         <div class="row pt-5 g-0 g-lg-5">
-          <div class="col-12 col-md-4 text-end">
-            <div class="block">
+          <div class="col-12 col-md-4">
+            <div class="block rtl-align">
               <div class="herotext secondary-bg p-4">
-                <h4><i class="las la-file-alt"></i> بدون أوراق</h4>
-                <p style="color: white">سير عمل مؤتمت بالكامل</p>
+                <h4 class="rtl-align">
+                  <i class="las la-file-alt"></i> بدون أوراق
+                </h4>
+                <p class="rtl-align" style="color: white">
+                  سير عمل مؤتمت بالكامل
+                </p>
               </div>
               <ul class="pt-4">
                 <li>
@@ -663,11 +674,14 @@
               </ul>
             </div>
           </div>
-          <div class="col-12 col-md-4 text-end">
-            <div class="block">
-              <div class="herotext primary-bg p-4 best">
-                <h4><i class="las la-map-marker-alt"></i> مصممة للسعودية</h4>
-                <p>متوافقة مع اللوائح المحلية</p>
+
+          <div class="col-12 col-md-4">
+            <div class="block rtl-align">
+              <div class="herotext primary-bg p-4">
+                <h4 class="rtl-align">
+                  <i class="las la-map-marker-alt"></i> مصممة للسعودية
+                </h4>
+                <p class="rtl-align">متوافقة مع اللوائح المحلية</p>
               </div>
               <ul class="pt-4">
                 <li>
@@ -681,15 +695,18 @@
               </ul>
             </div>
           </div>
-          <div class="col-12 col-md-4 text-end">
-            <div class="block">
+
+          <div class="col-12 col-md-4">
+            <div class="block rtl-align">
               <div class="herotext secondary-bg p-4">
-                <h4><i class="las la-brain"></i> أدوات ذكية</h4>
-                <p>تدريب وتقارير مدمجة</p>
+                <h4 class="rtl-align">
+                  <i class="las la-brain"></i> أدوات ذكية
+                </h4>
+                <p class="rtl-align">تدريب وتقارير مدمجة</p>
               </div>
               <ul class="pt-4">
                 <li>
-                  <i class="lar la-check-circle"></i> تعليمات توجيهية مدمجة
+                  <i class="lar la-check-circle"></i> تعليمات توجيهية مدمجة
                 </li>
                 <li><i class="lar la-check-circle"></i> لوحات تحكم لحظية</li>
                 <li>
@@ -720,28 +737,32 @@
 
         <div class="row text-center pt-5">
           <div class="col-12 col-md-6 col-lg-6 block">
-            <div class="d-flex align-items-start justify-content-end text-end">
+            <div
+              class="d-flex align-items-start justify-content-center text-center"
+            >
               <div class="ms-3">
+                <div class="icon fs-1" style="color: #50aa3e">
+                  <i class="las la-project-diagram"></i>
+                </div>
                 <h2>التكامل الرقابي</h2>
                 <p>تكامل تقني مباشر لأتمتة البيانات وتقليل الامتثال اليدوي</p>
-              </div>
-              <div class="icon fs-1" style="color: #50aa3e">
-                <i class="las la-project-diagram"></i>
               </div>
             </div>
           </div>
 
           <div class="col-12 col-md-6 col-lg-6 block">
-            <div class="d-flex align-items-start justify-content-end text-end">
+            <div
+              class="d-flex align-items-start justify-content-center text-center"
+            >
               <div class="ms-3">
+                <div class="icon fs-1" style="color: #50aa3e">
+                  <i class="las la-handshake"></i>
+                </div>
                 <h2>شراكات استراتيجية</h2>
                 <p>
                   التعاون مع رواد الصناعة ومزودي الخدمات لتعزيز القيمة والوصول
                   للأعمال المنظمة
                 </p>
-              </div>
-              <div class="icon fs-1" style="color: #50aa3e">
-                <i class="las la-handshake"></i>
               </div>
             </div>
           </div>
@@ -781,6 +802,9 @@
               <div
                 class="mb-4 d-flex align-items-start justify-content-end text-end"
               >
+                <div class="icon ms-3 fs-3" style="color: #50aa3e">
+                  <i class="las la-balance-scale"></i>
+                </div>
                 <div>
                   <h4 class="mb-1">المنافسون</h4>
                   <p class="mb-0">
@@ -788,23 +812,20 @@
                     وغالبًا بنفس الواجهة للجميع
                   </p>
                 </div>
-                <div class="icon ms-3 fs-3" style="color: #50aa3e">
-                  <i class="las la-balance-scale"></i>
-                </div>
               </div>
 
               <div
                 class="d-flex align-items-start justify-content-end text-end"
               >
+                <div class="icon ms-3 fs-3" style="color: #50aa3e">
+                  <i class="las la-check-double"></i>
+                </div>
                 <div>
                   <h4 class="mb-1">امتثال</h4>
                   <p class="mb-0">
                     تغطي دورة الجودة الكاملة – التدريب، التفتيش، التتبع،
                     والتقارير – بواجهة مخصصة لكل دور
                   </p>
-                </div>
-                <div class="icon ms-3 fs-3" style="color: #50aa3e">
-                  <i class="las la-check-double"></i>
                 </div>
               </div>
             </div>
