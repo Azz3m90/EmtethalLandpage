@@ -83,6 +83,7 @@
       <div class="container-fluid">
         <a class="navbar-brand white-logo" href="#">
           <img
+            loading="lazy"
             src="assets/imgs/logo-white.png"
             class="img-fluid logo-img"
             alt="Logo"
@@ -90,6 +91,7 @@
         </a>
         <a class="navbar-brand black-logo" href="#">
           <img
+            loading="lazy"
             src="assets/imgs/logo.png"
             class="img-fluid logo-img"
             alt="Logo"
@@ -592,9 +594,10 @@
         font-size: 1.375rem;
         font-weight: 500;
         line-height: 1.5;
-        color: #50aa3e !important; /* Light green for description */
+        color: #ffffff !important;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-        max-width: 90%; /* Flexible width to show all content */
+        max-width: 600px;
+        margin: 0 auto;
       }
 
       /* Animation for text */
@@ -975,9 +978,7 @@
         <div class="row justify-content-between align-items-start g-4">
           <div class="col-12 col-lg-6">
             <div class="pe-lg-4">
-              <h6 class="text-uppercase text-success mb-3">
-                /Role-Based Features
-              </h6>
+              <h6 class="herotext text-uppercase mb-3">/Role-Based Features</h6>
               <h2 class="mb-3 text-white">
                 Purpose-built tools for every team role
               </h2>
@@ -1154,7 +1155,7 @@
     <style>
       .contact-us-section {
         position: relative;
-        background: url("assets/imgs/features/big.jpg") no-repeat center center;
+        background: url("assets/imgs/features/2.jpg") no-repeat center center;
         background-size: cover;
         overflow: hidden;
       }
@@ -1166,8 +1167,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(3px);
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(8px);
         z-index: 0;
       }
 
@@ -1244,7 +1245,7 @@
           <div class="col-12">
             <div class="herotext text-center">
               <h6>/Key Differentiators</h6>
-              <h2>Why Emtethal<br class="d-none d-md-block" />is different</h2>
+              <h2>Why Emtethal is different</h2>
               <h5 class="pt-2">
                 Built for compliance. Powered by automation. Backed by insight.
               </h5>
@@ -1363,6 +1364,7 @@
           <div class="col-12 col-lg-6 position-relative overflow-hidden">
             <div class="image-blur-wrapper">
               <img
+                loading="lazy"
                 src="assets/imgs/features/big.jpg"
                 class="img-fluid w-100 h-100 object-fit-cover"
                 alt="Market Positioning"
@@ -1375,7 +1377,9 @@
             class="col-12 col-lg-6 d-flex align-items-center py-5 px-4 px-lg-5"
           >
             <div class="text-content w-100">
-              <h6 class="text-uppercase mb-3">/Market Positioning</h6>
+              <h6 class="herotext text-uppercase mb-3" style="color: #666">
+                /Market Positioning
+              </h6>
               <h2 class="mb-3">Where Emtethal Stands Out</h2>
               <h5 class="mb-4">
                 Most tools focus on operations or compliance—not both
@@ -1535,7 +1539,7 @@
                 <div
                   class="d-flex flex-column align-items-center justify-content-center"
                 >
-                  <div class="icon mb-2">
+                  <div class="icon mb-2 sectors-icon">
                     <i class="fas fa-utensils"></i>
                   </div>
                   <div class="detail">
@@ -1551,7 +1555,7 @@
                 <div
                   class="d-flex flex-column align-items-center justify-content-center"
                 >
-                  <div class="icon mb-2">
+                  <div class="icon mb-2 sectors-icon">
                     <i class="fas fa-hotel"></i>
                   </div>
                   <div class="detail">
@@ -1567,7 +1571,7 @@
                 <div
                   class="d-flex flex-column align-items-center justify-content-center"
                 >
-                  <div class="icon mb-2">
+                  <div class="icon mb-2 sectors-icon">
                     <i class="fas fa-briefcase"></i>
                   </div>
                   <div class="detail">
@@ -1584,7 +1588,7 @@
                   class="d-flex flex-column align-items-center justify-content-center"
                 >
                   <div class="icon mb-2">
-                    <i class="fas fa-rocket"></i>
+                    <i class="fas fa-rocket sectors-icon"></i>
                   </div>
                   <div class="detail">
                     <h5 class="fw-semibold">Growing Operations</h5>
@@ -1600,9 +1604,12 @@
       </div>
 
       <style>
+        .sectors-icon {
+          color: #50aa3e;
+        }
         .icon i {
           font-size: 40px;
-          color: #50aa3e;
+          /*color: #50aa3e;*/
         }
 
         .block .icon i.fas.fa-rocket {
@@ -1618,6 +1625,7 @@
           text-overflow: unset;
           max-width: 220px;
           padding-top: 0px;
+          color: #666;
         }
 
         .sectors {
@@ -1660,6 +1668,7 @@
           </div>
           <div class="col-12 col-lg-5 offset-lg-1 pt-4 pt-lg-0">
             <img
+              loading="lazy"
               src="assets/imgs/about/pic1.png"
               class="img-fluid"
               alt="About Emtethal"
@@ -1738,6 +1747,7 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
+                    loading="lazy"
                     src="assets/imgs/team/Abdulrahman.svg"
                     class="img-fluid rounded-circle"
                     alt="Abdulrahman"
@@ -1767,6 +1777,7 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
+                    loading="lazy"
                     src="assets/imgs/team/Abdullah.svg"
                     class="img-fluid rounded-circle"
                     alt="Abdullah"
@@ -1799,6 +1810,7 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
+                    loading="lazy"
                     src="assets/imgs/team/Abdelhamid.svg"
                     class="img-fluid rounded-circle"
                     alt="Abdelhamid"
@@ -1828,6 +1840,7 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
+                    loading="lazy"
                     src="assets/imgs/team/Maram.svg"
                     class="img-fluid rounded-circle"
                     alt="Maram"
@@ -1857,6 +1870,7 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
+                    loading="lazy"
                     src="assets/imgs/team/Sarah.svg"
                     class="img-fluid rounded-circle"
                     alt="Sarah"
@@ -1886,6 +1900,7 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
+                    loading="lazy"
                     src="assets/imgs/team/unkown.svg"
                     class="img-fluid rounded-circle"
                     alt="Saleh"
@@ -1918,6 +1933,7 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
+                    loading="lazy"
                     src="assets/imgs/team/Yamen.svg"
                     class="img-fluid rounded-circle"
                     alt="Yamen"
@@ -1947,7 +1963,8 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
-                    src="assets/imgs/team/Moataz.svg"
+                    loading="lazy"
+                    src="assets/imgs/team/Mutaz.jpg"
                     class="img-fluid rounded-circle"
                     alt="Moataz"
                   />
@@ -1976,6 +1993,7 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
+                    loading="lazy"
                     src="assets/imgs/team/Abdelmasih.svg"
                     class="img-fluid rounded-circle"
                     alt="Abdelmasih"
@@ -2005,6 +2023,7 @@
               <div class="team-card text-center">
                 <div class="pic pb-4">
                   <img
+                    loading="lazy"
                     src="assets/imgs/team/Azzam.svg"
                     class="img-fluid rounded-circle"
                     alt="Azzam"
@@ -2187,9 +2206,9 @@
           <div class="col-12 col-lg-8">
             <div class="herotext pb-4">
               <h6
-                class="text-success d-flex justify-content-center d-md-block text-md-start"
+                class="herotext d-flex justify-content-center d-md-block text-md-start"
               >
-                ESTIMATE PROJECT
+                /ESTIMATE PROJECT
               </h6>
               <h2
                 class="d-flex justify-content-center d-md-block text-md-start"
@@ -2203,39 +2222,52 @@
               name="ContactForm"
               id="ContactForm"
             >
-              <div class="mb-1">
+              <div class="mb-3 position-relative w-100">
+                <i
+                  class="fas fa-user position-absolute top-50 start-0 translate-middle-y ms-3"
+                  style="color: #50aa3e"
+                ></i>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control ps-5 py-3 rounded-3 shadow-sm w-100"
                   name="name"
                   placeholder="Enter your name"
                 />
               </div>
-              <div class="mb-1">
+
+              <div class="mb-3 position-relative w-100">
+                <i
+                  class="fas fa-envelope position-absolute top-50 start-0 translate-middle-y ms-3"
+                  style="color: #50aa3e"
+                ></i>
                 <input
                   type="email"
-                  class="form-control"
+                  class="form-control ps-5 py-3 rounded-3 shadow-sm w-100"
                   name="email"
-                  placeholder="Enter your Email"
+                  placeholder="Enter your email"
                 />
               </div>
-              <div class="mb-1">
+
+              <div class="mb-3 position-relative w-100">
+                <i
+                  class="fas fa-comment-dots position-absolute top-0 start-0 mt-3 ms-3"
+                  style="color: #50aa3e"
+                ></i>
                 <textarea
-                  class="form-control"
+                  class="form-control ps-5 py-3 rounded-3 shadow-sm w-100"
                   name="comment"
                   placeholder="Enter your message"
                   rows="5"
                 ></textarea>
               </div>
-              <div
-                class="d-flex justify-content-center d-md-block text-md-start"
-              >
+
+              <div class="text-center text-md-start">
                 <button
                   type="submit"
                   value="Submit"
                   name="submitf"
                   id="submitf"
-                  class="btn btn-success mt-1"
+                  class="btn btn-primary px-4 py-2 mt-2"
                 >
                   SEND MESSAGE
                 </button>
@@ -2253,12 +2285,14 @@
             >
               <div class="mb-2 mb-md-0 me-md-2">
                 <i
-                  class="las la-map-marker-alt text-success"
+                  class="las la-map-marker-alt contact-us-text-icons"
                   style="font-size: 36px"
                 ></i>
               </div>
               <div>
-                <div class="fw-bold text-success text-uppercase small mb-1">
+                <div
+                  class="fw-bold contact-us-text-icons text-uppercase small mb-1"
+                >
                   Get Us Here
                 </div>
                 <div>Riyadh, Saudi Arabia</div>
@@ -2273,12 +2307,14 @@
             >
               <div class="mb-2 mb-md-0 me-md-2">
                 <i
-                  class="las la-globe text-success"
+                  class="las la-globe contact-us-text-icons"
                   style="font-size: 36px"
                 ></i>
               </div>
               <div>
-                <div class="fw-bold text-success text-uppercase small mb-1">
+                <div
+                  class="fw-bold contact-us-text-icons text-uppercase small mb-1"
+                >
                   Website
                 </div>
                 <div>
@@ -2301,12 +2337,14 @@
             >
               <div class="mb-2 mb-md-0 me-md-2">
                 <i
-                  class="las la-envelope-open text-success"
+                  class="las la-envelope-open contact-us-text-icons"
                   style="font-size: 36px"
                 ></i>
               </div>
               <div>
-                <div class="fw-bold text-success text-uppercase small mb-1">
+                <div
+                  class="fw-bold contact-us-text-icons text-uppercase small mb-1"
+                >
                   Write Us
                 </div>
                 <div>
@@ -2323,6 +2361,14 @@
         </div>
       </div>
     </section>
+    <style>
+      .contact-us-text-icons {
+        color: #50aa3e;
+      }
+      #submitf {
+        background-color: #50aa3e;
+      }
+    </style>
     <!-- /. CONTACT US ENDS
 ========================================================================= -->
 
