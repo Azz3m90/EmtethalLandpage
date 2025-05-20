@@ -41,7 +41,7 @@
       .block,
       .team-card,
       .contact-us-text-icons {
-        text-align: right;
+        text-align: center;
       }
       .icon {
         margin-left: 10px;
@@ -85,7 +85,7 @@
       @media (max-width: 991px) {
         .navbar-brand.white-logo,
         .navbar-brand.black-logo {
-          right: 60px; /* Adjust for toggle button on mobile */
+          left: 10px; /* Adjust for toggle button on mobile */
         }
         .navbar-collapse {
           text-align: right;
@@ -245,7 +245,8 @@
         <div class="slide active" data-slide="1">
           <h1 class="title">امتثال</h1>
           <p class="description">
-            حلول ذكية لإدارة الجودة والامتثال في قطاع الضيافة والمطاعم
+            حلول ذكية لإدارة الجودة والامتثال في قطاع الضيافة والمطاعم (مطاعم –
+            فنادق – كافتيريات)
           </p>
         </div>
       </div>
@@ -331,24 +332,31 @@
                 function animateCounter() {
                   const counters = document.querySelectorAll(".counter-value");
                   const speed = 200;
+
                   counters.forEach((counter) => {
+                    counter.setAttribute("data-current", 0);
+
                     const updateCount = () => {
                       const target = +counter.getAttribute("data-target");
-                      const count = +counter.innerText.replace(/[^0-9]/g, "");
-                      const increment = target / speed;
-                      if (count < target) {
-                        counter.innerText = Math.ceil(
-                          count + increment
-                        ).toLocaleString("ar-SA");
+                      const current = +counter.getAttribute("data-current");
+                      const increment = Math.ceil(target / speed);
+                      const next = current + increment;
+
+                      if (next < target) {
+                        counter.setAttribute("data-current", next);
+                        counter.innerText = next.toLocaleString("ar-SA");
                         setTimeout(updateCount, 10);
                       } else {
                         counter.innerText = target.toLocaleString("ar-SA");
                       }
                     };
+
                     counter.updateCount = updateCount;
                   });
+
                   const counterSection =
                     document.querySelector(".counter-section");
+
                   const observer = new IntersectionObserver(
                     (entries) => {
                       if (entries[0].isIntersecting) {
@@ -358,8 +366,10 @@
                     },
                     { threshold: 0.3 }
                   );
+
                   observer.observe(counterSection);
                 }
+
                 window.addEventListener("load", animateCounter);
               </script>
             </div>
@@ -585,29 +595,39 @@
         </div>
         <div class="row text-center pt-5 justify-content-center">
           <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-search"></i></div>
-            <h2>التقييم الأولي</h2>
-            <p>نراجع عمليات منشأتك الحالية ووضع الامتثال</p>
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon mb-3"><i class="las la-search"></i></div>
+              <h2>التقييم الأولي</h2>
+              <p>نراجع عمليات منشأتك الحالية ووضع الامتثال</p>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-sliders-h"></i></div>
-            <h2>تخصيص النظام</h2>
-            <p>نصمم المنصة حسب نوع وحجم وطبيعة عملك</p>
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon mb-3"><i class="las la-sliders-h"></i></div>
+              <h2>تخصيص النظام</h2>
+              <p>نصمم المنصة حسب نوع وحجم وطبيعة عملك</p>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-users-cog"></i></div>
-            <h2>تدريب الفريق</h2>
-            <p>فريقك يتعلم استخدام الأدوات بسهولة من خلال تدريب موجه</p>
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon mb-3"><i class="las la-users-cog"></i></div>
+              <h2>تدريب الفريق</h2>
+              <p>فريقك يتعلم استخدام الأدوات بسهولة من خلال تدريب موجه</p>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-clipboard-list"></i></div>
-            <h2>تفتيش مستمر</h2>
-            <p>نفّذ التفتيشات، سجّل النتائج، وتابع أداء فريقك</p>
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon mb-3"><i class="las la-clipboard-list"></i></div>
+              <h2>تفتيش مستمر</h2>
+              <p>نفّذ التفتيشات، سجّل النتائج، وتابع أداء فريقك</p>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-chart-line"></i></div>
-            <h2>تقارير ورؤى</h2>
-            <p>احصل على بيانات الأداء وتوصيات تحسين عملية في أي وقت</p>
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon mb-3"><i class="las la-chart-line"></i></div>
+              <h2>تقارير ورؤى</h2>
+              <p>احصل على بيانات الأداء وتوصيات تحسين عملية في أي وقت</p>
+            </div>
           </div>
         </div>
       </div>
@@ -686,9 +706,9 @@
     <section class="home-services light-grey-bg" id="roadmap">
       <div class="container">
         <div class="row">
-          <div class="col-IMAGE">
+          <div class="col-12">
             <div class="herotext text-center">
-              <h6>/خارطة الطريق</h6>
+              <h6>/نعمل على</h6>
               <h2>نركز على التكامل والنمو الاستراتيجي</h2>
               <h5 class="pt-2">
                 نبني ما يهم لتقديم الامتثال، الكفاءة، والتوسع
@@ -696,31 +716,46 @@
             </div>
           </div>
         </div>
+
         <div class="row text-center pt-5">
           <div class="col-12 col-md-6 col-lg-6 block">
-            <div class="icon"><i class="las la-project-diagram"></i></div>
-            <h2>التكامل الرقابي</h2>
-            <p>
-              تكامل تقني مباشر مع الجهات الرقابية لأتمتة تبادل البيانات وتقليل
-              الامتثال اليدوي
-            </p>
+            <div class="d-flex align-items-start justify-content-end text-end">
+              <div class="ms-3">
+                <h2>التكامل الرقابي</h2>
+                <p>
+                  تكامل تقني مباشر مع الجهات الرقابية لأتمتة تبادل البيانات
+                  وتقليل الامتثال اليدوي
+                </p>
+              </div>
+              <div class="icon fs-1" style="color: #50aa3e">
+                <i class="las la-project-diagram"></i>
+              </div>
+            </div>
           </div>
+
           <div class="col-12 col-md-6 col-lg-6 block">
-            <div class="icon"><i class="las la-handshake"></i></div>
-            <h2>شراكات استراتيجية</h2>
-            <p>
-              التعاون مع رواد الصناعة ومزودي الخدمات لتعزيز القيمة والوصول
-              للأعمال المنظمة
-            </p>
+            <div class="d-flex align-items-start justify-content-end text-end">
+              <div class="ms-3">
+                <h2>شراكات استراتيجية</h2>
+                <p>
+                  التعاون مع رواد الصناعة ومزودي الخدمات لتعزيز القيمة والوصول
+                  للأعمال المنظمة
+                </p>
+              </div>
+              <div class="icon fs-1" style="color: #50aa3e">
+                <i class="las la-handshake"></i>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- /.. Our Roadmap ENDS -->
     <!-- Market Positioning -->
     <section class="market-positioning-section py-5" id="marketPositioning">
       <div class="container-fluid px-0">
-        <div class="row g-0">
+        <div class="row g-0 flex-row-reverse">
           <div class="col-12 col-lg-6 position-relative overflow-hidden">
             <div class="image-blur-wrapper">
               <img
@@ -732,10 +767,11 @@
               <div class="image-overlay"></div>
             </div>
           </div>
+
           <div
             class="col-12 col-lg-6 d-flex align-items-center py-5 px-4 px-lg-5"
           >
-            <div class="text-content w-100">
+            <div class="text-content w-100 text-end">
               <h6 class="herotext text-uppercase mb-3" style="color: #666">
                 /موقعنا في السوق
               </h6>
@@ -743,10 +779,10 @@
               <h5 class="mb-4">
                 معظم الأدوات تركز على العمليات أو الامتثال – مو الاثنين معًا
               </h5>
-              <div class="mb-4 d-flex align-items-start">
-                <div class="icon ms-3 fs-3" style="color: #50aa3e">
-                  <i class="las la-balance-scale"></i>
-                </div>
+
+              <div
+                class="mb-4 d-flex align-items-start justify-content-end text-end"
+              >
                 <div>
                   <h4 class="mb-1">المنافسون</h4>
                   <p class="mb-0">
@@ -754,11 +790,14 @@
                     وغالبًا بنفس الواجهة للجميع
                   </p>
                 </div>
-              </div>
-              <div class="d-flex align-items-start">
                 <div class="icon ms-3 fs-3" style="color: #50aa3e">
-                  <i class="las la-check-double"></i>
+                  <i class="las la-balance-scale"></i>
                 </div>
+              </div>
+
+              <div
+                class="d-flex align-items-start justify-content-end text-end"
+              >
                 <div>
                   <h4 class="mb-1">امتثال</h4>
                   <p class="mb-0">
@@ -766,12 +805,44 @@
                     والتقارير – بواجهة مخصصة لكل دور
                   </p>
                 </div>
+                <div class="icon ms-3 fs-3" style="color: #50aa3e">
+                  <i class="las la-check-double"></i>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <style>
+      .image-blur-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .image-blur-wrapper img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        display: block;
+        filter: brightness(0.5);
+      }
+
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .object-fit-cover {
+        object-fit: cover;
+      }
+    </style>
+
     <!-- Market Positioning ENDS -->
     <!-- SERVICES STARTS -->
     <section class="home-services light-grey-bg" id="services">
@@ -791,40 +862,58 @@
         </div>
         <div class="row text-center pt-5">
           <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-clipboard-check"></i></div>
-            <h2>قوائم تفتيش رقمية</h2>
-            <p>قوائم جاهزة متوافقة مع اللوائح المحلية، أنشئها وأدرها بسهولة</p>
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon mb-3">
+                <i class="las la-clipboard-check"></i>
+              </div>
+              <h2>قوائم تفتيش رقمية</h2>
+              <p>
+                قوائم جاهزة متوافقة مع اللوائح المحلية، أنشئها وأدرها بسهولة
+              </p>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-search-location"></i></div>
-            <h2>تفتيش من أي مكان</h2>
-            <p>
-              نفّذ التفتيشات من أي جهاز، اكتشف المشاكل بسرعة، وسجّل النتائج
-              لحظيًا
-            </p>
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon mb-3">
+                <i class="las la-search-location"></i>
+              </div>
+              <h2>تفتيش من أي مكان</h2>
+              <p>
+                نفّذ التفتيشات من أي جهاز، اكتشف المشاكل بسرعة، وسجّل النتائج
+                لحظيًا
+              </p>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-chart-bar"></i></div>
-            <h2>تتبع الأداء</h2>
-            <p>
-              تابع الاتجاهات عبر الفروع والفرق، حلّل درجات الجودة، واكتشف
-              الثغرات قبل ما تكلفك
-            </p>
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon mb-3"><i class="las la-chart-bar"></i></div>
+              <h2>تتبع الأداء</h2>
+              <p>
+                تابع الاتجاهات عبر الفروع والفرق، حلّل درجات الجودة، واكتشف
+                الثغرات قبل ما تكلفك
+              </p>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-user-cog"></i></div>
-            <h2>وصول حسب الدور</h2>
-            <p>عيّن المهام حسب الدور، وامنح كل مستخدم الأدوات المناسبة</p>
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon mb-3"><i class="las la-user-cog"></i></div>
+              <h2>وصول حسب الدور</h2>
+              <p>عيّن المهام حسب الدور، وامنح كل مستخدم الأدوات المناسبة</p>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-graduation-cap"></i></div>
-            <h2>تدريب مدمج</h2>
-            <p>درّب فريقك بمحتوى تفاعلي مدمج، وحافظ على مواكبة المعايير</p>
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon mb-3"><i class="las la-graduation-cap"></i></div>
+              <h2>تدريب مدمج</h2>
+              <p>درّب فريقك بمحتوى تفاعلي مدمج، وحافظ على مواكبة المعايير</p>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4 block">
-            <div class="icon"><i class="las la-file-alt"></i></div>
-            <h2>تقارير رقابية</h2>
-            <p>أنشئ تقارير متوافقة مع صيغ الجهات الرقابية، وشاركها مباشرة</p>
+            <div class="d-flex flex-column align-items-center">
+              <div class="icon mb-3"><i class="las la-file-alt"></i></div>
+              <h2>تقارير رقابية</h2>
+              <p>أنشئ تقارير متوافقة مع صيغ الجهات الرقابية، وشاركها مباشرة</p>
+            </div>
           </div>
         </div>
       </div>
@@ -933,45 +1022,56 @@
         <div class="row pt-5 gx-4 gy-4">
           <div class="col-12 col-md-6 block">
             <div
-              class="icon d-flex align-items-center justify-content-center mb-3"
-              style="
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                background-color: #eaf7e4;
-                font-size: 28px;
-                color: #50aa3e;
-              "
+              class="d-flex justify-content-end text-end align-items-start gap-3 flex-row-reverse"
             >
-              <i class="las la-eye"></i>
-            </div>
-            <div class="detail pt-2">
-              <h4>الرؤية</h4>
-              <p>
-                نطمح لنكون المعيار الإقليمي للجودة، ونجعل الضيافة أكثر أمانًا
-                وذكاءً وقوة
-              </p>
+              <div class="detail pt-2">
+                <h4>الرؤية</h4>
+                <p>
+                  نطمح لنكون المعيار الإقليمي للجودة، ونجعل الضيافة أكثر أمانًا
+                  وذكاءً وقوة
+                </p>
+              </div>
+              <div
+                class="icon d-flex align-items-center justify-content-center"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+                  background-color: #eaf7e4;
+                  font-size: 28px;
+                  color: #50aa3e;
+                  flex-shrink: 0;
+                "
+              >
+                <i class="las la-eye"></i>
+              </div>
             </div>
           </div>
+
           <div class="col-12 col-md-6 block">
             <div
-              class="icon d-flex align-items-center justify-content-center mb-3"
-              style="
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                background-color: #eaf7e4;
-                font-size: 28px;
-                color: #50aa3e;
-              "
+              class="d-flex justify-content-end text-end align-items-start gap-3 flex-row-reverse"
             >
-              <i class="las la-bullseye"></i>
-            </div>
-            <div class="detail pt-2">
-              <h4>الرسالة</h4>
-              <p>
-                نمكّن الفرق من إدارة الامتثال، ونقدم الوضوح، التحكم، والنتائج
-              </p>
+              <div class="detail pt-2">
+                <h4>الرسالة</h4>
+                <p>
+                  نمكّن الفرق من إدارة الامتثال، ونقدم الوضوح، التحكم، والنتائج
+                </p>
+              </div>
+              <div
+                class="icon d-flex align-items-center justify-content-center"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 50%;
+                  background-color: #eaf7e4;
+                  font-size: 28px;
+                  color: #50aa3e;
+                  flex-shrink: 0;
+                "
+              >
+                <i class="las la-bullseye"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -1094,7 +1194,7 @@
                   />
                 </div>
                 <div class="details">
-                  <h3>مرام علي</h3>
+                  <h3>مرام محمد علي</h3>
                   <h6 class="text-muted">مديرة مشروع</h6>
                   <ul class="socialmedia pt-2 list-inline">
                     <li class="list-inline-item">

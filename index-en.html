@@ -493,194 +493,6 @@
 			========================================================================= -->
     <!-- SLIDER STARTS
 			========================================================================= -->
-    <style>
-      /* Import friendly font */
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
-
-      /* Base spacing variables */
-      :root {
-        --spacing-xs: 0.5rem;
-        --spacing-sm: 1rem;
-        --spacing-md: 1.5rem;
-        --spacing-lg: 2rem;
-      }
-
-      /* Fullscreen video background */
-      #home {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-      }
-
-      #background-video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-      }
-
-      /* Gradient overlay for a softer look */
-      .video-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(
-          135deg,
-          rgba(0, 0, 0, 0.6),
-          rgba(0, 0, 0, 0.4)
-        );
-        z-index: 2;
-      }
-
-      /* Text content styling */
-      .content {
-        position: relative;
-        z-index: 3;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        text-align: center;
-        font-family: "Montserrat", sans-serif;
-        padding: var(--spacing-lg);
-        color: #50aa3e; /* Green for title */
-      }
-
-      .slide {
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        animation: scaleIn 1s ease-in-out;
-        display: none;
-      }
-
-      .slide.active {
-        display: flex;
-      }
-
-      .title {
-        font-size: 5rem;
-        font-weight: 600;
-        line-height: 1.1;
-        letter-spacing: -0.02em;
-        margin-bottom: var(--spacing-lg);
-        text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-      }
-
-      .description {
-        font-size: 1.375rem;
-        font-weight: 500;
-        line-height: 1.5;
-        color: #ffffff !important;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-        max-width: 600px;
-        margin: 0 auto;
-      }
-
-      /* Animation for text */
-      @keyframes scaleIn {
-        from {
-          transform: scale(0.95);
-          opacity: 0;
-        }
-        to {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-
-      /* Video controls styling */
-      .video-controls {
-        position: absolute;
-        bottom: var(--spacing-lg);
-        right: var(--spacing-lg);
-        z-index: 4;
-        display: flex;
-        gap: var(--spacing-sm);
-      }
-
-      .control-btn {
-        background-color: #50aa3e;
-        border: none;
-        padding: var(--spacing-xs);
-        border-radius: 50%;
-        cursor: pointer;
-        font-size: 1.125rem;
-        width: 3rem;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-      }
-
-      .control-btn:hover {
-        background-color: #3f8a30;
-        transform: scale(1.1);
-      }
-
-      /* Responsive adjustments */
-      @media (max-width: 992px) {
-        .title {
-          font-size: 3.75rem;
-          line-height: 1.1;
-          margin-bottom: var(--spacing-md);
-        }
-        .description {
-          font-size: 1.125rem;
-          line-height: 1.6;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .content {
-          padding: var(--spacing-md);
-        }
-        .title {
-          font-size: 2.5rem;
-          line-height: 1.2;
-        }
-        .description {
-          font-size: 0.875rem; /* Smaller font for mobile */
-          line-height: 1.4;
-        }
-        .control-btn {
-          width: 2.5rem;
-          height: 2.5rem;
-          font-size: 1rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .content {
-          padding: var(--spacing-sm);
-        }
-        .title {
-          font-size: 1.75rem;
-          line-height: 1.2;
-          margin-bottom: var(--spacing-sm);
-        }
-        .description {
-          font-size: 0.75rem; /* Even smaller font for small mobile screens */
-          line-height: 1.3;
-        }
-        .control-btn {
-          width: 2rem;
-          height: 2rem;
-          font-size: 0.875rem;
-        }
-      }
-    </style>
     <section id="home">
       <!-- Video Background -->
       <video
@@ -861,66 +673,7 @@
                 // Initialize observer when page loads
                 window.addEventListener("load", animateCounter);
               </script>
-              <!-- Counter Styles -->
-              <style>
-                @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 
-                .box-counter {
-                  width: auto;
-                  height: auto;
-                  padding: 10px 0;
-                  text-align: center;
-                  background: none;
-                  box-shadow: none;
-                  border-radius: 0;
-                  margin: 10px auto;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  font-family: "Montserrat", sans-serif;
-                  transition: none;
-                }
-
-                .box-counter:hover {
-                  transform: none;
-                  box-shadow: none;
-                }
-
-                .box-counter .box-counter-main {
-                  display: none; /* Hide icons if you want to match the clean layout */
-                }
-
-                .box-counter .box-counter-content {
-                  margin-top: 0;
-                }
-
-                .box-counter .counter-wrapper {
-                  justify-content: center;
-                }
-
-                .box-counter .counter-value {
-                  font-size: 32px;
-                  font-weight: 600;
-                  color: #50aa3e;
-                }
-
-                .box-counter .box-counter-title {
-                  font-size: 13px;
-                  font-weight: 400;
-                  color: #777;
-                  padding: 0;
-                  margin-top: 5px;
-                }
-
-                .box-counter .box-counter-title:before {
-                  content: none;
-                }
-
-                .counter-section {
-                  padding-top: 10px;
-                  padding-bottom: 10px;
-                }
-              </style>
             </div>
           </div>
         </div>
@@ -1138,30 +891,6 @@
       </div>
     </section>
 
-    <style>
-      .contact-us-section {
-        position: relative;
-        background: url("assets/imgs/features/2.jpg") no-repeat center center;
-        background-size: cover;
-        overflow: hidden;
-      }
-
-      .contact-us-section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-
-        z-index: 0;
-      }
-
-      .contact-us-section > .container {
-        position: relative;
-        z-index: 1;
-      }
-    </style>
     <!-- /.. FEATURES ENDS
 			========================================================================= -->
     <!-- How it works STARTS -->
@@ -1401,35 +1130,7 @@
         </div>
       </div>
     </section>
-    <style>
-      .image-blur-wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
 
-      .image-blur-wrapper img {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-        display: block;
-        filter: brightness(0.5);
-      }
-
-      .image-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        /*backdrop-filter: blur(2px);
-        background-color: rgba(0, 0, 0, 0.4);*/
-      }
-
-      .object-fit-cover {
-        object-fit: cover;
-      }
-    </style>
     <!-- Market Positioning ENDs
 ======================================================================== -->
     <!-- SERVICES STARTS -->
@@ -1587,47 +1288,6 @@
           </div>
         </div>
       </div>
-
-      <style>
-        .sectors-icon {
-          color: #50aa3e;
-        }
-        .icon i {
-          font-size: 40px;
-          /*color: #50aa3e;*/
-        }
-
-        .block .icon i.fas.fa-rocket {
-          font-size: 38px;
-        }
-
-        .description1 {
-          font-size: 12px;
-          color: lightgray;
-          margin: 0;
-          white-space: nowrap;
-          overflow: visible;
-          text-overflow: unset;
-          max-width: 220px;
-          padding-top: 0px;
-          color: #666;
-        }
-
-        .sectors {
-          padding-top: 60px;
-        }
-
-        .herotext h6 {
-          letter-spacing: 1px;
-          color: #666;
-        }
-
-        .herotext h2 {
-          font-size: 30px;
-          color: #111;
-        }
-      </style>
-    </section>
 
     <!-- /. targets ENDS
 ========================================================================= -->
@@ -2038,152 +1698,11 @@
           </div>
         </div>
       </div>
-      <style>
-        .team-hierarchy .pic img {
-          width: 120px;
-          height: 120px;
-          object-fit: cover;
-          border: 3px solid #f8f9fa;
-        }
-        .team-hierarchy .details {
-          flex-grow: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-        }
-        .team-hierarchy .details h3 {
-          font-size: 1.25rem;
-          margin-bottom: 0.5rem;
-          color: #333;
-          white-space: nowrap; /* Prevent name wrapping */
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        .team-hierarchy .details h6 {
-          font-size: 0.9rem;
-          margin-bottom: 1rem;
-          flex-grow: 1;
-        }
-        .team-hierarchy .socialmedia {
-          margin-top: auto;
-        }
-        .team-hierarchy .socialmedia li {
-          margin: 0 8px;
-          display: inline-block; /* Ensure no commas or unwanted separators */
-        }
-        .team-hierarchy .socialmedia a {
-          color: #555;
-          font-size: 1.1rem;
-          transition: color 0.3s;
-        }
-        .team-hierarchy .socialmedia a:hover {
-          color: #007bff;
-        }
-        /* Responsive Adjustments */
-        @media (max-width: 992px) {
-          .team-hierarchy .team-card {
-            min-height: 300px;
-          }
-          .team-hierarchy .pic img {
-            width: 100px;
-            height: 100px;
-          }
-          .team-hierarchy .details h3 {
-            font-size: 1.1rem;
-          }
-          .team-hierarchy .details h6 {
-            font-size: 0.85rem;
-          }
-        }
-        @media (max-width: 768px) and (min-width: 576px) {
-          .team-hierarchy .team-card {
-            min-height: 300px;
-          }
-          .team-hierarchy .pic img {
-            width: 130px; /* Larger photos on large mobile screens */
-            height: 130px;
-          }
-          .team-hierarchy .details h3 {
-            font-size: 1.1rem;
-          }
-          .team-hierarchy .details h6 {
-            font-size: 0.85rem;
-          }
-          .team-hierarchy .socialmedia li {
-            margin: 0 7px;
-          }
-          .team-hierarchy .socialmedia a {
-            font-size: 1.1rem;
-          }
-        }
-        @media (max-width: 576px) {
-          .team-hierarchy .team-card {
-            min-height: 260px;
-            padding: 15px;
-          }
-          .team-hierarchy .pic img {
-            width: 80px;
-            height: 80px;
-          }
-          .team-hierarchy .details h3 {
-            font-size: 0.95rem;
-          }
-          .team-hierarchy .details h6 {
-            font-size: 0.75rem;
-          }
-          .team-hierarchy .socialmedia li {
-            margin: 0 6px;
-          }
-          .team-hierarchy .socialmedia a {
-            font-size: 1rem;
-          }
-        }
-      </style>
+
     </section>
     <!-- TEAM ENDS
 			========================================================================= -->
-    <!-- VIDEO STARTS
-			========================================================================= -->
-    <section class="video bg-img text-center" hidden>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h6>
-              <a class="popup-vimeo" href="https://vimeo.com/45830194"
-                ><i class="las la-play"></i>&nbsp;</a
-              >
-            </h6>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /.. VIDEO ENDS
-			========================================================================= -->
-    <!-- JOIN US STARTS
-			========================================================================= -->
-    <section class="join-us primary-bg text-center" hidden>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="herotext">
-              <h6>/Join Us</h6>
-              <h2>
-                Smart Solutions<br class="d-none d-md-block" />
-                for Hospitality Quality & Compliance
-              </h2>
-            </div>
-            <ul class="pt-4">
-              <li><a href="#" class="btn btn-secondary">OUR SERVICES</a></li>
-              <li>
-                <a href="#" class="btn-transparent btn-secondary">JOIN NOW</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /.. JOIN US ENDS
-			========================================================================= -->
+  
     <!-- CONTACT US STARTS
 ========================================================================= -->
     <section class="contact-us light-grey-bg" id="contact">
@@ -2347,34 +1866,10 @@
         </div>
       </div>
     </section>
-    <style>
-      .contact-us-text-icons {
-        color: #50aa3e;
-      }
-      #submitf {
-        background-color: #50aa3e;
-      }
-    </style>
+
     <!-- /. CONTACT US ENDS
 ========================================================================= -->
 
-    <!-- MAPS STARTS
-			========================================================================= -->
-    <section class="map p-0" hidden>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12 p-0">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d927758.0370464313!2d46.163000437018475!3d24.724997748455827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2snl!4v1747157088414!5m2!1sen!2snl"
-              height="400"
-              allowfullscreen=""
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /.. MAPS ENDS
-			========================================================================= -->
     <!-- FOOTER STARTS
 			========================================================================= -->
     <footer class="dark-grey-bg text-center">
@@ -2426,109 +1921,7 @@
     <script src="assets/lib/jquery-1.12.4/jquery.min.js"></script>
     <!--BOOTSTRAP JS-->
     <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
-    <!-- REVOLUTION JS FILES -->
-    <script src="assets/lib/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script src="assets/lib/revolution/js/jquery.themepunch.revolution.min.js"></script>
-    <!-- SLICEY ADD-ON FILES -->
-    <script src="assets/lib/revolution/revolution-addons/slicey/js/revolution.addon.slicey.min.js?ver=1.0.0"></script>
-    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
-			(Load Extensions only on Local File Systems !  
-			The following part can be removed on Server for On Demand Loading) -->
-    <script src="assets/lib/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="assets/lib/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script src="assets/lib/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="assets/lib/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="assets/lib/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="assets/lib/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="assets/lib/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-    <script src="assets/lib/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="assets/lib/revolution/js/extensions/revolution.extension.video.min.js"></script>
-    <script>
-      var tpj = jQuery;
-      var revapi24;
-      tpj(document).ready(function () {
-        if (tpj("#rev_slider_24_1").revolution == undefined) {
-          revslider_showDoubleJqueryError("#rev_slider_24_1");
-        } else {
-          revapi24 = tpj("#rev_slider_24_1")
-            .show()
-            .revolution({
-              sliderType: "standard",
-              jsFileLocation: "revolution/js/",
-              sliderLayout: "fullscreen",
-              dottedOverlay: "none",
-              delay: 9000,
-              navigation: {
-                keyboardNavigation: "off",
-                keyboard_direction: "horizontal",
-                mouseScrollNavigation: "off",
-                mouseScrollReverse: "default",
-                onHoverStop: "off",
-                bullets: {
-                  enable: true,
-                  hide_onmobile: false,
-                  style: "bullet-bar",
-                  hide_onleave: false,
-                  direction: "horizontal",
-                  h_align: "center",
-                  v_align: "bottom",
-                  h_offset: 0,
-                  v_offset: 50,
-                  space: 5,
-                  tmp: "",
-                },
-                arrows: {
-                  style: "uranus",
-                  enable: true,
-                  hide_onmobile: false,
-                  hide_onleave: false,
-                  tmp: "",
-                  left: {
-                    h_align: "left",
-                    v_align: "center",
-                    h_offset: 10,
-                    v_offset: 0,
-                  },
-                  right: {
-                    h_align: "right",
-                    v_align: "center",
-                    h_offset: 10,
-                    v_offset: 0,
-                  },
-                },
-              },
-              responsiveLevels: [1240, 1024, 778, 480],
-              visibilityLevels: [1240, 1024, 778, 480],
-              gridwidth: [1240, 1024, 778, 480],
-              gridheight: [868, 768, 960, 720],
-              lazyType: "none",
-              shadow: 0,
-              spinner: "spinner1",
-              stopLoop: "off",
-              stopAfterLoops: -1,
-              stopAtSlide: -1,
-              shuffle: "off",
-              autoHeight: "off",
-              fullScreenAutoWidth: "off",
-              fullScreenAlignForce: "off",
-              fullScreenOffsetContainer: "",
-              fullScreenOffset: "0px",
-              hideThumbsOnMobile: "off",
-              hideSliderAtLimit: 0,
-              hideCaptionAtLimit: 0,
-              hideAllCaptionAtLilmit: 0,
-              debugMode: false,
-              fallbacks: {
-                simplifyAll: "off",
-                nextSlideOnWindowFocus: "off",
-                disableFocusListener: false,
-              },
-            });
-        }
-
-        if (revapi24) revapi24.revSliderSlicey();
-      }); /*ready*/
-    </script>
+  
     <!-- PRELOADER -->
     <script src="assets/lib/preloader/sPreloader.js"></script>
     <!-- OWL CAROUSEL -->
