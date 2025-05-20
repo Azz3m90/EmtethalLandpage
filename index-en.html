@@ -1,0 +1,2548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="assets/imgs/logo.png" type="image/png" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/fontawesome/fontawesome.min.css" />
+    <link rel="stylesheet" href="assets/css/mdb.min.css" />
+    <link rel="stylesheet" href="assets/css/flag-icons.min.css" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Emtethal</title>
+    <style>
+      .counter-section {
+        padding: 3rem 0;
+      }
+      .counter-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 150px;
+      }
+      .counter-icon {
+        font-size: 2.5rem;
+        color: #50aa3e;
+        margin-bottom: 1rem;
+      }
+      .counter-value {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #333;
+      }
+      .counter-text {
+        font-size: 1rem;
+        color: #666;
+        text-align: center;
+      }
+      @media (max-width: 767px) {
+        .counter-item {
+          margin-bottom: 2rem;
+        }
+        .counter-value {
+          font-size: 1.25rem;
+        }
+        .counter-text {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navigation">
+    <!-- PRELOADER STARTS
+			========================================================================= -->
+    <div id="main-preloader" class="main-preloader semi-dark-background">
+      <div class="main-preloader-inner center">
+        <h1 class="preloader-percentage center">
+          <span class="preloader-percentage-text">0</span>
+          <!-- Show Percentage Number -->
+          <span class="percentage">%</span>
+        </h1>
+        <div class="preloader-bar-outer">
+          <div class="preloader-bar"></div>
+          <!-- Percentage Precess Bar -->
+        </div>
+      </div>
+    </div>
+    <!-- /.. PRELOADER ENDS
+			========================================================================= -->
+    <!-- NAVIGATION STARTS
+			========================================================================= -->
+    <!-- HTML for the enhanced navbar -->
+    <nav id="navigation" class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand white-logo" href="#">
+          <img
+            loading="lazy"
+            src="assets/imgs/logo-white.png"
+            class="img-fluid logo-img"
+            alt="Logo"
+          />
+        </a>
+        <a class="navbar-brand black-logo" href="#">
+          <img
+            loading="lazy"
+            src="assets/imgs/logo.png"
+            class="img-fluid logo-img"
+            alt="Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#problemsToSolve">Challenges</a>
+            </li>
+            <li class="nav-item has-sub-nav">
+              <a class="nav-link" href="#platform">
+                Platform
+                <i class="fas fa-chevron-down ms-1 sub-nav-icon"></i>
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#howItWorks">How It Works</a>
+                </li>
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#Keys">Why Emtethal</a>
+                </li>
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#marketPositioning"
+                    >Market Positioning</a
+                  >
+                </li>
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#roadmap">Road Map</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-sub-nav">
+              <a class="nav-link" href="#services">
+                Services
+                <i class="fas fa-chevron-down ms-1 sub-nav-icon"></i>
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#targets">Sectors</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item has-sub-nav">
+              <a class="nav-link" href="#about">
+                About
+                <i class="fas fa-chevron-down ms-1 sub-nav-icon"></i>
+              </a>
+              <ul class="sub-nav">
+                <li class="sub-nav-item">
+                  <a class="sub-nav-link" href="#team">Team</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            <!-- Language Switch Button -->
+            <li class="nav-item">
+              <a
+                id="language-switch"
+                class="nav-link d-flex align-items-center"
+                href="#"
+              >
+                <i id="language-flag" class="fi fi-gb me-2"></i>
+              </a>
+            </li>
+
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const langSwitch = document.getElementById("language-switch");
+                const flagIcon = document.getElementById("language-flag");
+                const langText = document.getElementById("language-text");
+                const isEnglish = window.location.pathname.includes("-en");
+                if (isEnglish) {
+                  langSwitch.href = "./index.html";
+                  flagIcon.className = "fi fi-sa ms-2";
+                } else {
+                  langSwitch.href = "./index-en.html";
+                  flagIcon.className = "fi fi-gb  ms-2";
+                  //langText.textContent = "العربية";
+                }
+              });
+            </script>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Custom CSS for the enhanced navbar -->
+    <style>
+      /* General Navbar Styling */
+      .navbar {
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+        transition: all 0.3s ease;
+        font-family: "Poppins", sans-serif;
+        overflow: visible; /* Prevent clipping of dropdown */
+      }
+
+      .navbar.nav-bg {
+        background: linear-gradient(135deg, #ffffff, #f8f9fa);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        padding: 10px 0;
+      }
+
+      /* Logo Styling */
+      .navbar-brand {
+        position: relative;
+        padding: 0;
+      }
+
+      .logo-img {
+        max-height: 40px;
+        transition: opacity 0.3s ease;
+      }
+
+      .white-logo {
+        display: block;
+        opacity: 1;
+      }
+
+      .black-logo {
+        display: none;
+        opacity: 0;
+      }
+
+      .nav-bg .white-logo {
+        display: none;
+        opacity: 0;
+      }
+
+      .nav-bg .black-logo {
+        display: block;
+        opacity: 1;
+      }
+
+      /* Nav Links */
+      .navbar-nav .nav-link {
+        color: #333;
+        font-size: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding: 10px 15px;
+        transition: color 0.3s ease, transform 0.2s ease;
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+        color: #50aa3e;
+        transform: translateY(-2px);
+      }
+
+      /* Sub-Nav Styling */
+      .has-sub-nav {
+        position: relative;
+      }
+
+      .sub-nav {
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        min-width: 180px;
+        z-index: 1000;
+      }
+
+      .has-sub-nav:hover .sub-nav {
+        display: block;
+      }
+
+      .sub-nav-item {
+        padding: 8px 20px;
+      }
+
+      .sub-nav-link {
+        color: #333;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: none;
+        display: block;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+
+      .sub-nav-link:hover {
+        background: #50aa3e;
+        color: #fff;
+      }
+
+      /* Sub-Nav Icon */
+      .sub-nav-icon {
+        font-size: 0.8rem;
+        transition: transform 0.2s ease;
+      }
+
+      .has-sub-nav:hover .sub-nav-icon {
+        transform: rotate(180deg);
+      }
+
+      /* Language Dropdown */
+      #languageDropdown + .dropdown-menu {
+        right: 0;
+        left: auto;
+        min-width: 150px;
+        z-index: 1050; /* Higher z-index to ensure visibility */
+        max-height: none; /* Remove height restrictions */
+        overflow: visible; /* Prevent clipping */
+        padding: 10px 0; /* Improved padding */
+        border: none; /* Clean appearance */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      }
+
+      .dropdown-item.d-flex {
+        gap: 10px;
+      }
+
+      .fi {
+        font-size: 1.2rem;
+      }
+
+      .fa-check {
+        font-size: 1rem;
+      }
+
+      /* Ensure Navbar Collapse Doesn't Clip */
+      .navbar-collapse {
+        overflow: visible; /* Prevent dropdown clipping */
+      }
+
+      /* Toggler Icon */
+      .navbar-toggler {
+        border: none;
+        padding: 10px;
+      }
+
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(80, 170, 62, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
+
+      /* Responsive Adjustments for Tablet and Below */
+      @media (max-width: 991.98px) {
+        .navbar-nav {
+          text-align: center;
+          padding: 20px 0;
+          background: #fff;
+          border-radius: 8px;
+          margin-top: 10px;
+        }
+
+        .navbar-nav .nav-link {
+          padding: 12px 0;
+          font-size: 16px;
+        }
+
+        .has-sub-nav {
+          position: static;
+        }
+
+        .sub-nav {
+          position: static;
+          display: block;
+          background: #f8f9fa;
+          box-shadow: none;
+          border-radius: 0;
+          margin: 5px 0;
+        }
+
+        .sub-nav-item {
+          padding: 5px 0;
+        }
+
+        .sub-nav-link {
+          font-size: 14px;
+          padding: 8px 20px;
+        }
+
+        .sub-nav-link:hover {
+          background: none;
+          color: #50aa3e;
+        }
+
+        .has-sub-nav:hover .sub-nav-icon {
+          transform: none;
+        }
+
+        #languageDropdown + .dropdown-menu {
+          right: auto;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 90%;
+          max-width: 200px;
+          z-index: 1050; /* Maintain high z-index */
+        }
+      }
+
+      /* Mobile-Specific Adjustments */
+      @media (max-width: 575.98px) {
+        .navbar {
+          padding: 10px 0;
+        }
+
+        .logo-img {
+          max-height: 30px;
+        }
+
+        .navbar-toggler {
+          padding: 8px;
+        }
+
+        .navbar-nav {
+          max-height: 80vh;
+          overflow-y: auto;
+          padding: 15px;
+          margin-top: 5px;
+        }
+
+        .navbar-nav .nav-item {
+          margin: 5px 0;
+        }
+
+        .navbar-nav .nav-link {
+          font-size: 15px;
+          padding: 10px 0;
+          color: #333;
+          border-bottom: 1px solid #e9ecef;
+        }
+
+        .has-sub-nav .nav-link {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .sub-nav {
+          display: none;
+          background: #f9f9f9;
+          margin: 0;
+          padding: 10px 15px;
+        }
+
+        .has-sub-nav.active .sub-nav {
+          display: block;
+        }
+
+        .sub-nav-item {
+          padding: 5px 0;
+        }
+
+        .sub-nav-link {
+          font-size: 14px;
+          padding: 8px 0;
+          color: #555;
+        }
+
+        .sub-nav-link:hover {
+          color: #50aa3e;
+          background: none;
+        }
+
+        .sub-nav-icon {
+          font-size: 0.9rem;
+        }
+
+        .has-sub-nav.active .sub-nav-icon {
+          transform: rotate(180deg);
+        }
+
+        #languageDropdown + .dropdown-menu {
+          width: 80%;
+          max-width: 180px;
+          z-index: 1050; /* Ensure visibility on mobile */
+        }
+      }
+    </style>
+    <!-- NAVIGATION ENDS
+			========================================================================= -->
+    <!-- SLIDER STARTS
+			========================================================================= -->
+    <style>
+      /* Import friendly font */
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+      /* Base spacing variables */
+      :root {
+        --spacing-xs: 0.5rem;
+        --spacing-sm: 1rem;
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2rem;
+      }
+
+      /* Fullscreen video background */
+      #home {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #background-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      /* Gradient overlay for a softer look */
+      .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.4)
+        );
+        z-index: 2;
+      }
+
+      /* Text content styling */
+      .content {
+        position: relative;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        padding: var(--spacing-lg);
+        color: #50aa3e; /* Green for title */
+      }
+
+      .slide {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: scaleIn 1s ease-in-out;
+        display: none;
+      }
+
+      .slide.active {
+        display: flex;
+      }
+
+      .title {
+        font-size: 5rem;
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -0.02em;
+        margin-bottom: var(--spacing-lg);
+        text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+      }
+
+      .description {
+        font-size: 1.375rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: #ffffff !important;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Animation for text */
+      @keyframes scaleIn {
+        from {
+          transform: scale(0.95);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      /* Video controls styling */
+      .video-controls {
+        position: absolute;
+        bottom: var(--spacing-lg);
+        right: var(--spacing-lg);
+        z-index: 4;
+        display: flex;
+        gap: var(--spacing-sm);
+      }
+
+      .control-btn {
+        background-color: #50aa3e;
+        border: none;
+        padding: var(--spacing-xs);
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 1.125rem;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .control-btn:hover {
+        background-color: #3f8a30;
+        transform: scale(1.1);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 992px) {
+        .title {
+          font-size: 3.75rem;
+          line-height: 1.1;
+          margin-bottom: var(--spacing-md);
+        }
+        .description {
+          font-size: 1.125rem;
+          line-height: 1.6;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .content {
+          padding: var(--spacing-md);
+        }
+        .title {
+          font-size: 2.5rem;
+          line-height: 1.2;
+        }
+        .description {
+          font-size: 0.875rem; /* Smaller font for mobile */
+          line-height: 1.4;
+        }
+        .control-btn {
+          width: 2.5rem;
+          height: 2.5rem;
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .content {
+          padding: var(--spacing-sm);
+        }
+        .title {
+          font-size: 1.75rem;
+          line-height: 1.2;
+          margin-bottom: var(--spacing-sm);
+        }
+        .description {
+          font-size: 0.75rem; /* Even smaller font for small mobile screens */
+          line-height: 1.3;
+        }
+        .control-btn {
+          width: 2rem;
+          height: 2rem;
+          font-size: 0.875rem;
+        }
+      }
+    </style>
+    <section id="home">
+      <!-- Video Background -->
+      <video
+        id="background-video"
+        autoplay
+        loop
+        muted
+        playsinline
+        loading="lazy"
+      >
+        <source
+          src="assets/imgs/slider/b34a2528b7c96953d12bbfaa438dffa38b715691.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+      <!-- Overlay -->
+      <div class="video-overlay"></div>
+      <!-- Text Content -->
+      <div class="content">
+        <!-- Slide 1 -->
+        <div class="slide active" data-slide="1">
+          <h1 class="title">Emtethal</h1>
+          <p class="description">
+            Smart Solutions for Quality and Compliance Management in the Food
+            and Hospitality Sector
+          </p>
+        </div>
+      </div>
+      <!-- Video Controls -->
+      <div class="video-controls" hidden>
+        <button id="play-pause-btn" class="control-btn">⏸️</button>
+        <button id="mute-btn" class="control-btn">🔇</button>
+      </div>
+    </section>
+
+    <script>
+      const video = document.getElementById("background-video");
+      const playPauseBtn = document.getElementById("play-pause-btn");
+      const muteBtn = document.getElementById("mute-btn");
+
+      // Play/Pause control
+      playPauseBtn.addEventListener("click", () => {
+        if (video.paused) {
+          video.play();
+          playPauseBtn.textContent = "⏸️";
+        } else {
+          video.pause();
+          playPauseBtn.textContent = "▶️";
+        }
+      });
+
+      // Mute/Unmute control
+      muteBtn.addEventListener("click", () => {
+        video.muted = !video.muted;
+        muteBtn.textContent = video.muted ? "🔇" : "🔊";
+      });
+    </script>
+    <!-- /.. SLIDER ENDS
+			========================================================================= -->
+
+    <!-- The Problem We Solve STARTS -->
+    <section class="home-services light-grey-bg" id="problemsToSolve">
+      <!-- Include Font Awesome for icons -->
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="herotext text-center">
+              <h6>/The Problem We Solve</h6>
+              <h2>
+                Regulatory fines and inspection notes are constantly on the rise
+              </h2>
+              <div class="container counter-section">
+                <div class="row text-center justify-content-center">
+                  <div class="col-12 col-sm-6 col-md-4">
+                    <article class="box-counter">
+                      <div class="box-counter-main">
+                        <i class="fas fa-money-bill-wave icon"></i>
+                      </div>
+                      <div class="box-counter-content">
+                        <div class="counter-wrapper">
+                          <span
+                            class="counter counter-value"
+                            data-target="12400000"
+                            >0</span
+                          >
+                        </div>
+                        <div class="box-counter-title">Fines H2 2024</div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4">
+                    <article class="box-counter">
+                      <div class="box-counter-main">
+                        <i class="fas fa-search icon"></i>
+                      </div>
+                      <div class="box-counter-content">
+                        <div class="counter-wrapper">
+                          <span
+                            class="counter counter-value"
+                            data-target="541000"
+                            >0</span
+                          >
+                        </div>
+                        <div class="box-counter-title">
+                          Inspection visits H2 2024
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4">
+                    <article class="box-counter">
+                      <div class="box-counter-main">
+                        <i class="fas fa-exclamation-triangle icon"></i>
+                      </div>
+                      <div class="box-counter-content">
+                        <div class="counter-wrapper">
+                          <span
+                            class="counter counter-value"
+                            data-target="10000"
+                            >0</span
+                          >
+                        </div>
+                        <div class="box-counter-title">Violations Q1 2024</div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <!-- Counter Animation Script -->
+              <script>
+                function animateCounter() {
+                  const counters = document.querySelectorAll(".counter-value");
+                  const speed = 200; // Animation speed
+
+                  counters.forEach((counter) => {
+                    const updateCount = () => {
+                      const target = +counter.getAttribute("data-target");
+                      const count = +counter.innerText.replace(/[^0-9]/g, "");
+                      const increment = target / speed;
+
+                      if (count < target) {
+                        counter.innerText = Math.ceil(
+                          count + increment
+                        ).toLocaleString();
+                        setTimeout(updateCount, 10);
+                      } else {
+                        counter.innerText = target.toLocaleString();
+                      }
+                    };
+
+                    counter.updateCount = updateCount; // Store function for later use
+                  });
+
+                  // Observe the counter section
+                  const counterSection =
+                    document.querySelector(".counter-section");
+                  const observer = new IntersectionObserver(
+                    (entries) => {
+                      if (entries[0].isIntersecting) {
+                        counters.forEach((counter) => counter.updateCount());
+                        observer.disconnect();
+                      }
+                    },
+                    { threshold: 0.3 } // Trigger when 30% of section is visible
+                  );
+
+                  observer.observe(counterSection);
+                }
+
+                // Initialize observer when page loads
+                window.addEventListener("load", animateCounter);
+              </script>
+              <!-- Counter Styles -->
+              <style>
+                @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+                .box-counter {
+                  width: auto;
+                  height: auto;
+                  padding: 10px 0;
+                  text-align: center;
+                  background: none;
+                  box-shadow: none;
+                  border-radius: 0;
+                  margin: 10px auto;
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  font-family: "Montserrat", sans-serif;
+                  transition: none;
+                }
+
+                .box-counter:hover {
+                  transform: none;
+                  box-shadow: none;
+                }
+
+                .box-counter .box-counter-main {
+                  display: none; /* Hide icons if you want to match the clean layout */
+                }
+
+                .box-counter .box-counter-content {
+                  margin-top: 0;
+                }
+
+                .box-counter .counter-wrapper {
+                  justify-content: center;
+                }
+
+                .box-counter .counter-value {
+                  font-size: 32px;
+                  font-weight: 600;
+                  color: #50aa3e;
+                }
+
+                .box-counter .box-counter-title {
+                  font-size: 13px;
+                  font-weight: 400;
+                  color: #777;
+                  padding: 0;
+                  margin-top: 5px;
+                }
+
+                .box-counter .box-counter-title:before {
+                  content: none;
+                }
+
+                .counter-section {
+                  padding-top: 10px;
+                  padding-bottom: 10px;
+                }
+              </style>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pt-5">
+          <div class="col-12">
+            <div class="herotext text-center">
+              <h4 class="pb-3">Key Challenges</h4>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-3 text-center block">
+            <div class="icon"><i class="las la-file-alt"></i></div>
+            <h2>Weak Documentation</h2>
+            <p>Manual or inconsistent records</p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 text-center block">
+            <div class="icon"><i class="las la-users-cog"></i></div>
+            <h2>Fragmented Teams</h2>
+            <p>Unclear responsibilities</p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 text-center block">
+            <div class="icon"><i class="las la-bolt"></i></div>
+            <h2>Delayed Detection</h2>
+            <p>Errors found too late</p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3 text-center block">
+            <div class="icon"><i class="las la-chart-line"></i></div>
+            <h2>Compliance Gaps</h2>
+            <p>Growth outpaces controls</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- The Problem We Solve ENDS -->
+    <!-- FEATURES STARTS
+			========================================================================= -->
+
+    <section class="contact-us-section py-5" id="platform">
+      <div class="container">
+        <div class="row justify-content-between align-items-start g-4">
+          <div class="col-12 col-lg-6">
+            <div class="herotext pe-lg-4">
+              <h6 class="herotext text-uppercase mb-3">/Role-Based Features</h6>
+              <h2 class="mb-3 text-white">
+                Purpose-built tools for every team role
+              </h2>
+              <h5 class="fw-normal mb-0 text-light">
+                Each role gets only what it needs to operate, monitor, and
+                improve quality and compliance in real-time.
+              </h5>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6 col-xl-5">
+            <div
+              class="accordion pt-lg-2 pt-4"
+              id="accordionExample"
+              style="max-width: 100%"
+            >
+              <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingOne">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Organization Admin
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <i class="fas fa-check-circle text-success me-2"></i>Set
+                        up the organization structure
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle text-success me-2"></i
+                        >Flexible role permissions
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle text-success me-2"></i
+                        >Centralized control panel
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    QA Manager
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingTwo"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <i class="fas fa-check-circle text-success me-2"></i
+                        >Assign tasks
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle text-success me-2"></i
+                        >Track performance
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle text-success me-2"></i
+                        >Analyze trends
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item mb-3">
+                <h2 class="accordion-header" id="headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    QA Officer
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingThree"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <i class="fas fa-check-circle text-success me-2"></i
+                        >Execute inspections
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle text-success me-2"></i>Log
+                        observations
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle text-success me-2"></i
+                        >Raise violations
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    Employee
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingFour"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <ul class="list-unstyled mb-0">
+                      <li>
+                        <i class="fas fa-check-circle text-success me-2"></i
+                        >Clearly view assigned tasks
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle text-success me-2"></i
+                        >Update task status
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle text-success me-2"></i
+                        >Engage with inspection feedback
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .contact-us-section {
+        position: relative;
+        background: url("assets/imgs/features/2.jpg") no-repeat center center;
+        background-size: cover;
+        overflow: hidden;
+      }
+
+      .contact-us-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        z-index: 0;
+      }
+
+      .contact-us-section > .container {
+        position: relative;
+        z-index: 1;
+      }
+    </style>
+    <!-- /.. FEATURES ENDS
+			========================================================================= -->
+    <!-- How it works STARTS -->
+    <section class="home-services light-grey-bg" id="howItWorks">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="herotext text-center">
+              <h6>/How It Works</h6>
+              <h2>Streamline your compliance in five simple steps</h2>
+              <h5 class="pt-2">
+                From setup to ongoing improvement—we guide every stage
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center pt-5 justify-content-center">
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-search"></i></div>
+            <h2>Initial Assessment</h2>
+            <p>
+              We review your establishment's current processes and compliance
+              status.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-sliders-h"></i></div>
+            <h2>System Customization</h2>
+            <p>
+              We tailor the platform to fit your business type, size, and
+              operations.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-users-cog"></i></div>
+            <h2>Staff Training</h2>
+            <p>
+              Your team learns how to use the tools effectively through guided
+              training.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-clipboard-list"></i></div>
+            <h2>Ongoing Inspections</h2>
+            <p>
+              Conduct regular inspections, log results, and monitor team
+              performance.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-chart-line"></i></div>
+            <h2>Reports & Insights</h2>
+            <p>
+              Access performance data and get practical improvement suggestions
+              anytime.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Key Differentiators STARTS
+======================================================================== -->
+    <section class="pricing" id="Keys">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="herotext text-center">
+              <h6>/Key Differentiators</h6>
+              <h2>Why Emtethal is different</h2>
+              <h5 class="pt-2">
+                Built for compliance. Powered by automation. Backed by insight.
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-5 g-0 g-lg-5">
+          <div class="col-12 col-md-4 text-start">
+            <div class="block">
+              <div class="herotext secondary-bg p-4">
+                <h4><i class="las la-file-alt"></i> Paperless</h4>
+                <p style="color: white">Fully automated workflows</p>
+              </div>
+              <ul class="pt-4">
+                <li>
+                  <i class="lar la-check-circle"></i> No manual checklists
+                </li>
+                <li>
+                  <i class="lar la-check-circle"></i> Auto alerts and tracking
+                </li>
+                <li>
+                  <i class="lar la-check-circle"></i> Instant documentation
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 text-start">
+            <div class="block">
+              <div class="herotext primary-bg p-4 best">
+                <h4><i class="las la-map-marker-alt"></i> Saudi Focused</h4>
+                <p>Tailored for local compliance</p>
+              </div>
+              <ul class="pt-4">
+                <li>
+                  <i class="lar la-check-circle"></i> Aligns with SFDA rules
+                </li>
+                <li><i class="lar la-check-circle"></i> Arabic-ready UI</li>
+                <li><i class="lar la-check-circle"></i> Local audit formats</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 text-start">
+            <div class="block">
+              <div class="herotext secondary-bg p-4">
+                <h4><i class="las la-brain"></i> Smart Tools</h4>
+                <p>Training and reporting included</p>
+              </div>
+              <ul class="pt-4">
+                <li>
+                  <i class="lar la-check-circle"></i> Built-in training modules
+                </li>
+                <li>
+                  <i class="lar la-check-circle"></i> Real-time dashboards
+                </li>
+                <li>
+                  <i class="lar la-check-circle"></i> Secure and easy to use
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <br />
+    </section>
+
+    <!-- /.. Key Differentiators ENDS
+======================================================================== -->
+    <!-- Our Roadmap STARTS
+======================================================================== -->
+
+    <section class="home-services light-grey-bg" id="roadmap">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="herotext text-center">
+              <h6>/Our Roadmap</h6>
+              <h2>Focused on integration and strategic growth</h2>
+              <h5 class="pt-2">
+                Building what matters to deliver compliance, efficiency, and
+                scale
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center pt-5">
+          <div class="col-12 col-md-6 col-lg-6 block">
+            <div class="icon"><i class="las la-project-diagram"></i></div>
+            <h2>Regulatory Integration</h2>
+            <p>
+              Direct technical integration with key regulatory bodies to
+              automate data exchange and reduce manual compliance.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 block">
+            <div class="icon"><i class="las la-handshake"></i></div>
+            <h2>Strategic Partnerships</h2>
+            <p>
+              Partnering with industry leaders and service providers to enhance
+              value and reach for regulated businesses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- /.. Our Roadmap ENDS
+======================================================================== -->
+    <!-- Market Positioning
+======================================================================== -->
+    <section class="market-positioning-section py-5" id="marketPositioning">
+      <div class="container-fluid px-0">
+        <div class="row g-0">
+          <div class="col-12 col-lg-6 position-relative overflow-hidden">
+            <div class="image-blur-wrapper">
+              <img
+                loading="lazy"
+                src="assets/imgs/features/big.jpg"
+                class="img-fluid w-100 h-100 object-fit-cover"
+                alt="Market Positioning"
+              />
+              <div class="image-overlay"></div>
+            </div>
+          </div>
+
+          <div
+            class="col-12 col-lg-6 d-flex align-items-center py-5 px-4 px-lg-5"
+          >
+            <div class="text-content w-100">
+              <h6 class="herotext text-uppercase mb-3" style="color: #666">
+                /Market Positioning
+              </h6>
+              <h2 class="mb-3">Where Emtethal Stands Out</h2>
+              <h5 class="mb-4">
+                Most tools focus on operations or compliance—not both
+              </h5>
+
+              <div class="mb-4 d-flex align-items-start">
+                <div class="icon me-3 fs-3" style="color: #50aa3e">
+                  <i class="las la-balance-scale"></i>
+                </div>
+                <div>
+                  <h4 class="mb-1">Competitors</h4>
+                  <p class="mb-0">
+                    Offer limited scope—either operational tools or basic
+                    compliance tracking. Roles often share the same interface.
+                  </p>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-start">
+                <div class="icon me-3 fs-3" style="color: #50aa3e">
+                  <i class="las la-check-double"></i>
+                </div>
+                <div>
+                  <h4 class="mb-1">Emtethal</h4>
+                  <p class="mb-0">
+                    Covers the full quality cycle—training, inspection,
+                    tracking, and reporting. Each user role gets a purpose-built
+                    view.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .image-blur-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .image-blur-wrapper img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        display: block;
+        filter: brightness(0.5);
+      }
+
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        /*backdrop-filter: blur(2px);
+        background-color: rgba(0, 0, 0, 0.4);*/
+      }
+
+      .object-fit-cover {
+        object-fit: cover;
+      }
+    </style>
+    <!-- Market Positioning ENDs
+======================================================================== -->
+    <!-- SERVICES STARTS -->
+    <section class="home-services light-grey-bg" id="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="herotext text-center">
+              <h6>/The Solution – What We Offer</h6>
+              <h2>
+                Emtethal: Intelligent Compliance Solutions<br
+                  class="d-none d-lg-block"
+                />
+                <!--for hospitality and food businesses-->
+              </h2>
+              <h5 class="pt-2">
+                We help you simplify compliance, automate reporting, and boost
+                team accountability
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="row text-center pt-5">
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-clipboard-check"></i></div>
+            <h2>Digital Checklists</h2>
+            <p>
+              Access ready-made checklists that match local regulations. Create
+              and manage them in one place.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-search-location"></i></div>
+            <h2>Inspections Anywhere</h2>
+            <p>
+              Perform inspections on any device. Detect issues fast. Log and
+              track results in real time.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-chart-bar"></i></div>
+            <h2>Performance Tracking</h2>
+            <p>
+              Monitor trends across branches and teams. Analyze quality scores.
+              Spot weak areas before they cost you.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-user-cog"></i></div>
+            <h2>Role-Based Access</h2>
+            <p>
+              Assign tasks by role. Give each user the right tools. Keep
+              everyone accountable and informed.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-graduation-cap"></i></div>
+            <h2>Built-In Training</h2>
+            <p>
+              Train teams using integrated, interactive content. Keep everyone
+              aligned with evolving standards.
+            </p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 block">
+            <div class="icon"><i class="las la-file-alt"></i></div>
+            <h2>Regulatory Reports</h2>
+            <p>
+              Generate reports aligned with authority formats. Share them
+              directly during audits or inspections.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.. SERVICES ENDS -->
+    <!-- targets
+========================================================================= -->
+
+    <section class="home-intro" id="targets">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12">
+            <div class="herotext text-center mb-5">
+              <h6 class="text-uppercase text-muted">/Who we serve</h6>
+              <h2 class="fw-bold">
+                Quality management made easy for hospitality
+              </h2>
+            </div>
+
+            <div class="row sectors">
+              <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+                <div
+                  class="d-flex flex-column align-items-center justify-content-center"
+                >
+                  <div class="icon mb-2 sectors-icon">
+                    <i class="fas fa-utensils"></i>
+                  </div>
+                  <div class="detail">
+                    <h5 class="fw-semibold">Restaurants & Cafés</h5>
+                    <p class="description1 text-center">
+                      Independent and chain businesses
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+                <div
+                  class="d-flex flex-column align-items-center justify-content-center"
+                >
+                  <div class="icon mb-2 sectors-icon">
+                    <i class="fas fa-hotel"></i>
+                  </div>
+                  <div class="detail">
+                    <h5 class="fw-semibold">Hotels & Tourism</h5>
+                    <p class="description1 text-center">
+                      Hospitality and travel-based services
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+                <div
+                  class="d-flex flex-column align-items-center justify-content-center"
+                >
+                  <div class="icon mb-2 sectors-icon">
+                    <i class="fas fa-briefcase"></i>
+                  </div>
+                  <div class="detail">
+                    <h5 class="fw-semibold">SMBs</h5>
+                    <p class="description1 text-center">
+                      Businesses without in-house QA teams
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 col-lg-3 text-center mb-4">
+                <div
+                  class="d-flex flex-column align-items-center justify-content-center"
+                >
+                  <div class="icon mb-2">
+                    <i class="fas fa-rocket sectors-icon"></i>
+                  </div>
+                  <div class="detail">
+                    <h5 class="fw-semibold">Growing Operations</h5>
+                    <p class="description1 text-center">
+                      Teams that need automation and scale
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        .sectors-icon {
+          color: #50aa3e;
+        }
+        .icon i {
+          font-size: 40px;
+          /*color: #50aa3e;*/
+        }
+
+        .block .icon i.fas.fa-rocket {
+          font-size: 38px;
+        }
+
+        .description1 {
+          font-size: 12px;
+          color: lightgray;
+          margin: 0;
+          white-space: nowrap;
+          overflow: visible;
+          text-overflow: unset;
+          max-width: 220px;
+          padding-top: 0px;
+          color: #666;
+        }
+
+        .sectors {
+          padding-top: 60px;
+        }
+
+        .herotext h6 {
+          letter-spacing: 1px;
+          color: #666;
+        }
+
+        .herotext h2 {
+          font-size: 30px;
+          color: #111;
+        }
+      </style>
+    </section>
+
+    <!-- /. targets ENDS
+========================================================================= -->
+
+    <!-- ABOUT US STARTS
+========================================================================= -->
+    <section class="home-intro light-grey-bg" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-lg-6">
+            <div class="herotext">
+              <h6>/Who we are</h6>
+              <h2>Emtethal: Your hospitality compliance partner</h2>
+              <h5 class="pt-2" style="text-align: justify">
+                Founded in 2024, Emtethal is a Saudi platform built to lead
+                quality and compliance in hospitality. Our digital solution
+                helps food businesses meet top standards efficiently. Born from
+                real market needs, we simplify inspections and documentation.
+                Emtethal replaces paper processes with a smart, seamless
+                experience.
+              </h5>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 offset-lg-1 pt-4 pt-lg-0">
+            <img
+              loading="lazy"
+              src="assets/imgs/about/pic1.png"
+              class="img-fluid"
+              alt="About Emtethal"
+            />
+          </div>
+        </div>
+
+        <!-- Vision and Mission as new row -->
+        <div class="row pt-5 gx-4 gy-4">
+          <div class="col-12 col-md-6 block">
+            <div
+              class="icon d-flex align-items-center justify-content-center mb-3"
+              style="
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: #eaf7e4;
+                font-size: 28px;
+                color: #50aa3e;
+              "
+            >
+              <i class="las la-eye"></i>
+            </div>
+            <div class="detail pt-2">
+              <h4>Vision</h4>
+              <p>
+                Set the regional standard for quality. Make hospitality safer,
+                smarter, and stronger.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 block">
+            <div
+              class="icon d-flex align-items-center justify-content-center mb-3"
+              style="
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: #eaf7e4;
+                font-size: 28px;
+                color: #50aa3e;
+              "
+            >
+              <i class="las la-bullseye"></i>
+            </div>
+            <div class="detail pt-2">
+              <h4>Mission</h4>
+              <p>
+                Empower teams to manage compliance. Deliver clarity, control,
+                and results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /. ABOUT US ENDS
+========================================================================= -->
+    <!-- /. Our TEAM Starts
+========================================================================= -->
+
+    <section class="team mt-3" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="herotext text-center">
+              <h6>/Meet Our Team</h6>
+              <h2>Our Core Members</h2>
+            </div>
+          </div>
+        </div>
+        <div class="team-hierarchy pt-5">
+          <!-- Leadership Level -->
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    loading="lazy"
+                    src="assets/imgs/team/Abdulrahman.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Abdulrahman"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Abdulrahman Joud</h3>
+                  <h6 class="text-muted">Co-founder & CEO</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    loading="lazy"
+                    src="assets/imgs/team/Abdullah.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Abdullah"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Abdullah Joud</h3>
+                  <h6 class="text-muted">Co-founder & CTO</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Senior Level -->
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    loading="lazy"
+                    src="assets/imgs/team/Abdelhamid.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Abdelhamid"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Dr. Abdelhamid Hashem</h3>
+                  <h6 class="text-muted">Quality Advisor</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    loading="lazy"
+                    src="assets/imgs/team/Maram.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Maram"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Maram Ali</h3>
+                  <h6 class="text-muted">Project Manager</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    loading="lazy"
+                    src="assets/imgs/team/Sarah.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Sarah"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Sarah Hussein</h3>
+                  <h6 class="text-muted">Product Manager</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    loading="lazy"
+                    src="assets/imgs/team/unkown.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Saleh"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Saleh Ghalayini</h3>
+                  <h6 class="text-muted">Go-To-Market Consultant</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Team Members Level -->
+          <div class="row justify-content-center">
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    loading="lazy"
+                    src="assets/imgs/team/Yamen.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Yamen"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Yamen Bayer</h3>
+                  <h6 class="text-muted">Software Engineer</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    loading="lazy"
+                    src="assets/imgs/team/Mutaz.jpg"
+                    class="img-fluid rounded-circle"
+                    alt="Moataz"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Moataz Omar</h3>
+                  <h6 class="text-muted">Software Engineer</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    loading="lazy"
+                    src="assets/imgs/team/Abdelmasih.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Abdelmasih"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Abdelmasih Rafaat</h3>
+                  <h6 class="text-muted">Software Engineer</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+              <div class="team-card text-center">
+                <div class="pic pb-4">
+                  <img
+                    loading="lazy"
+                    src="assets/imgs/team/Azzam.svg"
+                    class="img-fluid rounded-circle"
+                    alt="Azzam"
+                  />
+                </div>
+                <div class="details">
+                  <h3>Azzam Ali</h3>
+                  <h6 class="text-muted">Software Engineer</h6>
+                  <ul class="socialmedia pt-2 list-inline">
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-facebook-f"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="#"><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .team-hierarchy .pic img {
+          width: 120px;
+          height: 120px;
+          object-fit: cover;
+          border: 3px solid #f8f9fa;
+        }
+        .team-hierarchy .details {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .team-hierarchy .details h3 {
+          font-size: 1.25rem;
+          margin-bottom: 0.5rem;
+          color: #333;
+          white-space: nowrap; /* Prevent name wrapping */
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .team-hierarchy .details h6 {
+          font-size: 0.9rem;
+          margin-bottom: 1rem;
+          flex-grow: 1;
+        }
+        .team-hierarchy .socialmedia {
+          margin-top: auto;
+        }
+        .team-hierarchy .socialmedia li {
+          margin: 0 8px;
+          display: inline-block; /* Ensure no commas or unwanted separators */
+        }
+        .team-hierarchy .socialmedia a {
+          color: #555;
+          font-size: 1.1rem;
+          transition: color 0.3s;
+        }
+        .team-hierarchy .socialmedia a:hover {
+          color: #007bff;
+        }
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+          .team-hierarchy .team-card {
+            min-height: 300px;
+          }
+          .team-hierarchy .pic img {
+            width: 100px;
+            height: 100px;
+          }
+          .team-hierarchy .details h3 {
+            font-size: 1.1rem;
+          }
+          .team-hierarchy .details h6 {
+            font-size: 0.85rem;
+          }
+        }
+        @media (max-width: 768px) and (min-width: 576px) {
+          .team-hierarchy .team-card {
+            min-height: 300px;
+          }
+          .team-hierarchy .pic img {
+            width: 130px; /* Larger photos on large mobile screens */
+            height: 130px;
+          }
+          .team-hierarchy .details h3 {
+            font-size: 1.1rem;
+          }
+          .team-hierarchy .details h6 {
+            font-size: 0.85rem;
+          }
+          .team-hierarchy .socialmedia li {
+            margin: 0 7px;
+          }
+          .team-hierarchy .socialmedia a {
+            font-size: 1.1rem;
+          }
+        }
+        @media (max-width: 576px) {
+          .team-hierarchy .team-card {
+            min-height: 260px;
+            padding: 15px;
+          }
+          .team-hierarchy .pic img {
+            width: 80px;
+            height: 80px;
+          }
+          .team-hierarchy .details h3 {
+            font-size: 0.95rem;
+          }
+          .team-hierarchy .details h6 {
+            font-size: 0.75rem;
+          }
+          .team-hierarchy .socialmedia li {
+            margin: 0 6px;
+          }
+          .team-hierarchy .socialmedia a {
+            font-size: 1rem;
+          }
+        }
+      </style>
+    </section>
+    <!-- TEAM ENDS
+			========================================================================= -->
+    <!-- VIDEO STARTS
+			========================================================================= -->
+    <section class="video bg-img text-center" hidden>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h6>
+              <a class="popup-vimeo" href="https://vimeo.com/45830194"
+                ><i class="las la-play"></i>&nbsp;</a
+              >
+            </h6>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.. VIDEO ENDS
+			========================================================================= -->
+    <!-- JOIN US STARTS
+			========================================================================= -->
+    <section class="join-us primary-bg text-center" hidden>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="herotext">
+              <h6>/Join Us</h6>
+              <h2>
+                Smart Solutions<br class="d-none d-md-block" />
+                for Hospitality Quality & Compliance
+              </h2>
+            </div>
+            <ul class="pt-4">
+              <li><a href="#" class="btn btn-secondary">OUR SERVICES</a></li>
+              <li>
+                <a href="#" class="btn-transparent btn-secondary">JOIN NOW</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.. JOIN US ENDS
+			========================================================================= -->
+    <!-- CONTACT US STARTS
+========================================================================= -->
+    <section class="contact-us light-grey-bg" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-8">
+            <div class="herotext pb-4">
+              <h6
+                class="herotext d-flex justify-content-center d-md-block text-md-start"
+              >
+                /ESTIMATE PROJECT
+              </h6>
+              <h2
+                class="d-flex justify-content-center d-md-block text-md-start"
+              >
+                Let Us Know Here
+              </h2>
+            </div>
+            <form
+              action="process.php"
+              method="post"
+              name="ContactForm"
+              id="ContactForm"
+            >
+              <div class="mb-3 position-relative w-100">
+                <i
+                  class="fas fa-user position-absolute top-50 start-0 translate-middle-y ms-3"
+                  style="color: #50aa3e"
+                ></i>
+                <input
+                  type="text"
+                  class="form-control ps-5 py-3 rounded-3 shadow-sm w-100"
+                  name="name"
+                  placeholder="Enter your name"
+                />
+              </div>
+
+              <div class="mb-3 position-relative w-100">
+                <i
+                  class="fas fa-envelope position-absolute top-50 start-0 translate-middle-y ms-3"
+                  style="color: #50aa3e"
+                ></i>
+                <input
+                  type="email"
+                  class="form-control ps-5 py-3 rounded-3 shadow-sm w-100"
+                  name="email"
+                  placeholder="Enter your email"
+                />
+              </div>
+
+              <div class="mb-3 position-relative w-100">
+                <i
+                  class="fas fa-comment-dots position-absolute top-0 start-0 mt-3 ms-3"
+                  style="color: #50aa3e"
+                ></i>
+                <textarea
+                  class="form-control ps-5 py-3 rounded-3 shadow-sm w-100"
+                  name="comment"
+                  placeholder="Enter your message"
+                  rows="5"
+                ></textarea>
+              </div>
+
+              <div class="text-center text-md-start">
+                <button
+                  type="submit"
+                  value="Submit"
+                  name="submitf"
+                  id="submitf"
+                  class="btn btn-primary px-4 py-2 mt-2"
+                >
+                  SEND MESSAGE
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Info Row -->
+        <div class="row text-center text-md-start pt-3 gy-4 d-md-flex">
+          <!-- Address -->
+          <div class="col-12 col-md-4">
+            <div
+              class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-start text-center text-md-start"
+            >
+              <div class="mb-2 mb-md-0 me-md-2">
+                <i
+                  class="las la-map-marker-alt contact-us-text-icons"
+                  style="font-size: 36px"
+                ></i>
+              </div>
+              <div>
+                <div
+                  class="fw-bold contact-us-text-icons text-uppercase small mb-1"
+                >
+                  Get Us Here
+                </div>
+                <div>Riyadh, Saudi Arabia</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Website -->
+          <div class="col-12 col-md-4">
+            <div
+              class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-start text-center text-md-start"
+            >
+              <div class="mb-2 mb-md-0 me-md-2">
+                <i
+                  class="las la-globe contact-us-text-icons"
+                  style="font-size: 36px"
+                ></i>
+              </div>
+              <div>
+                <div
+                  class="fw-bold contact-us-text-icons text-uppercase small mb-1"
+                >
+                  Website
+                </div>
+                <div>
+                  <a
+                    href="https://www.emtethal.com"
+                    target="_blank"
+                    class="text-dark text-decoration-none"
+                  >
+                    www.emtethal.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="col-12 col-md-4">
+            <div
+              class="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-start text-center text-md-start"
+            >
+              <div class="mb-2 mb-md-0 me-md-2">
+                <i
+                  class="las la-envelope-open contact-us-text-icons"
+                  style="font-size: 36px"
+                ></i>
+              </div>
+              <div>
+                <div
+                  class="fw-bold contact-us-text-icons text-uppercase small mb-1"
+                >
+                  Write Us
+                </div>
+                <div>
+                  <a
+                    href="mailto:info@emtethal.com"
+                    class="text-dark text-decoration-none"
+                  >
+                    info@emtethal.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .contact-us-text-icons {
+        color: #50aa3e;
+      }
+      #submitf {
+        background-color: #50aa3e;
+      }
+    </style>
+    <!-- /. CONTACT US ENDS
+========================================================================= -->
+
+    <!-- MAPS STARTS
+			========================================================================= -->
+    <section class="map p-0" hidden>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 p-0">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d927758.0370464313!2d46.163000437018475!3d24.724997748455827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2snl!4v1747157088414!5m2!1sen!2snl"
+              height="400"
+              allowfullscreen=""
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.. MAPS ENDS
+			========================================================================= -->
+    <!-- FOOTER STARTS
+			========================================================================= -->
+    <footer class="dark-grey-bg text-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <ul>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#services">SERVICES</a></li>
+              <li><a href="#targets">SECTORS</a></li>
+              <li><a href="#platform">PLATFORM</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row pt-4">
+          <div class="col-12">
+            <ul class="socialmedia">
+              <li>
+                <a href="#"><i class="lab la-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="lab la-linkedin-in"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="lab la-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="lab la-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row pt-3 copyright">
+          <div class="col-12">EMTETHAL© 2024</div>
+        </div>
+      </div>
+    </footer>
+    <!-- /.. FOOTER ENDS
+			========================================================================= -->
+    <!-- TO TOP STARTS
+			========================================================================= -->
+    <a href="#home" class="back-to-top"><i class="las la-angle-up"></i></a>
+    <!-- /.. TO TOP ENDS
+			========================================================================= -->
+    <!-- INCLUD ALL JS FILES 
+			========================================================================= -->
+    <!--JQUERY MIN JS-->
+    <script src="assets/lib/jquery-1.12.4/jquery.min.js"></script>
+    <!--BOOTSTRAP JS-->
+    <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="assets/lib/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="assets/lib/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLICEY ADD-ON FILES -->
+    <script src="assets/lib/revolution/revolution-addons/slicey/js/revolution.addon.slicey.min.js?ver=1.0.0"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  
+			(Load Extensions only on Local File Systems !  
+			The following part can be removed on Server for On Demand Loading) -->
+    <script src="assets/lib/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="assets/lib/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="assets/lib/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="assets/lib/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="assets/lib/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="assets/lib/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="assets/lib/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="assets/lib/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="assets/lib/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script>
+      var tpj = jQuery;
+      var revapi24;
+      tpj(document).ready(function () {
+        if (tpj("#rev_slider_24_1").revolution == undefined) {
+          revslider_showDoubleJqueryError("#rev_slider_24_1");
+        } else {
+          revapi24 = tpj("#rev_slider_24_1")
+            .show()
+            .revolution({
+              sliderType: "standard",
+              jsFileLocation: "revolution/js/",
+              sliderLayout: "fullscreen",
+              dottedOverlay: "none",
+              delay: 9000,
+              navigation: {
+                keyboardNavigation: "off",
+                keyboard_direction: "horizontal",
+                mouseScrollNavigation: "off",
+                mouseScrollReverse: "default",
+                onHoverStop: "off",
+                bullets: {
+                  enable: true,
+                  hide_onmobile: false,
+                  style: "bullet-bar",
+                  hide_onleave: false,
+                  direction: "horizontal",
+                  h_align: "center",
+                  v_align: "bottom",
+                  h_offset: 0,
+                  v_offset: 50,
+                  space: 5,
+                  tmp: "",
+                },
+                arrows: {
+                  style: "uranus",
+                  enable: true,
+                  hide_onmobile: false,
+                  hide_onleave: false,
+                  tmp: "",
+                  left: {
+                    h_align: "left",
+                    v_align: "center",
+                    h_offset: 10,
+                    v_offset: 0,
+                  },
+                  right: {
+                    h_align: "right",
+                    v_align: "center",
+                    h_offset: 10,
+                    v_offset: 0,
+                  },
+                },
+              },
+              responsiveLevels: [1240, 1024, 778, 480],
+              visibilityLevels: [1240, 1024, 778, 480],
+              gridwidth: [1240, 1024, 778, 480],
+              gridheight: [868, 768, 960, 720],
+              lazyType: "none",
+              shadow: 0,
+              spinner: "spinner1",
+              stopLoop: "off",
+              stopAfterLoops: -1,
+              stopAtSlide: -1,
+              shuffle: "off",
+              autoHeight: "off",
+              fullScreenAutoWidth: "off",
+              fullScreenAlignForce: "off",
+              fullScreenOffsetContainer: "",
+              fullScreenOffset: "0px",
+              hideThumbsOnMobile: "off",
+              hideSliderAtLimit: 0,
+              hideCaptionAtLimit: 0,
+              hideAllCaptionAtLilmit: 0,
+              debugMode: false,
+              fallbacks: {
+                simplifyAll: "off",
+                nextSlideOnWindowFocus: "off",
+                disableFocusListener: false,
+              },
+            });
+        }
+
+        if (revapi24) revapi24.revSliderSlicey();
+      }); /*ready*/
+    </script>
+    <!-- PRELOADER -->
+    <script src="assets/lib/preloader/sPreloader.js"></script>
+    <!-- OWL CAROUSEL -->
+    <script src="assets/lib/owl-carousel/owl.carousel.js"></script>
+    <!-- ISOTOPE GALLERY -->
+    <script src="assets/lib/isotope/jquery.isotope.min.js"></script>
+    <script src="assets/lib/isotope/custom-isotope-mansory.js"></script>
+    <!-- MAGNIFIC POPUP -->
+    <script src="assets/lib/magnific-popup/jquery.magnific-popup.js"></script>
+    <!-- CONTACT FORM JS -->
+    <script src="assets/js/contact-form/contact-form.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="assets/js/script.js"></script>
+    <!--Languages-->
+    <script src="assets/js/mdb.min.js"></script>
+  </body>
+</html>
