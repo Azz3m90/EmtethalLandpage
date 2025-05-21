@@ -1,4 +1,4 @@
-/* Common Style */
+﻿/* Common Style */
 html * {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -25,27 +25,51 @@ body {
   top: 0;
   z-index: 999999999;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
 }
-.main-preloader .main-preloader-inner {
+
+.main-preloader-inner {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  position: absolute;
-  top: 50%;
-  margin-top: -60px;
   width: 100%;
 }
-.main-preloader .preloader-percentage {
+
+.main-preloader img {
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.preloader-percentage {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  color: #000;
+  color: #50aa3e;
   margin: 0;
 }
-.main-preloader .preloader-percentage span {
-  display: inline-block;
-  float: center;
+
+.preloader-percentage span {
   font-size: 70px;
 }
+
+.preloader-bar-outer {
+  width: 60%;
+  height: 8px;
+  background: #ddd;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.preloader-bar {
+  height: 100%;
+  width: 0%;
+  background: #50aa3e;
+  transition: width 0.3s ease;
+}
+
 
 a {
   -webkit-transition: all 0.3s;
@@ -2621,7 +2645,7 @@ footer .copyright {
 /* Features Section */
 .contact-us-section {
   position: relative;
-  background: url("assets/imgs/features/2.jpg") no-repeat center center;
+  background: url("../imgs/features/s2-min.jpg") no-repeat center center;
   background-size: cover;
   overflow: hidden;
 }
