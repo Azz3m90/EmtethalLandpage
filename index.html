@@ -60,10 +60,26 @@
         margin-left: 0px;
         margin-right: unset;
       }
-      .accordion-button::after {
-        margin-right: auto;
-        margin-left: unset;
+      .accordion-button {
+        direction: rtl;
+        text-align: right;
       }
+      .accordion-button {
+        direction: rtl;
+        text-align: right;
+        padding-right: 1.25rem;
+        padding-left: 2.5rem;
+        position: relative;
+      }
+
+      .accordion-button::after {
+        position: absolute;
+        left: 1rem;
+        right: unset;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+      }
+
       .text-md-start {
         text-align: right !important;
       }
@@ -231,16 +247,43 @@
         ]
       }
     </script>
+    <style>
+      @media (max-width: 991.98px) {
+        .navbar-brand.white-logo,
+        .navbar-brand.black-logo {
+          top: 15px !important;
+        }
+      }
+    </style>
+    <script>
+      document
+        .querySelectorAll("#navbarSupportedContent .nav-link")
+        .forEach((link) => {
+          link.addEventListener("click", () => {
+            const collapseEl = document.getElementById(
+              "navbarSupportedContent"
+            );
+            if (collapseEl.classList.contains("show")) {
+              new bootstrap.Collapse(collapseEl).hide();
+            }
+          });
+        });
+    </script>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navigation">
     <!-- PRELOADER STARTS -->
     <div id="main-preloader" class="main-preloader semi-dark-background">
       <div class="main-preloader-inner center">
-        <h1 class="preloader-percentage center">
+        <img
+          src="assets/imgs/Loader/emtethalLoader.webp"
+          class="center"
+          alt=""
+        />
+        <h1 class="preloader-percentage center" hidden>
           <span class="preloader-percentage-text">0</span>
           <span class="percentage">%</span>
         </h1>
-        <div class="preloader-bar-outer">
+        <div class="preloader-bar-outer" hidden>
           <div class="preloader-bar"></div>
         </div>
       </div>
@@ -249,20 +292,26 @@
     <!-- NAVIGATION STARTS -->
     <nav id="navigation" class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand white-logo" href="#">
+        <a
+          class="navbar-brand white-logo position-absolute left-0 fixed-top"
+          style="top: 15px"
+          href="#"
+        >
           <img
             src="assets/imgs/logo-white.png"
             class="img-fluid logo-img"
             alt="شعار امتثال"
-            loading="lazy"
           />
         </a>
-        <a class="navbar-brand black-logo" href="#">
+        <a
+          class="navbar-brand black-logo position-absolute left-0 fixed-top"
+          style="top: 15px"
+          href="#"
+        >
           <img
             src="assets/imgs/logo.png"
             class="img-fluid logo-img"
             alt="شعار امتثال"
-            loading="lazy"
           />
         </a>
         <button
@@ -361,6 +410,7 @@
         </div>
       </div>
     </nav>
+
     <!-- NAVIGATION ENDS -->
     <!-- SLIDER STARTS -->
 
@@ -428,7 +478,7 @@
                           >
                         </div>
                         <div class="box-counter-title">
-                          الغرامات - النصف الثاني 2024
+                          الغرامات - النصف الثاني ٢٠٢٤
                         </div>
                       </div>
                     </article>
@@ -447,7 +497,7 @@
                           >
                         </div>
                         <div class="box-counter-title">
-                          زيارات التفتيش - النصف الثاني 2024
+                          زيارات التفتيش - النصف الثاني ٢٠٢٤
                         </div>
                       </div>
                     </article>
@@ -466,7 +516,7 @@
                           >
                         </div>
                         <div class="box-counter-title">
-                          المخالفات - الربع الأول 2024
+                          المخالفات - الربع الأول ٢٠٢٤
                         </div>
                       </div>
                     </article>
@@ -927,7 +977,6 @@
                 src="assets/imgs/features/big.jpg"
                 class="img-fluid w-100 h-100 object-fit-cover"
                 alt="موقعنا في السوق"
-                loading="lazy"
               />
               <div class="image-overlay"></div>
             </div>
@@ -1180,7 +1229,6 @@
               src="assets/imgs/about/pic1.png"
               class="img-fluid"
               alt="عن امتثال"
-              loading="lazy"
             />
           </div>
         </div>
@@ -1220,7 +1268,8 @@
               <div class="detail pt-2">
                 <h4>الرسالة</h4>
                 <p>
-                  نمكّن الفرق من إدارة الامتثال، ونقدم الوضوح، التحكم، والنتائج
+                  نمكّن الفرق من إدارة الامتثال بفعالية، ونوفر الوضوح، التحكم،
+                  والكفاءة المستدامة
                 </p>
               </div>
               <div
@@ -1263,7 +1312,6 @@
                     src="assets/imgs/team/Abdulrahman.svg"
                     class="img-fluid rounded-circle"
                     alt="عبد الرحمن"
-                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1293,7 +1341,6 @@
                     src="assets/imgs/team/Abdullah.svg"
                     class="img-fluid rounded-circle"
                     alt="عبد الله"
-                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1325,7 +1372,6 @@
                     src="assets/imgs/team/Abdelhamid.svg"
                     class="img-fluid rounded-circle"
                     alt="عبد الحميد"
-                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1355,7 +1401,6 @@
                     src="assets/imgs/team/Maram.svg"
                     class="img-fluid rounded-circle"
                     alt="مرام"
-                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1385,7 +1430,6 @@
                     src="assets/imgs/team/Sarah.svg"
                     class="img-fluid rounded-circle"
                     alt="سارة"
-                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1415,7 +1459,6 @@
                     src="assets/imgs/team/unkown.svg"
                     class="img-fluid rounded-circle"
                     alt="صالح"
-                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1447,7 +1490,6 @@
                     src="assets/imgs/team/Yamen.svg"
                     class="img-fluid rounded-circle"
                     alt="يامن"
-                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1477,7 +1519,6 @@
                     src="assets/imgs/team/Mutaz.jpg"
                     class="img-fluid rounded-circle"
                     alt="معتز"
-                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1507,7 +1548,6 @@
                     src="assets/imgs/team/Abdelmasih.svg"
                     class="img-fluid rounded-circle"
                     alt="عبد المسيح"
-                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1537,7 +1577,6 @@
                     src="assets/imgs/team/Azzam.svg"
                     class="img-fluid rounded-circle"
                     alt="عزام"
-                    loading="lazy"
                   />
                 </div>
                 <div class="details">
@@ -1740,6 +1779,13 @@
           .contact-us-text-icons {
             direction: rtl; /* Ensure text flows RTL */
           }
+          @media (max-width: 767.98px) {
+            .contact-us-text-icons.override-right {
+              text-align: center !important;
+              display: block;
+              width: 100%;
+            }
+          }
         </style>
       </div>
     </section>
@@ -1777,7 +1823,7 @@
           </div>
         </div>
         <div class="row pt-3 copyright">
-          <div class="col-12">امتثال© 2024</div>
+          <div class="col-12">امتثال© ٢٠٢٤</div>
         </div>
       </div>
     </footer>

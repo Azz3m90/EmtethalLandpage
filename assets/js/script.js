@@ -169,6 +169,16 @@ $(document).ready(function () {
 	});
 
 	$('.back-to-top').fadeOut();
+  /************************************************************************************ SCROLL TO TOP STARTS */
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$('.back-to-top-ar').fadeIn();
+		} else {
+			$('.back-to-top-ar').fadeOut();
+		}
+	});
 
+	$('.back-to-top-ar').fadeOut();
 
 });
+
