@@ -17,97 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
 
-    <style>
-      body {
-        font-family: 'Cairo', sans-serif;
-        direction: rtl;
-        text-align: right;
-      }
-      .navbar-nav {
-        margin-right: 0px !important;
-        margin-left: unset !important;
-      }
-      .nav-link,
-      .sub-nav-link {
-        text-align: right;
-      }
-      .sub-nav {
-        right: 0;
-        left: unset;
-      }
-      .herotext,
-      .text-content,
-      .box-counter-content,
-      .block,
-      .team-card,
-      .contact-us-text-icons {
-        text-align: center;
-      }
-      .icon {
-        margin-left: 10px;
-        margin-right: unset;
-      }
-      .form-control {
-        padding-right: 3rem !important;
-        padding-left: 1rem !important;
-      }
-      .form-control::placeholder {
-        text-align: right;
-      }
-      .fas,
-      .las,
-      .lar {
-        margin-left: 0px;
-        margin-right: unset;
-      }
-      .accordion-button {
-        direction: rtl;
-        text-align: right;
-      }
-      .accordion-button {
-        direction: rtl;
-        text-align: right;
-        padding-right: 1.25rem;
-        padding-left: 2.5rem;
-        position: relative;
-      }
 
-      .accordion-button::after {
-        position: absolute;
-        left: 1rem;
-        right: unset;
-        top: 50%;
-        transform: translateY(-50%) rotate(0deg);
-      }
-
-      .text-md-start {
-        text-align: right !important;
-      }
-      @media (max-width: 767px) {
-        .text-center {
-          text-align: right !important;
-        }
-      }
-      /* Move logo to the left */
-      .navbar-brand.white-logo,
-      .navbar-brand.black-logo {
-        position: absolute;
-        right: unset; /* Left in RTL context */
-        left: 15px;
-      }
-      .navbar-toggler {
-        margin-left: auto; /* Ensure toggle button stays on the right */
-      }
-      @media (max-width: 991px) {
-        .navbar-brand.white-logo,
-        .navbar-brand.black-logo {
-          left: 10px; /* Adjust for toggle button on mobile */
-        }
-        .navbar-collapse {
-          text-align: right;
-        }
-      }
-    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
@@ -247,14 +157,7 @@
         ]
       }
     </script>
-    <style>
-      @media (max-width: 991.98px) {
-        .navbar-brand.white-logo,
-        .navbar-brand.black-logo {
-          top: 15px !important;
-        }
-      }
-    </style>
+
     <script>
       document
         .querySelectorAll("#navbarSupportedContent .nav-link")
@@ -292,21 +195,7 @@
     </div>
     <!-- /.. PRELOADER ENDS -->
     <!-- NAVIGATION STARTS -->
-    <style>
-      @media (max-width: 768px) {
-        .navbar-nav {
-          flex-direction: column;
-          padding: 10px 0;
-        }
-        .nav-item {
-          padding: 10px 0;
-          text-align: center;
-        }
-        .sub-nav {
-          padding-left: 20px;
-        }
-      }
-    </style>
+
     <nav id="navigation" class="navbar navbar-expand-lg navbar-light fixed-top">
       <div class="container-fluid">
         <a
@@ -475,19 +364,7 @@
     </div>
   </div>
 </nav>
-<style>
-@media (max-width: 767.98px) {
-  .navbar-nav {
-    height: 100vh;
-    overflow-y: auto;
-    flex-direction: column;
-    justify-content: start;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
 
-</style>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     // Language switch for desktop
@@ -962,12 +839,6 @@ document.querySelectorAll('#navbarSupportedContentMobile .nav-link').forEach(lin
             </div>
           </div>
         </div>
-        <style>
-          .rtl-align {
-            direction: rtl;
-            text-align: right;
-          }
-        </style>
 
         <div class="row pt-5 g-0 g-lg-5">
           <div class="col-12 col-md-4">
@@ -1150,33 +1021,7 @@ document.querySelectorAll('#navbarSupportedContentMobile .nav-link').forEach(lin
       </div>
     </section>
 
-    <style>
-      .image-blur-wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
-      }
 
-      .image-blur-wrapper img {
-        object-fit: cover;
-        height: 100%;
-        width: 100%;
-        display: block;
-        filter: brightness(0.5);
-      }
-
-      .image-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-      .object-fit-cover {
-        object-fit: cover;
-      }
-    </style>
 
     <!-- Market Positioning ENDS -->
     <!-- SERVICES STARTS -->
@@ -1726,11 +1571,7 @@ document.querySelectorAll('#navbarSupportedContentMobile .nav-link').forEach(lin
     </section>
     <!-- TEAM ENDS -->
     <!-- CONTACT US STARTS -->
-    <style>
-      .force-right {
-        text-align: right !important;
-      }
-    </style>
+
     <section class="contact-us light-grey-bg" id="contact">
       <div class="container">
         <div class="row">
@@ -1783,17 +1624,18 @@ document.querySelectorAll('#navbarSupportedContentMobile .nav-link').forEach(lin
                   rows="5"
                 ></textarea>
               </div>
-              <div class="force-right">
-                <button
-                  type="submit"
-                  value="Submit"
-                  name="submitf"
-                  id="submitf"
-                  class="btn btn-primary px-4 py-2 mt-2 force-right"
-                >
-                  إرسال الرسالة
-                </button>
-              </div>
+<div class="d-flex justify-content-center justify-content-lg-start">
+  <button
+    type="submit"
+    value="Submit"
+    name="submitf"
+    id="submitf"
+    class="btn btn-primary px-4 py-2 mt-2"
+  >
+    إرسال الرسالة
+  </button>
+</div>
+
             </form>
           </div>
         </div>
@@ -1881,33 +1723,7 @@ document.querySelectorAll('#navbarSupportedContentMobile .nav-link').forEach(lin
           </div>
         </div>
 
-        <style>
-          .override-right {
-            text-align: right !important;
-          }
 
-          /* Ensure RTL text alignment and proper spacing */
-          [dir="rtl"] .text-md-end {
-            text-align: left !important; /* Override Bootstrap's text-md-start for RTL */
-          }
-          [dir="rtl"] .justify-content-md-end {
-            justify-content: flex-start !important; /* Adjust for RTL */
-          }
-          [dir="rtl"] .me-md-2 {
-            margin-right: 0 !important;
-            margin-left: 0.5rem !important; /* Replace margin-right with margin-left for RTL */
-          }
-          .contact-us-text-icons {
-            direction: rtl; /* Ensure text flows RTL */
-          }
-          @media (max-width: 767.98px) {
-            .contact-us-text-icons.override-right {
-              text-align: center !important;
-              display: block;
-              width: 100%;
-            }
-          }
-        </style>
       </div>
     </section>
     <!-- /. CONTACT US ENDS -->

@@ -5,7 +5,7 @@ html * {
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  font-family: "Cairo", sans-serif;
+  font-family: 'Cairo', sans-serif;
   color: #000;
   font-size: 16px;
   font-weight: 400;
@@ -48,7 +48,7 @@ body.noscroll {
 }
 
 .main-preloader-inner {
-  font-family: "Cairo", sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-weight: 400;
   width: 100%;
 }
@@ -59,7 +59,7 @@ body.noscroll {
 }
 
 .preloader-percentage {
-  font-family: "Cairo", sans-serif;
+  font-family: 'Cairo', sans-serif;
   font-weight: 400;
   color: #50aa3e;
   margin: 0;
@@ -2208,7 +2208,7 @@ footer .copyright {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 15px 0;
   transition: all 0.3s ease;
-  font-family: "Cairo", sans-serif;
+  font-family: 'Cairo', sans-serif;
   overflow: visible;
 }
 
@@ -3173,14 +3173,182 @@ footer .copyright {
         }
       }
 
-@media (max-width: 767.98px) {
+    .rtl-align {
+      direction: rtl;
+      text-align: right;
+    }
+    .image-blur-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .image-blur-wrapper img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        display: block;
+        filter: brightness(0.5);
+      }
+
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .object-fit-cover {
+        object-fit: cover;
+      }
+            .force-right {
+        text-align: right !important;
+      }
+
+       .override-right {
+            text-align: right !important;
+          }
+
+          /* Ensure RTL text alignment and proper spacing */
+          [dir="rtl"] .text-md-end {
+            text-align: left !important; /* Override Bootstrap's text-md-start for RTL */
+          }
+          [dir="rtl"] .justify-content-md-end {
+            justify-content: flex-start !important; /* Adjust for RTL */
+          }
+          [dir="rtl"] .me-md-2 {
+            margin-right: 0 !important;
+            margin-left: 0.5rem !important; /* Replace margin-right with margin-left for RTL */
+          }
+          .contact-us-text-icons {
+            direction: rtl; /* Ensure text flows RTL */
+          }
+          @media (max-width: 767.98px) {
+            .contact-us-text-icons.override-right {
+              text-align: center !important;
+              display: block;
+              width: 100%;
+            }
+          }
+
+               body {
+        font-family: 'Cairo', sans-serif;
+        direction: rtl;
+        text-align: right;
+      }
+      .navbar-nav {
+        margin-right: 0px !important;
+        margin-left: unset !important;
+      }
+      .nav-link,
+      .sub-nav-link {
+        text-align: right;
+      }
+      .sub-nav {
+        right: 0;
+        left: unset;
+      }
+      .herotext,
+      .text-content,
+      .box-counter-content,
+      .block,
+      .team-card,
+      .contact-us-text-icons {
+        text-align: center;
+      }
+      .icon {
+        margin-left: 10px;
+        margin-right: unset;
+      }
+      .form-control {
+        padding-right: 3rem !important;
+        padding-left: 1rem !important;
+      }
+      .form-control::placeholder {
+        text-align: right;
+      }
+      .fas,
+      .las,
+      .lar {
+        margin-left: 0px;
+        margin-right: unset;
+      }
+      .accordion-button {
+        direction: rtl;
+        text-align: right;
+      }
+      .accordion-button {
+        direction: rtl;
+        text-align: right;
+        padding-right: 1.25rem;
+        padding-left: 2.5rem;
+        position: relative;
+      }
+
+      .accordion-button::after {
+        position: absolute;
+        left: 1rem;
+        right: unset;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+      }
+
+      .text-md-start {
+        text-align: right !important;
+      }
+      @media (max-width: 767px) {
+        .text-center {
+          text-align: right !important;
+        }
+      }
+      /* Move logo to the left */
+      .navbar-brand.white-logo,
+      .navbar-brand.black-logo {
+        position: absolute;
+        right: unset; /* Left in RTL context */
+        left: 15px;
+      }
+      .navbar-toggler {
+        margin-left: auto; /* Ensure toggle button stays on the right */
+      }
+      @media (max-width: 991px) {
+        .navbar-brand.white-logo,
+        .navbar-brand.black-logo {
+          left: 10px; /* Adjust for toggle button on mobile */
+        }
+        .navbar-collapse {
+          text-align: right;
+        }
+      }
+            @media (max-width: 991.98px) {
+        .navbar-brand.white-logo,
+        .navbar-brand.black-logo {
+          top: 15px !important;
+        }
+      }
+
+            @media (max-width: 768px) {
+        .navbar-nav {
+          flex-direction: column;
+          padding: 10px 0;
+        }
+        .nav-item {
+          padding: 10px 0;
+          text-align: center;
+        }
+        .sub-nav {
+          padding-left: 20px;
+        }
+      }
+      @media (max-width: 767.98px) {
   .navbar-nav {
     height: 100vh;
     overflow-y: auto;
     max-height: calc(100vh - 56px); /* adjust if your navbar is taller */
     flex-direction: column;
     justify-content: start;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
   }
 }
