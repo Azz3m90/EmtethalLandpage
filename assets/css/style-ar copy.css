@@ -3352,3 +3352,13 @@ footer .copyright {
     padding-bottom: 0.25rem;
   }
 }
+
+
+    @media (max-width: 767.98px) {
+    .challanges-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
