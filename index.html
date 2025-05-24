@@ -274,9 +274,11 @@
     <div id="main-preloader" class="main-preloader semi-dark-background">
       <div class="main-preloader-inner center">
         <img
-          src="assets/imgs/Loader/emtethalLoader.webp"
+          src="assets/imgs/emtethal-logo.svg"
           class="center"
-          alt=""
+          alt="emtethal-loader"
+          width="240px"
+          height="240px"
         />
         <h1 class="preloader-percentage center" hidden>
           <span class="preloader-percentage-text">0</span>
@@ -348,10 +350,10 @@
               <a class="nav-link" href="#problemsToSolve">التحديات</a>
             </li>
             <li class="nav-item has-sub-nav">
-              <a class="nav-link" href="#platform">
-                المنصة
-                <i class="fas fa-chevron-down ms-1 sub-nav-icon"></i>
-              </a>
+<a class="nav-link" href="#platform">
+  المنصة
+  <i class="fas fa-chevron-down me-2 sub-nav-icon"></i>
+</a>
               <ul class="sub-nav">
                 <li class="sub-nav-item">
                   <a class="sub-nav-link" href="#howItWorks">كيف تعمل</a>
@@ -372,7 +374,7 @@
             <li class="nav-item has-sub-nav">
               <a class="nav-link" href="#services">
                 الخدمات
-                <i class="fas fa-chevron-down ms-1 sub-nav-icon"></i>
+                <i class="fas fa-chevron-down me-2  sub-nav-icon"></i>
               </a>
               <ul class="sub-nav">
                 <li class="sub-nav-item">
@@ -383,7 +385,7 @@
             <li class="nav-item has-sub-nav">
               <a class="nav-link" href="#about">
                 عنا
-                <i class="fas fa-chevron-down ms-1 sub-nav-icon"></i>
+                <i class="fas fa-chevron-down me-2  sub-nav-icon"></i>
               </a>
               <ul class="sub-nav">
                 <li class="sub-nav-item">
@@ -424,7 +426,111 @@
         </div>
       </div>
     </nav>
+    <!-- Mobile nav: show on md and below, hide on lg and above -->
+<nav id="navigation-mobile" class="navbar navbar-light fixed-top d-flex d-lg-none bg-white shadow-sm">
+  <div class="container-fluid justify-content-between">
+    <a class="navbar-brand white-logo" href="#">
+      <img src="assets/imgs/logo-white.png" class="img-fluid logo-img" alt="Logo" />
+    </a>
+    <a class="navbar-brand black-logo" href="#">
+      <img src="assets/imgs/logo.png" class="img-fluid logo-img" alt="Logo" />
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContentMobile"
+      aria-controls="navbarSupportedContentMobile"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContentMobile">
+<ul class="navbar-nav ms-auto align-items-center">
+<li class="nav-item"><a class="nav-link" href="#home">الرئيسية</a></li>
+<li class="nav-item"><a class="nav-link" href="#problemsToSolve">التحديات</a></li>
 
+<li class="nav-item"><a class="nav-link" href="#platform">المنصة</a></li>
+<li class="nav-item"><a class="nav-link" href="#howItWorks">كيف تعمل</a></li>
+<li class="nav-item"><a class="nav-link" href="#Keys">لماذا امتثال</a></li>
+<li class="nav-item"><a class="nav-link" href="#marketPositioning">موقعنا في السوق</a></li>
+<li class="nav-item"><a class="nav-link" href="#roadmap">خارطة الطريق</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#services">الخدمات</a></li>
+<li class="nav-item"><a class="nav-link" href="#targets">القطاعات</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#about">عنا</a></li>
+<li class="nav-item"><a class="nav-link" href="#team">الفريق</a></li>
+
+<li class="nav-item"><a class="nav-link" href="#contact">تواصل معنا</a></li>
+
+  <li class="nav-item">
+    <a id="language-switch-mobile" class="nav-link d-flex align-items-center" href="/index-en.html">
+      <i id="language-flag-mobile" class="fi fi-gp me-2"></i>
+    </a>
+  </li>
+</ul>
+    </div>
+  </div>
+</nav>
+<style>
+@media (max-width: 767.98px) {
+  .navbar-nav {
+    height: 100vh;
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Language switch for desktop
+    const langSwitch = document.getElementById("language-switch");
+    const flagIcon = document.getElementById("language-flag");
+    const isEnglish = window.location.pathname.includes("-en");
+    if (langSwitch && flagIcon) {
+      if (isEnglish) {
+        langSwitch.href = "./index.html";
+        flagIcon.className = "fi fi-sa ms-2";
+      } else {
+        langSwitch.href = "./index-en.html";
+        flagIcon.className = "fi fi-gb ms-2";
+      }
+    }
+
+    // Language switch for mobile
+    const langSwitchMobile = document.getElementById("language-switch-mobile");
+    const flagIconMobile = document.getElementById("language-flag-mobile");
+    if (langSwitchMobile && flagIconMobile) {
+      if (isEnglish) {
+        langSwitchMobile.href = "./index.html";
+        flagIconMobile.className = "fi fi-sa me-2";
+      } else {
+        langSwitchMobile.href = "./index-en.html";
+        flagIconMobile.className = "fi fi-gb me-2";
+      }
+    }
+
+document.querySelectorAll('#navbarSupportedContentMobile .nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    const mobileMenu = document.getElementById('navbarSupportedContentMobile');
+    if (mobileMenu.classList.contains('show')) {
+      const bsCollapse = bootstrap.Collapse.getInstance(mobileMenu);
+      if (bsCollapse) {
+        bsCollapse.hide();
+      }
+    }
+  });
+});
+
+
+  });
+</script>
     <!-- NAVIGATION ENDS -->
     <!-- SLIDER STARTS -->
 

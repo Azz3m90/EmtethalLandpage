@@ -1,1 +1,65 @@
-$(document).ready(function(){"use strict";$("body").jpreLoader({preMainSection:"#main-preloader",prePerText:".preloader-percentage-text",preBar:".preloader-bar"}),$(".navbar-collapse a").click(function(){$(".navbar-collapse").collapse("hide")});var a=$(".team-carousel");a.owlCarousel({autoplay:!1,autoplayHoverPause:!0,nav:!0,dots:!1,mouseDrag:!0,smartSpeed:500,margin:24,loop:!0,singleItem:!0,navText:["<i class='las la-angle-left'></i>","<i class='las la-angle-right'></i>"],responsive:{0:{items:1},600:{items:2},1e3:{items:3}}});var a=$(".testimonials-carousel");a.owlCarousel({autoplay:!1,autoplayHoverPause:!0,nav:!0,dots:!1,mouseDrag:!0,smartSpeed:500,margin:24,loop:!0,singleItem:!0,navText:["<i class='las la-angle-left'></i>","<i class='las la-angle-right'></i>"],responsive:{0:{items:1},600:{items:1},1e3:{items:1}}}),$(".image-popup-vertical-fit").magnificPopup({type:"image",closeOnContentClick:!0,mainClass:"mfp-img-mobile",image:{verticalFit:!0}}),$(".image-popup-fit-width").magnificPopup({type:"image",closeOnContentClick:!0,image:{verticalFit:!1}}),$(".image-popup-no-margins").magnificPopup({type:"image",closeOnContentClick:!0,closeBtnInside:!1,fixedContentPos:!0,mainClass:"mfp-no-margins mfp-with-zoom",image:{verticalFit:!0},zoom:{enabled:!0,duration:300}}),$(".popup-gallery").magnificPopup({delegate:"a",type:"image",tLoading:"Loading image #%curr%...",mainClass:"mfp-img-mobile",gallery:{enabled:!0,navigateByImgClick:!0,preload:[0,1]},image:{tError:'<a href="%url%">The image #%curr%</a> could not be loaded.',titleSrc:function(a){return a.el.attr("title")+"<small>by Marsel Van Oosten</small>"}}}),$(".popup-youtube, .popup-vimeo, .popup-gmaps").magnificPopup({disableOn:700,type:"iframe",mainClass:"mfp-fade",removalDelay:160,preloader:!1,fixedContentPos:!1}),$(window).scroll(()=>{$(window).width()>991&&($(window).scrollTop()>0?$("nav").addClass("nav-bg"):$("nav").removeClass("nav-bg"))}),$(window).on("resize",function(){992>$(window).width()?$("nav").addClass("nav-bg"):$("nav").removeClass("nav-bg")}),$(document).ready(function(){$(window).trigger("resize")}),$(window).scroll(function(){$(this).scrollTop()>100?$(".back-to-top").fadeIn():$(".back-to-top").fadeOut()}),$(".back-to-top").fadeOut(),$(window).scroll(function(){$(this).scrollTop()>100?$(".back-to-top-ar").fadeIn():$(".back-to-top-ar").fadeOut()}),$(".back-to-top-ar").fadeOut()});
+$(document).ready(function () {
+
+  'use strict';
+
+  /************************************************************************************ PRELOADER STARTS */
+document.documentElement.classList.add('noscroll');
+document.body.classList.add('noscroll');
+
+window.addEventListener('load', function () {
+  const preloader = document.getElementById('main-preloader');
+  if (preloader) {
+    preloader.classList.add('hide');
+    setTimeout(() => {
+      preloader.remove(); // حذف العنصر بعد التلاشي
+      document.documentElement.classList.remove('noscroll');
+      document.body.classList.remove('noscroll');
+    }, 700); // أطول قليلاً من transition لضمان انتهاء التلاشي
+  }
+});
+
+
+
+/************************************************************************************ TOP NAV WHITE BACKGROUND STARTS */
+	// Top Navigation White Background.
+	$(window).scroll(() => {
+		if ($(window).width() > 991) {
+			var windowTop = $(window).scrollTop();
+			windowTop > 0 ? $('nav').addClass('nav-bg') : $('nav').removeClass('nav-bg');
+		}
+
+	});
+	$(window).on('resize', function () {
+		if ($(window).width() < 992) {
+			$('nav').addClass('nav-bg');
+		} else {
+			$('nav').removeClass('nav-bg');
+		}
+	});
+	$(document).ready(function () {
+		$(window).trigger('resize');
+	});
+
+  /************************************************************************************ SCROLL TO TOP STARTS */
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$('.back-to-top').fadeIn();
+		} else {
+			$('.back-to-top').fadeOut();
+		}
+	});
+
+	$('.back-to-top').fadeOut();
+  /************************************************************************************ SCROLL TO TOP STARTS */
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$('.back-to-top-ar').fadeIn();
+		} else {
+			$('.back-to-top-ar').fadeOut();
+		}
+	});
+
+	$('.back-to-top-ar').fadeOut();
+
+});
+
