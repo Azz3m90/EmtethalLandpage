@@ -32,7 +32,10 @@
       property="og:image"
       content="https://www.emtethal.com/assets/imgs/logo.png"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo&display=swap"
+      rel="stylesheet"
+    />
 
     <meta property="og:url" content="https://www.emtethal.com" />
     <meta property="og:type" content="website" />
@@ -237,98 +240,139 @@
       </div>
     </nav>
     <!-- Mobile nav: show on md and below, hide on lg and above -->
-<nav id="navigation-mobile" class="navbar navbar-light fixed-top d-flex d-lg-none bg-white shadow-sm">
-  <div class="container-fluid justify-content-between">
-    <a class="navbar-brand white-logo" href="#">
-      <img src="assets/imgs/logo-white.png" class="img-fluid logo-img" alt="Logo" />
-    </a>
-    <a class="navbar-brand black-logo" href="#">
-      <img src="assets/imgs/logo.png" class="img-fluid logo-img" alt="Logo" />
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContentMobile"
-      aria-controls="navbarSupportedContentMobile"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
+    <nav
+      id="navigation-mobile"
+      class="navbar navbar-light fixed-top d-flex d-lg-none bg-white shadow-sm"
     >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContentMobile">
-<ul class="navbar-nav ms-auto align-items-center">
-  <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-  <li class="nav-item"><a class="nav-link" href="#problemsToSolve">Challenges</a></li>
+      <div class="container-fluid justify-content-between">
+        <a class="navbar-brand white-logo" href="#">
+          <img
+            src="assets/imgs/logo-white.png"
+            class="img-fluid logo-img"
+            alt="Logo"
+          />
+        </a>
+        <a class="navbar-brand black-logo" href="#">
+          <img
+            src="assets/imgs/logo.png"
+            class="img-fluid logo-img"
+            alt="Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContentMobile"
+          aria-controls="navbarSupportedContentMobile"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContentMobile">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#problemsToSolve">Challenges</a>
+            </li>
 
-  <li class="nav-item"><a class="nav-link" href="#platform">Platform</a></li>
-  <li class="nav-item"><a class="nav-link" href="#howItWorks">How It Works</a></li>
-  <li class="nav-item"><a class="nav-link" href="#Keys">Why Emtethal</a></li>
-  <li class="nav-item"><a class="nav-link" href="#marketPositioning">Market Positioning</a></li>
-  <li class="nav-item"><a class="nav-link" href="#roadmap">Road Map</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#platform">Platform</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#howItWorks">How It Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Keys">Why Emtethal</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#marketPositioning"
+                >Market Positioning</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#roadmap">Road Map</a>
+            </li>
 
-  <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-  <li class="nav-item"><a class="nav-link" href="#targets">Sectors</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#targets">Sectors</a>
+            </li>
 
-  <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-  <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
 
-  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
 
-  <li class="nav-item">
-    <a id="language-switch-mobile" class="nav-link d-flex align-items-center" href="/index.html">
-      <i id="language-flag-mobile" class="fi fi-sa me-2"></i>
-    </a>
-  </li>
-</ul>
-    </div>
-  </div>
-</nav>
+            <li class="nav-item">
+              <a
+                id="language-switch-mobile"
+                class="nav-link d-flex align-items-center"
+                href="/index.html"
+              >
+                <i id="language-flag-mobile" class="fi fi-sa me-2"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Language switch for desktop
-    const langSwitch = document.getElementById("language-switch");
-    const flagIcon = document.getElementById("language-flag");
-    const isEnglish = window.location.pathname.includes("-en");
-    if (langSwitch && flagIcon) {
-      if (isEnglish) {
-        langSwitch.href = "./index.html";
-        flagIcon.className = "fi fi-sa ms-2";
-      } else {
-        langSwitch.href = "./index-en.html";
-        flagIcon.className = "fi fi-gb ms-2";
-      }
-    }
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Language switch for desktop
+        const langSwitch = document.getElementById("language-switch");
+        const flagIcon = document.getElementById("language-flag");
+        const isEnglish = window.location.pathname.includes("-en");
+        if (langSwitch && flagIcon) {
+          if (isEnglish) {
+            langSwitch.href = "./index.html";
+            flagIcon.className = "fi fi-sa ms-2";
+          } else {
+            langSwitch.href = "./index-en.html";
+            flagIcon.className = "fi fi-gb ms-2";
+          }
+        }
 
-    // Language switch for mobile
-    const langSwitchMobile = document.getElementById("language-switch-mobile");
-    const flagIconMobile = document.getElementById("language-flag-mobile");
-    if (langSwitchMobile && flagIconMobile) {
-      if (isEnglish) {
-        langSwitchMobile.href = "./index.html";
-        flagIconMobile.className = "fi fi-sa me-2";
-      } else {
-        langSwitchMobile.href = "./index-en.html";
-        flagIconMobile.className = "fi fi-gb me-2";
-      }
-    }
+        // Language switch for mobile
+        const langSwitchMobile = document.getElementById(
+          "language-switch-mobile"
+        );
+        const flagIconMobile = document.getElementById("language-flag-mobile");
+        if (langSwitchMobile && flagIconMobile) {
+          if (isEnglish) {
+            langSwitchMobile.href = "./index.html";
+            flagIconMobile.className = "fi fi-sa me-2";
+          } else {
+            langSwitchMobile.href = "./index-en.html";
+            flagIconMobile.className = "fi fi-gb me-2";
+          }
+        }
 
-document.querySelectorAll('#navbarSupportedContentMobile .nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    const mobileMenu = document.getElementById('navbarSupportedContentMobile');
-    if (mobileMenu.classList.contains('show')) {
-      const bsCollapse = bootstrap.Collapse.getInstance(mobileMenu);
-      if (bsCollapse) {
-        bsCollapse.hide();
-      }
-    }
-  });
-});
-
-
-  });
-</script>
+        document
+          .querySelectorAll("#navbarSupportedContentMobile .nav-link")
+          .forEach((link) => {
+            link.addEventListener("click", () => {
+              const mobileMenu = document.getElementById(
+                "navbarSupportedContentMobile"
+              );
+              if (mobileMenu.classList.contains("show")) {
+                const bsCollapse = bootstrap.Collapse.getInstance(mobileMenu);
+                if (bsCollapse) {
+                  bsCollapse.hide();
+                }
+              }
+            });
+          });
+      });
+    </script>
     <!-- NAVIGATION ENDS
 			========================================================================= -->
     <!-- SLIDER STARTS
@@ -1725,16 +1769,6 @@ document.querySelectorAll('#navbarSupportedContentMobile .nav-link').forEach(lin
     <script src="assets/lib/jquery-1.12.4/jquery.min.js"></script>
     <!--BOOTSTRAP JS-->
     <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- PRELOADER -->
-    <script src="assets/lib/preloader/sPreloader.js"></script>
-    <!-- OWL CAROUSEL -->
-    <script src="assets/lib/owl-carousel/owl.carousel.js"></script>
-    <!-- ISOTOPE GALLERY -->
-    <script src="assets/lib/isotope/jquery.isotope.min.js"></script>
-    <script src="assets/lib/isotope/custom-isotope-mansory.js"></script>
-    <!-- MAGNIFIC POPUP -->
-    <script src="assets/lib/magnific-popup/jquery.magnific-popup.js"></script>
     <!-- CONTACT FORM JS -->
     <script src="assets/js/contact-form/contact-form.js"></script>
     <!-- CUSTOM JS -->
