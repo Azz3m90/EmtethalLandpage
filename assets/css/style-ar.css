@@ -2853,6 +2853,17 @@ footer .copyright {
   margin: 0 8px;
   display: inline-block;
 }
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.socialmedia li {
+  margin: 0 8px;
+  list-style: none;
+}
 
 .team-hierarchy .socialmedia a {
   color: #555;
@@ -2861,7 +2872,7 @@ footer .copyright {
 }
 
 .team-hierarchy .socialmedia a:hover {
-  color: #007bff;
+  color: #50aa3e;
 }
 
 @media (max-width: 992px) {
