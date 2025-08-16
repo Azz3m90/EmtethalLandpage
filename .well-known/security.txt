@@ -1,0 +1,28 @@
+# Security.txt for Emtethal (امتثال)
+# https://www.emtethal.com/.well-known/security.txt
+# Last Updated: 2024-12-30
+
+# Contact information for security issues
+Contact: mailto:security@emtethal.com
+Contact: mailto:info@emtethal.com
+
+# Preferred language for security reports
+Preferred-Languages: en, ar
+
+# Canonical URL
+Canonical: https://www.emtethal.com/.well-known/security.txt
+
+# Encryption key for secure communication
+# Encryption: https://www.emtethal.com/.well-known/pgp-key.txt
+
+# Acknowledgments page (if you have one)
+# Acknowledgments: https://www.emtethal.com/security-acknowledgments
+
+# Policy page (if you have one)
+# Policy: https://www.emtethal.com/security-policy
+
+# Hiring page (if you're hiring security professionals)
+# Hiring: https://www.emtethal.com/careers
+
+# Expiration date
+Expires: 2025-12-30T23:59:59.000Z

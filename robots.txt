@@ -1,0 +1,93 @@
+# Robots.txt for Emtethal (امتثال) - Smart Compliance Solutions
+# Website: https://www.emtethal.com
+# Last Updated: 2024-12-30
+
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+
+# Allow specific important pages and assets
+Allow: /index.html
+Allow: /index-en.html
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/imgs/
+Allow: /assets/lib/
+
+# Disallow sensitive or unnecessary directories
+Disallow: /temp/
+Disallow: /.git/
+Disallow: /.vscode/
+Disallow: /.zencoder/
+Disallow: /node_modules/
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /.gitignore
+
+# Disallow duplicate content and development files
+Disallow: /*?*
+Disallow: /*.json$
+Disallow: /*.log$
+Disallow: /*.md$
+
+# Special rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Block malicious or unwanted bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://www.emtethal.com/sitemap.xml
+
+# Additional sitemap for images (if needed in future)
+# Sitemap: https://www.emtethal.com/sitemap-images.xml
+
+# Host specification (helps with canonicalization)
+Host: https://www.emtethal.com

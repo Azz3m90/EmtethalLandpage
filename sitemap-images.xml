@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Main Pages with Images -->
+    <url>
+        <loc>https://www.emtethal.com/</loc>
+        <image:image>
+            <image:loc>https://www.emtethal.com/assets/imgs/logo.png</image:loc>
+            <image:title>امتثال - شعار الشركة</image:title>
+            <image:caption>شعار شركة امتثال للحلول الذكية لإدارة الجودة والامتثال في قطاع الضيافة والمطاعم</image:caption>
+            <image:geo_location>Riyadh, Saudi Arabia</image:geo_location>
+            <image:license>https://www.emtethal.com/</image:license>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.emtethal.com/assets/imgs/logo-white.png</image:loc>
+            <image:title>امتثال - الشعار الأبيض</image:title>
+            <image:caption>شعار امتثال باللون الأبيض للاستخدام على الخلفيات الداكنة</image:caption>
+            <image:geo_location>Riyadh, Saudi Arabia</image:geo_location>
+            <image:license>https://www.emtethal.com/</image:license>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.emtethal.com/assets/imgs/emtethal-logo.svg</image:loc>
+            <image:title>امتثال - الشعار المتجه</image:title>
+            <image:caption>شعار امتثال بصيغة SVG للجودة العالية</image:caption>
+            <image:geo_location>Riyadh, Saudi Arabia</image:geo_location>
+            <image:license>https://www.emtethal.com/</image:license>
+        </image:image>
+    </url>
+
+    <!-- English Page Images -->
+    <url>
+        <loc>https://www.emtethal.com/index-en.html</loc>
+        <image:image>
+            <image:loc>https://www.emtethal.com/assets/imgs/logo.png</image:loc>
+            <image:title>Emtethal - Company Logo</image:title>
+            <image:caption>Emtethal logo for smart compliance and quality management solutions in hospitality sector</image:caption>
+            <image:geo_location>Riyadh, Saudi Arabia</image:geo_location>
+            <image:license>https://www.emtethal.com/</image:license>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.emtethal.com/assets/imgs/logo-white.png</image:loc>
+            <image:title>Emtethal - White Logo</image:title>
+            <image:caption>Emtethal white logo for use on dark backgrounds</image:caption>
+            <image:geo_location>Riyadh, Saudi Arabia</image:geo_location>
+            <image:license>https://www.emtethal.com/</image:license>
+        </image:image>
+        <image:image>
+            <image:loc>https://www.emtethal.com/assets/imgs/about/pic1-min.webp</image:loc>
+            <image:title>About Emtethal - Quality Management</image:title>
+            <image:caption>Emtethal team providing smart compliance solutions for hospitality businesses</image:caption>
+            <image:geo_location>Riyadh, Saudi Arabia</image:geo_location>
+            <image:license>https://www.emtethal.com/</image:license>
+        </image:image>
+    </url>
+
+    <!-- Feature Images -->
+    <url>
+        <loc>https://www.emtethal.com/assets/imgs/features/s4-min.webp</loc>
+        <image:image>
+            <image:loc>https://www.emtethal.com/assets/imgs/features/s4-min.webp</image:loc>
+            <image:title>Emtethal Platform Features</image:title>
+            <image:caption>Digital compliance and quality management platform interface</image:caption>
+            <image:geo_location>Riyadh, Saudi Arabia</image:geo_location>
+            <image:license>https://www.emtethal.com/</image:license>
+        </image:image>
+    </url>
+
+    <!-- Loader Image -->
+    <url>
+        <loc>https://www.emtethal.com/assets/imgs/Loader/emtethalLoader.webp</loc>
+        <image:image>
+            <image:loc>https://www.emtethal.com/assets/imgs/Loader/emtethalLoader.webp</image:loc>
+            <image:title>Emtethal Loading Animation</image:title>
+            <image:caption>Emtethal platform loading animation for smart compliance solutions</image:caption>
+            <image:geo_location>Riyadh, Saudi Arabia</image:geo_location>
+            <image:license>https://www.emtethal.com/</image:license>
+        </image:image>
+    </url>
+
+</urlset>

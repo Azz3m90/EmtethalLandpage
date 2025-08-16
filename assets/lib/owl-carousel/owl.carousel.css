@@ -113,7 +113,11 @@
   -ms-user-select: none;
   user-select: none;
 }
-.owl-item { transform: translateZ(0); -webkit-transform: translateZ(0); -ms-transform: translateZ(0); }
+.owl-item {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+}
 .owl-carousel .owl-item img {
   display: block;
   /*width: 100%;*/

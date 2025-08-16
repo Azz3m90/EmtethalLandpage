@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - 404 | Emtethal</title>
+    <meta name="description" content="Sorry, the page you're looking for doesn't exist. Browse Emtethal homepage for smart compliance and quality management solutions.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://www.emtethal.com/404-en.html">
+    <link rel="preload" href="assets/imgs/logo.png" as="image">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .error-container {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px;
+        }
+        
+        .logo {
+            max-width: 200px;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+        
+        .error-code {
+            font-size: 8em;
+            font-weight: bold;
+            color: #50aa3e;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        
+        .error-title {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .error-message {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .btn {
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1em;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #50aa3e, #45a537);
+            color: white;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #45a537, #3d8f30);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(80, 170, 62, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #50aa3e;
+            border: 2px solid #50aa3e;
+        }
+        
+        .btn-secondary:hover {
+            background: #50aa3e;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(80, 170, 62, 0.3);
+        }
+        
+        .helpful-links {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+        
+        .helpful-links h3 {
+            color: #50aa3e;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .helpful-link {
+            padding: 10px 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+        
+        .helpful-link:hover {
+            background: #50aa3e;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(80, 170, 62, 0.2);
+        }
+        
+        .search-box {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 15px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            font-size: 1.1em;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #50aa3e;
+        }
+        
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .lang-btn {
+            padding: 8px 15px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+        
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 5em;
+            }
+            
+            .error-title {
+                font-size: 2em;
+            }
+            
+            .error-message {
+                font-size: 1.1em;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .language-switch {
+                position: static;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switch">
+        <a href="/404-en.html" class="lang-btn">English</a>
+        <a href="/404.html" class="lang-btn">العربية</a>
+    </div>
+    
+    <div class="error-container">
+        <img src="assets/imgs/logo.png" alt="Emtethal - Smart Compliance Solutions" class="logo" onerror="this.style.display='none'">
+        
+        <div class="error-code">404</div>
+        
+        <h1 class="error-title">Page Not Found</h1>
+        
+        <p class="error-message">
+            Sorry, we can't find the page you're looking for.<br>
+            It might have been moved, deleted, or you entered the wrong URL.
+        </p>
+        
+        <div class="action-buttons">
+            <a href="/index-en.html" class="btn btn-primary">
+                🏠 Back to Homepage
+            </a>
+            <a href="/" class="btn btn-secondary">
+                🌐 Arabic Version
+            </a>
+        </div>
+        
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Search our website..." onkeypress="searchSite(event)">
+        </div>
+        
+        <div class="helpful-links">
+            <h3>Helpful Links</h3>
+            <div class="links-grid">
+                <a href="/index-en.html#problemsToSolve" class="helpful-link">Challenges We Solve</a>
+                <a href="/index-en.html#platform" class="helpful-link">Platform</a>
+                <a href="/index-en.html#services" class="helpful-link">Services</a>
+                <a href="/index-en.html#about" class="helpful-link">About Emtethal</a>
+                <a href="/index-en.html#contact" class="helpful-link">Contact Us</a>
+                <a href="/sitemap.html" class="helpful-link">Site Map</a>
+            </div>
+        </div>
+        
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #666;">
+            <p>If you believe this is an error, please <a href="/index-en.html#contact" style="color: #50aa3e;">contact us</a></p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                Emtethal - Smart Compliance Solutions for Hospitality Excellence
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function searchSite(event) {
+            if (event.key === 'Enter') {
+                const query = event.target.value.trim();
+                if (query) {
+                    // Simple search redirect - you can enhance this with actual search functionality
+                    window.location.href = '/index-en.html?search=' + encodeURIComponent(query);
+                }
+            }
+        }
+        
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            const logo = document.querySelector('.logo');
+            const errorCode = document.querySelector('.error-code');
+            
+            // Animate elements on load
+            logo.style.opacity = '0';
+            logo.style.transform = 'translateY(-20px)';
+            
+            setTimeout(() => {
+                logo.style.transition = 'all 0.8s ease';
+                logo.style.opacity = '0.8';
+                logo.style.transform = 'translateY(0)';
+            }, 300);
+            
+            // Add click effect to error code
+            errorCode.addEventListener('click', function() {
+                this.style.animation = 'none';
+                setTimeout(() => {
+                    this.style.animation = 'bounce 1s';
+                }, 10);
+            });
+        });
+    </script>
+</body>
+</html>

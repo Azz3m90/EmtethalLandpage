@@ -12,17 +12,26 @@
 }
 */
 
-#divbgholder .slotholder {z-index: 0 !important}
-#divbgholder .oldslotholder {display: none !important}
-.rs-duotone-simplified .tp-revslider-slidesli {opacity: 1 !important}
-.rs-duotone-simplified  .rs-duotone-slide {z-index: 9999 !important; opacity: 0 !important}
+#divbgholder .slotholder {
+  z-index: 0 !important;
+}
+#divbgholder .oldslotholder {
+  display: none !important;
+}
+.rs-duotone-simplified .tp-revslider-slidesli {
+  opacity: 1 !important;
+}
+.rs-duotone-simplified .rs-duotone-slide {
+  z-index: 9999 !important;
+  opacity: 0 !important;
+}
 
 [class^="rs-duotone"] {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 [class^="rs-duotone"] .slotholder,
@@ -33,7 +42,7 @@
 
 [class^="rs-duotone"]:after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -63,7 +72,7 @@
 }
 
 [class^="rs-duotone"][class*="-red"] {
-  background: #E50914 !important;
+  background: #e50914 !important;
 }
 
 [class^="rs-duotone"][class*="-red"]:after {
@@ -85,7 +94,7 @@
 }
 
 [class^="rs-duotone"][class*="-red"]:after {
-  background: #E50914 !important;
+  background: #e50914 !important;
 }
 
 [class^="rs-duotone"][class*="-red"]:after {
@@ -93,7 +102,7 @@
 }
 
 [class^="rs-duotone"][class*="-orange"] {
-  background: #FCA300 !important;
+  background: #fca300 !important;
 }
 
 [class^="rs-duotone"][class*="-orange"][class*="-dark"]:after {
@@ -107,14 +116,16 @@
 }
 
 [class^="rs-duotone"][class*="-orange"]:after {
-  background: #FCA300 !important;
+  background: #fca300 !important;
 }
 
 [class^="rs-duotone"][class*="-blue"] {
-  background: #0066BF !important;
+  background: #0066bf !important;
 }
 
-[class^="rs-duotone"][class*="-blue"]:not([class*="-dark"]):not([class*="-light"]):after {
+[class^="rs-duotone"][class*="-blue"]:not([class*="-dark"]):not(
+    [class*="-light"]
+  ):after {
   mix-blend-mode: hard-light;
   -webkit-filter: brightness(0.6);
   filter: brightness(0.6);
@@ -125,18 +136,20 @@
 }
 
 [class^="rs-duotone"][class*="-blue"]:after {
-  background: #0066BF !important;
+  background: #0066bf !important;
 }
 
 [class^="rs-duotone"][class*="-blue"]:after {
-  background: #93EF90 !important;
+  background: #93ef90 !important;
 }
 
 [class^="rs-duotone"][class*="-yellow"] {
-  background: #FEDD31 !important;
+  background: #fedd31 !important;
 }
 
-[class^="rs-duotone"][class*="-yellow"]:not([class*="-dark"]):not([class*="-light"]):after {
+[class^="rs-duotone"][class*="-yellow"]:not([class*="-dark"]):not(
+    [class*="-light"]
+  ):after {
   -webkit-filter: brightness(3.5);
   filter: brightness(3.5);
   mix-blend-mode: soft-light;
@@ -159,27 +172,31 @@
 }
 
 [class^="rs-duotone"][class*="-yellow"]:after {
-  background: #FEDD31 !important;
+  background: #fedd31 !important;
 }
 
 [class^="rs-duotone"][class*="-yellow"]:after {
-  background: #EF3CB4 !important;
+  background: #ef3cb4 !important;
 }
 
 [class^="rs-duotone"][class*="-purple"] {
-  background: #BC6D14 !important;
+  background: #bc6d14 !important;
 }
 
-[class^="rs-duotone"][class*="-purple"]:not([class*="-dark"]):not([class*="-light"]) {
+[class^="rs-duotone"][class*="-purple"]:not([class*="-dark"]):not(
+    [class*="-light"]
+  ) {
   background: rebeccapurple !important;
 }
 
-[class^="rs-duotone"][class*="-purple"]:not([class*="-dark"]):not([class*="-light"]):after {
+[class^="rs-duotone"][class*="-purple"]:not([class*="-dark"]):not(
+    [class*="-light"]
+  ):after {
   mix-blend-mode: darken !important;
 }
 
 [class^="rs-duotone"][class*="-purple"][class*="-dark"] {
-  background: #B10AFF !important;
+  background: #b10aff !important;
 }
 
 [class^="rs-duotone"][class*="-purple"][class*="-dark"]:after {
@@ -189,24 +206,26 @@
 }
 
 [class^="rs-duotone"][class*="-purple"][class*="-light"]:after {
-  background: #A37FC7 !important;
+  background: #a37fc7 !important;
   -webkit-filter: saturate(520%) brightness(10.5) contrast(350) !important;
   filter: saturate(520%) brightness(10.5) contrast(350) !important;
 }
 
 [class^="rs-duotone"][class*="-purple"]:after {
-  background: #BC6D14 !important;
+  background: #bc6d14 !important;
 }
 
 [class^="rs-duotone"][class*="-purple"]:after {
-  background: #ACFCEE !important;
+  background: #acfcee !important;
 }
 
 [class^="rs-duotone"][class*="-green"] {
-  background: #11C966 !important;
+  background: #11c966 !important;
 }
 
-[class^="rs-duotone"][class*="-green"]:not([class*="-dark"]):not([class*="-light"]):after {
+[class^="rs-duotone"][class*="-green"]:not([class*="-dark"]):not(
+    [class*="-light"]
+  ):after {
   mix-blend-mode: soft-light;
 }
 
@@ -217,38 +236,40 @@
 }
 
 [class^="rs-duotone"][class*="-green"]:after {
-  background: #11C966 !important;
+  background: #11c966 !important;
 }
 
 [class^="rs-duotone"][class*="-green"]:after {
-  background: #2D3181 !important;
+  background: #2d3181 !important;
 }
 
 [class^="rs-duotone"][class*="-pink"] {
-  background: #EA4C89 !important;
+  background: #ea4c89 !important;
 }
 
 [class^="rs-duotone"][class*="-pink"][class*="-dark"]:after {
-  background: #1D0E14 !important;
+  background: #1d0e14 !important;
 }
 
 [class^="rs-duotone"][class*="-pink"][class*="-light"]:after {
-  background: #FF468D !important;
+  background: #ff468d !important;
   mix-blend-mode: lighten !important;
   -webkit-filter: contrast(1) saturate(250%) !important;
   filter: contrast(1) saturate(250%) !important;
 }
 
 [class^="rs-duotone"][class*="-pink"]:after {
-  background: #EA4C89 !important;
+  background: #ea4c89 !important;
 }
 
 [class^="rs-duotone"][class*="-pink"]:after {
-  background: #EA4C89 !important;
+  background: #ea4c89 !important;
 }
 
-[class^="rs-duotone"][class*="-blue-yellow"]:not([class*="-dark"]):not([class*="-light"]) {
-  background: linear-gradient(to top left, #55ACEE, #FEDD31) !important;
+[class^="rs-duotone"][class*="-blue-yellow"]:not([class*="-dark"]):not(
+    [class*="-light"]
+  ) {
+  background: linear-gradient(to top left, #55acee, #fedd31) !important;
 }
 
 [class^="rs-duotone"][class*="-blue-yellow"][class*="-dark"]:after {
@@ -262,11 +283,13 @@
 }
 
 [class^="rs-duotone"][class*="-blue-yellow"]:after {
-  background: linear-gradient(to top left, #55ACEE, #FEDD31) !important;
+  background: linear-gradient(to top left, #55acee, #fedd31) !important;
 }
 
-[class^="rs-duotone"][class*="-pink-yellow"]:not([class*="-dark"]):not([class*="-light"]) {
-  background: linear-gradient(to bottom right, #FAA6FB, #FBBC05) !important;
+[class^="rs-duotone"][class*="-pink-yellow"]:not([class*="-dark"]):not(
+    [class*="-light"]
+  ) {
+  background: linear-gradient(to bottom right, #faa6fb, #fbbc05) !important;
 }
 
 [class^="rs-duotone"][class*="-pink-yellow"][class*="-dark"]:after {
@@ -282,14 +305,18 @@
 }
 
 [class^="rs-duotone"][class*="-pink-yellow"]:after {
-  background: linear-gradient(to top left, #FAA6FB, #FBBC05) !important;
+  background: linear-gradient(to top left, #faa6fb, #fbbc05) !important;
 }
 
-[class^="rs-duotone"][class*="-red-blue"]:not([class*="-dark"]):not([class*="-light"]) {
-  background: linear-gradient(to bottom right, #3993E2, #E2544B) !important;
+[class^="rs-duotone"][class*="-red-blue"]:not([class*="-dark"]):not(
+    [class*="-light"]
+  ) {
+  background: linear-gradient(to bottom right, #3993e2, #e2544b) !important;
 }
 
-[class^="rs-duotone"][class*="-red-blue"]:not([class*="-dark"]):not([class*="-light"]):after {
+[class^="rs-duotone"][class*="-red-blue"]:not([class*="-dark"]):not(
+    [class*="-light"]
+  ):after {
   -webkit-filter: none;
   filter: none;
   mix-blend-mode: hard-light;
@@ -308,7 +335,5 @@
 }
 
 [class^="rs-duotone"][class*="-red-blue"]:after {
-  background: linear-gradient(to bottom right, #3993E2, #E2544B) !important;
+  background: linear-gradient(to bottom right, #3993e2, #e2544b) !important;
 }
-
-
