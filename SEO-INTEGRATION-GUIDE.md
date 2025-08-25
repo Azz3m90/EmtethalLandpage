@@ -39,7 +39,7 @@ This guide shows exactly how to integrate all SEO elements into your Emtethal we
 
 ```javascript
 // Replace 'G-XXXXXXXXXX' with your actual Google Analytics 4 measurement ID
-const GA_MEASUREMENT_ID = "G-YOUR-ACTUAL-ID";
+const GA_MEASUREMENT_ID = 'G-YOUR-ACTUAL-ID'
 ```
 
 ### 2. Google Search Console Verification
@@ -78,56 +78,56 @@ const GA_MEASUREMENT_ID = "G-YOUR-ACTUAL-ID";
 <script>
   // Language Switch Tracking
   document.querySelectorAll('a[href*="index"]').forEach((link) => {
-    link.addEventListener("click", function () {
-      if (this.href.includes("index-en.html")) {
-        EmtethalAnalytics.trackLanguageSwitch("arabic", "english");
-      } else if (this.href.includes("index.html")) {
-        EmtethalAnalytics.trackLanguageSwitch("english", "arabic");
+    link.addEventListener('click', function () {
+      if (this.href.includes('index-en.html')) {
+        EmtethalAnalytics.trackLanguageSwitch('arabic', 'english')
+      } else if (this.href.includes('index.html')) {
+        EmtethalAnalytics.trackLanguageSwitch('english', 'arabic')
       }
-    });
-  });
+    })
+  })
 
   // Contact Form Tracking
   document
-    .getElementById("ContactForm")
-    ?.addEventListener("submit", function () {
-      EmtethalAnalytics.trackContactForm("main_contact_form");
-    });
+    .getElementById('ContactForm')
+    ?.addEventListener('submit', function () {
+      EmtethalAnalytics.trackContactForm('main_contact_form')
+    })
 
   // Section View Tracking (Intersection Observer)
   const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const sectionId = entry.target.id;
-          EmtethalAnalytics.trackSectionView(sectionId);
+          const sectionId = entry.target.id
+          EmtethalAnalytics.trackSectionView(sectionId)
         }
-      });
+      })
     },
-    { threshold: 0.5 }
-  );
+    { threshold: 0.5 },
+  )
 
   // Observe all main sections
-  [
-    "home",
-    "problemsToSolve",
-    "platform",
-    "services",
-    "about",
-    "contact",
+  ;[
+    'home',
+    'problemsToSolve',
+    'platform',
+    'services',
+    'about',
+    'contact',
   ].forEach((id) => {
-    const element = document.getElementById(id);
-    if (element) sectionObserver.observe(element);
-  });
+    const element = document.getElementById(id)
+    if (element) sectionObserver.observe(element)
+  })
 
   // Service Interest Tracking
   document
     .querySelectorAll('[href="#services"], [href*="#platform"]')
     .forEach((link) => {
-      link.addEventListener("click", function () {
-        EmtethalAnalytics.trackServiceInterest("compliance_solutions");
-      });
-    });
+      link.addEventListener('click', function () {
+        EmtethalAnalytics.trackServiceInterest('compliance_solutions')
+      })
+    })
 </script>
 ```
 
@@ -240,13 +240,11 @@ if ('serviceWorker' in navigator) {
 ### Additional Performance Tips:
 
 1. **Optimize Images:**
-
    - Convert to WebP format
    - Use appropriate sizing
    - Implement lazy loading
 
 2. **Minify Resources:**
-
    - Minify CSS files
    - Minify JavaScript files
    - Remove unused code
@@ -263,12 +261,10 @@ if ('serviceWorker' in navigator) {
 ### Set up monitoring for:
 
 1. **Site Uptime:**
-
    - Use UptimeRobot or similar service
    - Monitor main pages and key functionalities
 
 2. **Performance Monitoring:**
-
    - Google PageSpeed Insights
    - Core Web Vitals monitoring
    - Mobile usability testing

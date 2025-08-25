@@ -1,311 +1,364 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>خريطة الموقع - امتثال | Sitemap - Emtethal</title>
-    <meta name="description" content="خريطة الموقع الكاملة لمنصة امتثال - حلول ذكية لإدارة الجودة والامتثال في قطاع الضيافة والمطاعم">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.emtethal.com/sitemap.html">
-    <link rel="alternate" hreflang="ar" href="https://www.emtethal.com/sitemap.html">
-    <link rel="alternate" hreflang="en" href="https://www.emtethal.com/sitemap.html">
+    <meta
+      name="description"
+      content="خريطة الموقع الكاملة لمنصة امتثال - حلول ذكية لإدارة الجودة والامتثال في قطاع الضيافة والمطاعم"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.emtethal.com/sitemap.html" />
+    <link
+      rel="alternate"
+      hreflang="ar"
+      href="https://www.emtethal.com/sitemap.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://www.emtethal.com/sitemap.html"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #50aa3e 0%, #45a537 100%);
-            color: white;
-            border-radius: 10px;
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
-        .sitemap-section {
-            background: white;
-            margin-bottom: 30px;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .sitemap-section h2 {
-            color: #50aa3e;
-            border-bottom: 3px solid #50aa3e;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.8em;
-        }
-        
-        .language-toggle {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .language-toggle a {
-            padding: 10px 20px;
-            background: #50aa3e;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        
-        .language-toggle a:hover {
-            background: #45a537;
-        }
-        
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 40px 20px;
+        background: linear-gradient(135deg, #50aa3e 0%, #45a537 100%);
+        color: white;
+        border-radius: 10px;
+      }
+
+      .header h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        font-size: 1.2em;
+        opacity: 0.9;
+      }
+
+      .sitemap-section {
+        background: white;
+        margin-bottom: 30px;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .sitemap-section h2 {
+        color: #50aa3e;
+        border-bottom: 3px solid #50aa3e;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        font-size: 1.8em;
+      }
+
+      .language-toggle {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .language-toggle a {
+        padding: 10px 20px;
+        background: #50aa3e;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+
+      .language-toggle a:hover {
+        background: #45a537;
+      }
+
+      .links-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .link-item {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        background: #fafafa;
+        transition: all 0.3s;
+      }
+
+      .link-item:hover {
+        background: #f0f8ff;
+        border-color: #50aa3e;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(80, 170, 62, 0.1);
+      }
+
+      .link-item a {
+        color: #50aa3e;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1em;
+        margin-bottom: 8px;
+      }
+
+      .link-item a:hover {
+        text-decoration: underline;
+      }
+
+      .link-description {
+        color: #666;
+        font-size: 0.9em;
+        line-height: 1.4;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 30px;
+        background: white;
+        border-radius: 10px;
+        color: #666;
+      }
+
+      .footer a {
+        color: #50aa3e;
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
         .links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+          grid-template-columns: 1fr;
         }
-        
-        .link-item {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            background: #fafafa;
-            transition: all 0.3s;
+
+        .header h1 {
+          font-size: 2em;
         }
-        
-        .link-item:hover {
-            background: #f0f8ff;
-            border-color: #50aa3e;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(80, 170, 62, 0.1);
+
+        .language-toggle {
+          flex-direction: column;
+          align-items: center;
         }
-        
-        .link-item a {
-            color: #50aa3e;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            margin-bottom: 8px;
-        }
-        
-        .link-item a:hover {
-            text-decoration: underline;
-        }
-        
-        .link-description {
-            color: #666;
-            font-size: 0.9em;
-            line-height: 1.4;
-        }
-        
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 30px;
-            background: white;
-            border-radius: 10px;
-            color: #666;
-        }
-        
-        .footer a {
-            color: #50aa3e;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 768px) {
-            .links-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .language-toggle {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header class="header">
-            <h1>خريطة الموقع | Sitemap</h1>
-            <p>امتثال - حلول ذكية لإدارة الجودة والامتثال في قطاع الضيافة</p>
-            <p>Emtethal - Smart Compliance Solutions for Hospitality Excellence</p>
-        </header>
+      <header class="header">
+        <h1>خريطة الموقع | Sitemap</h1>
+        <p>امتثال - حلول ذكية لإدارة الجودة والامتثال في قطاع الضيافة</p>
+        <p>Emtethal - Smart Compliance Solutions for Hospitality Excellence</p>
+      </header>
 
-        <div class="language-toggle">
-            <a href="/" title="الصفحة الرئيسية باللغة العربية">🏠 الرئيسية العربية</a>
-            <a href="/index-en.html" title="English Homepage">🏠 English Homepage</a>
+      <div class="language-toggle">
+        <a href="/" title="الصفحة الرئيسية باللغة العربية"
+          >🏠 الرئيسية العربية</a
+        >
+        <a href="/index-en.html" title="English Homepage"
+          >🏠 English Homepage</a
+        >
+      </div>
+
+      <!-- Main Pages Section -->
+      <section class="sitemap-section">
+        <h2>الصفحات الرئيسية | Main Pages</h2>
+        <div class="links-grid">
+          <div class="link-item">
+            <a href="/">الصفحة الرئيسية - العربية</a>
+            <div class="link-description">
+              الصفحة الرئيسية لمنصة امتثال باللغة العربية
+            </div>
+          </div>
+          <div class="link-item">
+            <a href="/index-en.html">Homepage - English</a>
+            <div class="link-description">
+              Emtethal homepage in English language
+            </div>
+          </div>
+          <div class="link-item">
+            <a href="/index.html">صفحة الفهرس</a>
+            <div class="link-description">صفحة الفهرس الرئيسية للموقع</div>
+          </div>
         </div>
+      </section>
 
-        <!-- Main Pages Section -->
-        <section class="sitemap-section">
-            <h2>الصفحات الرئيسية | Main Pages</h2>
-            <div class="links-grid">
-                <div class="link-item">
-                    <a href="/">الصفحة الرئيسية - العربية</a>
-                    <div class="link-description">الصفحة الرئيسية لمنصة امتثال باللغة العربية</div>
-                </div>
-                <div class="link-item">
-                    <a href="/index-en.html">Homepage - English</a>
-                    <div class="link-description">Emtethal homepage in English language</div>
-                </div>
-                <div class="link-item">
-                    <a href="/index.html">صفحة الفهرس</a>
-                    <div class="link-description">صفحة الفهرس الرئيسية للموقع</div>
-                </div>
+      <!-- Arabic Sections -->
+      <section class="sitemap-section">
+        <h2>أقسام الموقع العربي | Arabic Site Sections</h2>
+        <div class="links-grid">
+          <div class="link-item">
+            <a href="/#home">الرئيسية</a>
+            <div class="link-description">
+              القسم الرئيسي للموقع مع مقدمة عن امتثال
             </div>
-        </section>
-
-        <!-- Arabic Sections -->
-        <section class="sitemap-section">
-            <h2>أقسام الموقع العربي | Arabic Site Sections</h2>
-            <div class="links-grid">
-                <div class="link-item">
-                    <a href="/#home">الرئيسية</a>
-                    <div class="link-description">القسم الرئيسي للموقع مع مقدمة عن امتثال</div>
-                </div>
-                <div class="link-item">
-                    <a href="/#problemsToSolve">المشكلة التي نعالجها</a>
-                    <div class="link-description">التحديات والمشاكل في قطاع الضيافة والحلول المقترحة</div>
-                </div>
-                <div class="link-item">
-                    <a href="/#platform">المنصة</a>
-                    <div class="link-description">معلومات تفصيلية عن منصة امتثال وميزاتها</div>
-                </div>
-                <div class="link-item">
-                    <a href="/#services">الخدمات</a>
-                    <div class="link-description">الخدمات التي تقدمها امتثال لإدارة الجودة والامتثال</div>
-                </div>
-                <div class="link-item">
-                    <a href="/#about">عن امتثال</a>
-                    <div class="link-description">معلومات عن الشركة ورؤيتها ومهمتها</div>
-                </div>
-                <div class="link-item">
-                    <a href="/#contact">تواصل معنا</a>
-                    <div class="link-description">معلومات التواصل ونموذج الاستفسارات</div>
-                </div>
+          </div>
+          <div class="link-item">
+            <a href="/#problemsToSolve">المشكلة التي نعالجها</a>
+            <div class="link-description">
+              التحديات والمشاكل في قطاع الضيافة والحلول المقترحة
             </div>
-        </section>
-
-        <!-- English Sections -->
-        <section class="sitemap-section">
-            <h2>English Site Sections</h2>
-            <div class="links-grid">
-                <div class="link-item">
-                    <a href="/index-en.html#home">Home</a>
-                    <div class="link-description">Main section with introduction to Emtethal</div>
-                </div>
-                <div class="link-item">
-                    <a href="/index-en.html#problemsToSolve">Challenges We Solve</a>
-                    <div class="link-description">Hospitality sector challenges and proposed solutions</div>
-                </div>
-                <div class="link-item">
-                    <a href="/index-en.html#platform">Platform</a>
-                    <div class="link-description">Detailed information about Emtethal platform and features</div>
-                </div>
-                <div class="link-item">
-                    <a href="/index-en.html#services">Services</a>
-                    <div class="link-description">Quality management and compliance services offered by Emtethal</div>
-                </div>
-                <div class="link-item">
-                    <a href="/index-en.html#about">About</a>
-                    <div class="link-description">Company information, vision, and mission</div>
-                </div>
-                <div class="link-item">
-                    <a href="/index-en.html#contact">Contact</a>
-                    <div class="link-description">Contact information and inquiry form</div>
-                </div>
+          </div>
+          <div class="link-item">
+            <a href="/#platform">المنصة</a>
+            <div class="link-description">
+              معلومات تفصيلية عن منصة امتثال وميزاتها
             </div>
-        </section>
-
-        <!-- Important Resources -->
-        <section class="sitemap-section">
-            <h2>موارد مهمة | Important Resources</h2>
-            <div class="links-grid">
-                <div class="link-item">
-                    <a href="/sitemap.xml">خريطة الموقع XML</a>
-                    <div class="link-description">خريطة الموقع بتنسيق XML لمحركات البحث</div>
-                </div>
-                <div class="link-item">
-                    <a href="/sitemap-images.xml">خريطة الصور XML</a>
-                    <div class="link-description">خريطة مخصصة للصور لتحسين ظهورها في البحث</div>
-                </div>
-                <div class="link-item">
-                    <a href="/robots.txt">ملف Robots</a>
-                    <div class="link-description">ملف توجيهات محركات البحث</div>
-                </div>
-                <div class="link-item">
-                    <a href="/manifest.json">Web App Manifest</a>
-                    <div class="link-description">ملف التطبيق التدريجي للويب</div>
-                </div>
+          </div>
+          <div class="link-item">
+            <a href="/#services">الخدمات</a>
+            <div class="link-description">
+              الخدمات التي تقدمها امتثال لإدارة الجودة والامتثال
             </div>
-        </section>
-
-        <!-- Assets and Resources -->
-        <section class="sitemap-section">
-            <h2>الموارد والملفات | Assets & Resources</h2>
-            <div class="links-grid">
-                <div class="link-item">
-                    <a href="/assets/imgs/logo.png">شعار امتثال</a>
-                    <div class="link-description">الشعار الرسمي لشركة امتثال</div>
-                </div>
-                <div class="link-item">
-                    <a href="/assets/imgs/logo-white.png">الشعار الأبيض</a>
-                    <div class="link-description">شعار امتثال باللون الأبيض</div>
-                </div>
-                <div class="link-item">
-                    <a href="/assets/css/main.css">ملف التصميم الرئيسي</a>
-                    <div class="link-description">ملف CSS الرئيسي للموقع</div>
-                </div>
-                <div class="link-item">
-                    <a href="/assets/css/style-ar.css">ملف التصميم العربي</a>
-                    <div class="link-description">ملف CSS مخصص للنسخة العربية</div>
-                </div>
+          </div>
+          <div class="link-item">
+            <a href="/#about">عن امتثال</a>
+            <div class="link-description">
+              معلومات عن الشركة ورؤيتها ومهمتها
             </div>
-        </section>
+          </div>
+          <div class="link-item">
+            <a href="/#contact">تواصل معنا</a>
+            <div class="link-description">
+              معلومات التواصل ونموذج الاستفسارات
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <footer class="footer">
-            <p>© 2024 <a href="/">امتثال - Emtethal</a>. جميع الحقوق محفوظة | All Rights Reserved</p>
-            <p>حلول ذكية لإدارة الجودة والامتثال في قطاع الضيافة والمطاعم</p>
-            <p>Smart Compliance Solutions for Food Safety & Quality Management</p>
-            <br>
-            <p><a href="mailto:info@emtethal.com">info@emtethal.com</a> | <a href="tel:+966-11-XXX-XXXX">+966-11-XXX-XXXX</a></p>
-        </footer>
+      <!-- English Sections -->
+      <section class="sitemap-section">
+        <h2>English Site Sections</h2>
+        <div class="links-grid">
+          <div class="link-item">
+            <a href="/index-en.html#home">Home</a>
+            <div class="link-description">
+              Main section with introduction to Emtethal
+            </div>
+          </div>
+          <div class="link-item">
+            <a href="/index-en.html#problemsToSolve">Challenges We Solve</a>
+            <div class="link-description">
+              Hospitality sector challenges and proposed solutions
+            </div>
+          </div>
+          <div class="link-item">
+            <a href="/index-en.html#platform">Platform</a>
+            <div class="link-description">
+              Detailed information about Emtethal platform and features
+            </div>
+          </div>
+          <div class="link-item">
+            <a href="/index-en.html#services">Services</a>
+            <div class="link-description">
+              Quality management and compliance services offered by Emtethal
+            </div>
+          </div>
+          <div class="link-item">
+            <a href="/index-en.html#about">About</a>
+            <div class="link-description">
+              Company information, vision, and mission
+            </div>
+          </div>
+          <div class="link-item">
+            <a href="/index-en.html#contact">Contact</a>
+            <div class="link-description">
+              Contact information and inquiry form
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Important Resources -->
+      <section class="sitemap-section">
+        <h2>موارد مهمة | Important Resources</h2>
+        <div class="links-grid">
+          <div class="link-item">
+            <a href="/sitemap.xml">خريطة الموقع XML</a>
+            <div class="link-description">
+              خريطة الموقع بتنسيق XML لمحركات البحث
+            </div>
+          </div>
+          <div class="link-item">
+            <a href="/sitemap-images.xml">خريطة الصور XML</a>
+            <div class="link-description">
+              خريطة مخصصة للصور لتحسين ظهورها في البحث
+            </div>
+          </div>
+          <div class="link-item">
+            <a href="/robots.txt">ملف Robots</a>
+            <div class="link-description">ملف توجيهات محركات البحث</div>
+          </div>
+          <div class="link-item">
+            <a href="/manifest.json">Web App Manifest</a>
+            <div class="link-description">ملف التطبيق التدريجي للويب</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Assets and Resources -->
+      <section class="sitemap-section">
+        <h2>الموارد والملفات | Assets & Resources</h2>
+        <div class="links-grid">
+          <div class="link-item">
+            <a href="/assets/imgs/logo.png">شعار امتثال</a>
+            <div class="link-description">الشعار الرسمي لشركة امتثال</div>
+          </div>
+          <div class="link-item">
+            <a href="/assets/imgs/logo-white.png">الشعار الأبيض</a>
+            <div class="link-description">شعار امتثال باللون الأبيض</div>
+          </div>
+          <div class="link-item">
+            <a href="/assets/css/main.css">ملف التصميم الرئيسي</a>
+            <div class="link-description">ملف CSS الرئيسي للموقع</div>
+          </div>
+          <div class="link-item">
+            <a href="/assets/css/style-ar.css">ملف التصميم العربي</a>
+            <div class="link-description">ملف CSS مخصص للنسخة العربية</div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>
+          © 2024 <a href="/">امتثال - Emtethal</a>. جميع الحقوق محفوظة | All
+          Rights Reserved
+        </p>
+        <p>حلول ذكية لإدارة الجودة والامتثال في قطاع الضيافة والمطاعم</p>
+        <p>Smart Compliance Solutions for Food Safety & Quality Management</p>
+        <br />
+        <p>
+          <a href="mailto:info@emtethal.com">info@emtethal.com</a> |
+          <a href="tel:+966-11-XXX-XXXX">+966-11-XXX-XXXX</a>
+        </p>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

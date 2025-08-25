@@ -1,334 +1,353 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>خطأ في الخادم - 500 | امتثال</title>
-    <meta name="description" content="خطأ مؤقت في الخادم. نعمل على إصلاح المشكلة. تصفح امتثال للحصول على حلول إدارة الجودة والامتثال.">
-    <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://www.emtethal.com/500.html">
+    <meta
+      name="description"
+      content="خطأ مؤقت في الخادم. نعمل على إصلاح المشكلة. تصفح امتثال للحصول على حلول إدارة الجودة والامتثال."
+    />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://www.emtethal.com/500.html" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+        color: #333;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .error-container {
+        text-align: center;
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 20px;
+      }
+
+      .logo {
+        max-width: 200px;
+        margin-bottom: 30px;
+        opacity: 0.8;
+      }
+
+      .error-code {
+        font-size: 8em;
+        font-weight: bold;
+        color: #ff6b6b;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 1;
         }
-        
-        body {
-            font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        50% {
+          transform: scale(1.05);
+          opacity: 0.8;
         }
-        
-        .error-container {
-            text-align: center;
-            padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 20px;
+        100% {
+          transform: scale(1);
+          opacity: 1;
         }
-        
-        .logo {
-            max-width: 200px;
-            margin-bottom: 30px;
-            opacity: 0.8;
+      }
+
+      .error-title {
+        font-size: 2.5em;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .error-message {
+        font-size: 1.3em;
+        color: #666;
+        margin-bottom: 40px;
+        line-height: 1.6;
+      }
+
+      .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+
+      .btn {
+        padding: 15px 30px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: bold;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.1em;
+      }
+
+      .btn-primary {
+        background: linear-gradient(45deg, #50aa3e, #45a537);
+        color: white;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(45deg, #45a537, #3d8f30);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(80, 170, 62, 0.3);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: #ff6b6b;
+        border: 2px solid #ff6b6b;
+      }
+
+      .btn-secondary:hover {
+        background: #ff6b6b;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
+      }
+
+      .status-info {
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 30px 0;
+        border-left: 5px solid #ff6b6b;
+      }
+
+      .status-info h3 {
+        color: #ff6b6b;
+        margin-bottom: 10px;
+      }
+
+      .refresh-timer {
+        font-size: 1.1em;
+        color: #666;
+        margin: 20px 0;
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 8px;
+        background: #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+        margin: 15px 0;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(45deg, #50aa3e, #45a537);
+        border-radius: 4px;
+        animation: progress 30s linear;
+      }
+
+      @keyframes progress {
+        from {
+          width: 100%;
         }
-        
+        to {
+          width: 0%;
+        }
+      }
+
+      .language-switch {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .lang-btn {
+        padding: 8px 15px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        font-weight: bold;
+        transition: all 0.3s;
+        backdrop-filter: blur(10px);
+      }
+
+      .lang-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
         .error-code {
-            font-size: 8em;
-            font-weight: bold;
-            color: #ff6b6b;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            animation: pulse 2s infinite;
+          font-size: 5em;
         }
-        
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-                opacity: 1;
-            }
-            50% {
-                transform: scale(1.05);
-                opacity: 0.8;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-        
+
         .error-title {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 20px;
-            font-weight: bold;
+          font-size: 2em;
         }
-        
+
         .error-message {
-            font-size: 1.3em;
-            color: #666;
-            margin-bottom: 40px;
-            line-height: 1.6;
+          font-size: 1.1em;
         }
-        
+
         .action-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
+          flex-direction: column;
+          align-items: center;
         }
-        
+
         .btn {
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.1em;
+          width: 100%;
+          max-width: 300px;
         }
-        
-        .btn-primary {
-            background: linear-gradient(45deg, #50aa3e, #45a537);
-            color: white;
-            border: none;
-        }
-        
-        .btn-primary:hover {
-            background: linear-gradient(45deg, #45a537, #3d8f30);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(80, 170, 62, 0.3);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: #ff6b6b;
-            border: 2px solid #ff6b6b;
-        }
-        
-        .btn-secondary:hover {
-            background: #ff6b6b;
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.3);
-        }
-        
-        .status-info {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 20px;
-            margin: 30px 0;
-            border-left: 5px solid #ff6b6b;
-        }
-        
-        .status-info h3 {
-            color: #ff6b6b;
-            margin-bottom: 10px;
-        }
-        
-        .refresh-timer {
-            font-size: 1.1em;
-            color: #666;
-            margin: 20px 0;
-        }
-        
-        .progress-bar {
-            width: 100%;
-            height: 8px;
-            background: #ddd;
-            border-radius: 4px;
-            overflow: hidden;
-            margin: 15px 0;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(45deg, #50aa3e, #45a537);
-            border-radius: 4px;
-            animation: progress 30s linear;
-        }
-        
-        @keyframes progress {
-            from {
-                width: 100%;
-            }
-            to {
-                width: 0%;
-            }
-        }
-        
+
         .language-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 10px;
+          position: static;
+          justify-content: center;
+          margin-bottom: 20px;
         }
-        
-        .lang-btn {
-            padding: 8px 15px;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            text-decoration: none;
-            border-radius: 20px;
-            font-weight: bold;
-            transition: all 0.3s;
-            backdrop-filter: blur(10px);
-        }
-        
-        .lang-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-        
-        @media (max-width: 768px) {
-            .error-code {
-                font-size: 5em;
-            }
-            
-            .error-title {
-                font-size: 2em;
-            }
-            
-            .error-message {
-                font-size: 1.1em;
-            }
-            
-            .action-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .language-switch {
-                position: static;
-                justify-content: center;
-                margin-bottom: 20px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="language-switch">
-        <a href="/500.html" class="lang-btn">العربية</a>
-        <a href="/500-en.html" class="lang-btn">English</a>
+      <a href="/500.html" class="lang-btn">العربية</a>
+      <a href="/500-en.html" class="lang-btn">English</a>
     </div>
-    
+
     <div class="error-container">
-        <img src="assets/imgs/logo.png" alt="امتثال - حلول إدارة الجودة والامتثال" class="logo" onerror="this.style.display='none'">
-        
-        <div class="error-code">500</div>
-        
-        <h1 class="error-title">خطأ في الخادم</h1>
-        
-        <p class="error-message">
-            عذراً، حدث خطأ مؤقت في الخادم.<br>
-            نعمل على إصلاح المشكلة وستعود الخدمة قريباً.
+      <img
+        src="assets/imgs/logo.png"
+        alt="امتثال - حلول إدارة الجودة والامتثال"
+        class="logo"
+        onerror="this.style.display='none'"
+      />
+
+      <div class="error-code">500</div>
+
+      <h1 class="error-title">خطأ في الخادم</h1>
+
+      <p class="error-message">
+        عذراً، حدث خطأ مؤقت في الخادم.<br />
+        نعمل على إصلاح المشكلة وستعود الخدمة قريباً.
+      </p>
+
+      <div class="status-info">
+        <h3>معلومات الحالة</h3>
+        <p>⏰ وقت الخطأ: <span id="errorTime"></span></p>
+        <p>🔧 الفريق التقني يعمل على الإصلاح</p>
+        <p>📈 نسبة التوفر العادية: 99.9%</p>
+      </div>
+
+      <div class="refresh-timer">
+        <p>
+          سيتم تحديث الصفحة تلقائياً خلال <span id="countdown">30</span> ثانية
         </p>
-        
-        <div class="status-info">
-            <h3>معلومات الحالة</h3>
-            <p>⏰ وقت الخطأ: <span id="errorTime"></span></p>
-            <p>🔧 الفريق التقني يعمل على الإصلاح</p>
-            <p>📈 نسبة التوفر العادية: 99.9%</p>
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
         </div>
-        
-        <div class="refresh-timer">
-            <p>سيتم تحديث الصفحة تلقائياً خلال <span id="countdown">30</span> ثانية</p>
-            <div class="progress-bar">
-                <div class="progress-fill"></div>
-            </div>
-        </div>
-        
-        <div class="action-buttons">
-            <a href="/" class="btn btn-primary" onclick="location.reload()">
-                🔄 إعادة المحاولة
-            </a>
-            <a href="/#contact" class="btn btn-secondary">
-                📞 تواصل معنا
-            </a>
-        </div>
-        
-        <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #666;">
-            <p>في حالة استمرار المشكلة، يرجى <a href="/#contact" style="color: #50aa3e;">التواصل مع فريق الدعم</a></p>
-            <p style="margin-top: 10px; font-size: 0.9em;">
-                امتثال - حلول ذكية لإدارة الجودة والامتثال في قطاع الضيافة
-            </p>
-        </div>
+      </div>
+
+      <div class="action-buttons">
+        <a href="/" class="btn btn-primary" onclick="location.reload()">
+          🔄 إعادة المحاولة
+        </a>
+        <a href="/#contact" class="btn btn-secondary"> 📞 تواصل معنا </a>
+      </div>
+
+      <div
+        style="
+          margin-top: 30px;
+          padding-top: 20px;
+          border-top: 1px solid #eee;
+          color: #666;
+        "
+      >
+        <p>
+          في حالة استمرار المشكلة، يرجى
+          <a href="/#contact" style="color: #50aa3e">التواصل مع فريق الدعم</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 0.9em">
+          امتثال - حلول ذكية لإدارة الجودة والامتثال في قطاع الضيافة
+        </p>
+      </div>
     </div>
-    
+
     <script>
-        // Set error time
-        document.getElementById('errorTime').textContent = new Date().toLocaleString('ar-SA');
-        
-        // Countdown timer
-        let countdown = 30;
-        const countdownElement = document.getElementById('countdown');
-        
-        const timer = setInterval(() => {
-            countdown--;
-            countdownElement.textContent = countdown;
-            
-            if (countdown <= 0) {
-                clearInterval(timer);
-                location.reload();
-            }
-        }, 1000);
-        
-        // Add interactivity
-        document.addEventListener('DOMContentLoaded', function() {
-            const logo = document.querySelector('.logo');
-            const errorCode = document.querySelector('.error-code');
-            
-            // Animate elements on load
-            logo.style.opacity = '0';
-            logo.style.transform = 'translateY(-20px)';
-            
-            setTimeout(() => {
-                logo.style.transition = 'all 0.8s ease';
-                logo.style.opacity = '0.8';
-                logo.style.transform = 'translateY(0)';
-            }, 300);
-            
-            // Add click effect to error code
-            errorCode.addEventListener('click', function() {
-                this.style.animation = 'none';
-                setTimeout(() => {
-                    this.style.animation = 'pulse 2s infinite';
-                }, 10);
-            });
-            
-            // Check server status periodically
-            setInterval(checkServerStatus, 5000);
-        });
-        
-        function checkServerStatus() {
-            // Simple fetch to check if server is back online
-            fetch('/', { method: 'HEAD', mode: 'no-cors' })
-                .then(() => {
-                    // Server might be back online
-                    clearInterval(timer);
-                    location.reload();
-                })
-                .catch(() => {
-                    // Server still down, continue waiting
-                    console.log('Server still experiencing issues...');
-                });
+      // Set error time
+      document.getElementById('errorTime').textContent =
+        new Date().toLocaleString('ar-SA')
+
+      // Countdown timer
+      let countdown = 30
+      const countdownElement = document.getElementById('countdown')
+
+      const timer = setInterval(() => {
+        countdown--
+        countdownElement.textContent = countdown
+
+        if (countdown <= 0) {
+          clearInterval(timer)
+          location.reload()
         }
+      }, 1000)
+
+      // Add interactivity
+      document.addEventListener('DOMContentLoaded', function () {
+        const logo = document.querySelector('.logo')
+        const errorCode = document.querySelector('.error-code')
+
+        // Animate elements on load
+        logo.style.opacity = '0'
+        logo.style.transform = 'translateY(-20px)'
+
+        setTimeout(() => {
+          logo.style.transition = 'all 0.8s ease'
+          logo.style.opacity = '0.8'
+          logo.style.transform = 'translateY(0)'
+        }, 300)
+
+        // Add click effect to error code
+        errorCode.addEventListener('click', function () {
+          this.style.animation = 'none'
+          setTimeout(() => {
+            this.style.animation = 'pulse 2s infinite'
+          }, 10)
+        })
+
+        // Check server status periodically
+        setInterval(checkServerStatus, 5000)
+      })
+
+      function checkServerStatus() {
+        // Simple fetch to check if server is back online
+        fetch('/', { method: 'HEAD', mode: 'no-cors' })
+          .then(() => {
+            // Server might be back online
+            clearInterval(timer)
+            location.reload()
+          })
+          .catch(() => {
+            // Server still down, continue waiting
+            console.log('Server still experiencing issues...')
+          })
+      }
     </script>
-</body>
+  </body>
 </html>

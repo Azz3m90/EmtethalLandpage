@@ -21,7 +21,7 @@ website:    http://www.themepunch.com
 }
 
 .hermes.tparrows:before {
-  font-family: "revicons";
+  font-family: 'revicons';
   font-size: 15px;
   color: #fff;
   display: block;
@@ -33,10 +33,10 @@ website:    http://www.themepunch.com
   -webkit-transition: all 0.3s;
 }
 .hermes.tparrows.tp-leftarrow:before {
-  content: "\e824";
+  content: '\e824';
 }
 .hermes.tparrows.tp-rightarrow:before {
-  content: "\e825";
+  content: '\e825';
 }
 .hermes.tparrows.tp-leftarrow:hover:before {
   transform: translateX(-20px);
@@ -139,7 +139,7 @@ website:    http://www.themepunch.com
   background-color: rgba(0, 0, 0, 0.2);
 }
 .hermes .tp-bullet:after {
-  content: " ";
+  content: ' ';
   position: absolute;
   bottom: 0;
   height: 0;
@@ -199,7 +199,7 @@ website:    http://www.themepunch.com
   border-style: solid;
   border-width: 30px 0 30px 10px;
   border-color: transparent transparent transparent rgb(54, 54, 54);
-  content: " ";
+  content: ' ';
   position: absolute;
   right: -9px;
   bottom: 50%;

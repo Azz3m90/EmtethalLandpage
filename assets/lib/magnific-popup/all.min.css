@@ -60,7 +60,7 @@ h6 {
   font-weight: 400;
   text-rendering: optimizelegibility;
   color: #282b30;
-  font-family: Calibri, "PT Sans", "Trebuchet MS", "Helvetica Neue", Arial;
+  font-family: Calibri, 'PT Sans', 'Trebuchet MS', 'Helvetica Neue', Arial;
 }
 .mfp-preloader {
   font-size: 13px;
@@ -199,7 +199,7 @@ h2.intro {
   -webkit-backface-visibility: hidden;
   list-style: none;
 }
-#markdown-toc a[href="#magnific-popup-docs"] {
+#markdown-toc a[href='#magnific-popup-docs'] {
   display: none;
 }
 #markdown-toc ul {
@@ -209,7 +209,7 @@ h2.intro {
   display: none;
 }
 #markdown-toc:before {
-  content: "Table of contents";
+  content: 'Table of contents';
   font-weight: 700;
   display: block;
   margin-bottom: 10px;
@@ -235,7 +235,7 @@ h2.intro {
 }
 code,
 pre {
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
 }
 code {
   background: #f8f8f8;
@@ -276,20 +276,20 @@ pre code:before {
   line-height: 13px;
 }
 code.html:before {
-  content: "HTML";
+  content: 'HTML';
 }
 code.javascript:before {
-  content: "JS";
+  content: 'JS';
 }
 code.css:before {
-  content: "CSS";
+  content: 'CSS';
 }
 #mc_embed_signup {
   max-width: 350px;
   padding: 32px;
   background: #eee;
 }
-#mc_embed_signup input[type="email"] {
+#mc_embed_signup input[type='email'] {
   border: 1px solid #ccc;
   border-top: 1px solid #999;
   padding: 5px;
@@ -304,7 +304,7 @@ code.css:before {
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
 }
-#mc_embed_signup input[type="email"]:focus {
+#mc_embed_signup input[type='email']:focus {
   background-color: #fff;
   border: 1px solid #3169b3;
   box-shadow: #3169b3 0 0 5px;
@@ -312,7 +312,7 @@ code.css:before {
   -webkit-box-shadow: #3169b3 0 0 5px;
   outline: 0;
 }
-#mc_embed_signup input[type="submit"] {
+#mc_embed_signup input[type='submit'] {
   border: 1px solid #3169b3;
   font-size: 13px;
   font-weight: 700;
@@ -356,7 +356,7 @@ code.css:before {
   position: relative;
 }
 #examples:after {
-  content: "to view source click on the title of example";
+  content: 'to view source click on the title of example';
   opacity: 0.4;
   font-weight: 400;
   font-size: 14px;
@@ -376,12 +376,12 @@ code.css:before {
   color: #c00;
 }
 .example h3:hover:after {
-  content: "view source";
+  content: 'view source';
   padding-left: 8px;
   color: #999;
   position: absolute;
   top: 16px;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-family: Consolas, 'Liberation Mono', Courier, monospace;
   font-size: 12px;
 }
 .square-tmb {
@@ -541,7 +541,7 @@ code.def {
   min-height: 18px;
   padding-left: 18px;
 }
-#mfp-build-form input[type="checkbox"] {
+#mfp-build-form input[type='checkbox'] {
   margin: 3px 5px 3px -18px;
   line-height: normal;
   cursor: pointer;
@@ -578,7 +578,7 @@ code.def {
   position: relative;
 }
 .smashing-link:before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 24px;
   height: 24px;
@@ -955,7 +955,7 @@ pre .chunk {
   box-sizing: border-box;
 }
 .mfp-container:before {
-  content: "";
+  content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
@@ -1115,7 +1115,7 @@ button::-moz-focus-inner {
 .mfp-arrow .mfp-b,
 .mfp-arrow:after,
 .mfp-arrow:before {
-  content: "";
+  content: '';
   display: block;
   width: 0;
   height: 0;
@@ -1207,7 +1207,7 @@ img.mfp-img {
   line-height: 0;
 }
 .mfp-figure:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 40px;

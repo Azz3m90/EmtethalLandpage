@@ -1,25 +1,25 @@
-var tpj = jQuery;
+var tpj = jQuery
 
-var revapi2;
+var revapi2
 tpj(document).ready(function () {
-  if (tpj("#rev_slider_2_1").revolution == undefined) {
-    revslider_showDoubleJqueryError("#rev_slider_2_1");
+  if (tpj('#rev_slider_2_1').revolution == undefined) {
+    revslider_showDoubleJqueryError('#rev_slider_2_1')
   } else {
-    revapi2 = tpj("#rev_slider_2_1")
+    revapi2 = tpj('#rev_slider_2_1')
       .show()
       .revolution({
-        sliderType: "carousel",
-        jsFileLocation: "revolution/js/",
-        sliderLayout: "fullwidth",
-        dottedOverlay: "none",
+        sliderType: 'carousel',
+        jsFileLocation: 'revolution/js/',
+        sliderLayout: 'fullwidth',
+        dottedOverlay: 'none',
         delay: 9000,
         navigation: {
-          keyboardNavigation: "off",
-          keyboard_direction: "horizontal",
-          mouseScrollNavigation: "off",
-          onHoverStop: "off",
+          keyboardNavigation: 'off',
+          keyboard_direction: 'horizontal',
+          mouseScrollNavigation: 'off',
+          onHoverStop: 'off',
           arrows: {
-            style: "erinyen",
+            style: 'erinyen',
             enable: true,
             hide_onmobile: true,
             hide_under: 600,
@@ -28,83 +28,83 @@ tpj(document).ready(function () {
             hide_delay_mobile: 1200,
             tmp: '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div>    <div class="tp-arr-img-over"></div>	<span class="tp-arr-titleholder">{{title}}</span> </div>',
             left: {
-              h_align: "left",
-              v_align: "center",
+              h_align: 'left',
+              v_align: 'center',
               h_offset: 30,
               v_offset: 0,
             },
             right: {
-              h_align: "right",
-              v_align: "center",
+              h_align: 'right',
+              v_align: 'center',
               h_offset: 30,
               v_offset: 0,
             },
           },
           thumbnails: {
-            style: "gyges",
+            style: 'gyges',
             enable: true,
             width: 80,
             height: 80,
             min_width: 80,
             wrapper_padding: 0,
-            wrapper_color: "transparent",
-            wrapper_opacity: "1",
+            wrapper_color: 'transparent',
+            wrapper_opacity: '1',
             tmp: '<span class="tp-thumb-img-wrap">  <span class="tp-thumb-image"></span></span>',
             visibleAmount: 5,
             hide_onmobile: true,
             hide_under: 800,
             hide_onleave: false,
-            direction: "horizontal",
+            direction: 'horizontal',
             span: false,
-            position: "inner",
+            position: 'inner',
             space: 5,
-            h_align: "center",
-            v_align: "bottom",
+            h_align: 'center',
+            v_align: 'bottom',
             h_offset: 0,
             v_offset: 20,
           },
         },
         carousel: {
-          horizontal_align: "center",
-          vertical_align: "center",
-          fadeout: "off",
+          horizontal_align: 'center',
+          vertical_align: 'center',
+          fadeout: 'off',
           maxVisibleItems: 3,
-          infinity: "on",
+          infinity: 'on',
           space: 0,
-          stretch: "off",
+          stretch: 'off',
         },
         viewPort: {
           enable: true,
-          outof: "pause",
-          visible_area: "90%",
+          outof: 'pause',
+          visible_area: '90%',
         },
         responsiveLevels: [1240, 1024, 778, 480],
         gridwidth: [1240, 1024, 778, 480],
         gridheight: [550, 550, 450, 400],
-        lazyType: "none",
+        lazyType: 'none',
         parallax: {
-          type: "mouse",
-          origo: "slidercenter",
+          type: 'mouse',
+          origo: 'slidercenter',
           speed: 2000,
           levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
         },
-        shadow: "off",
-        spinner: "spinner1",
-        stopLoop: "off",
+        shadow: 'off',
+        spinner: 'spinner1',
+        stopLoop: 'off',
         stopAfterLoops: -1,
         stopAtSlide: -1,
-        shuffle: "off",
-        autoHeight: "off",
-        hideThumbsOnMobile: "on",
+        shuffle: 'off',
+        autoHeight: 'off',
+        hideThumbsOnMobile: 'on',
         hideSliderAtLimit: 0,
         hideCaptionAtLimit: 0,
         hideAllCaptionAtLilmit: 0,
         debugMode: false,
         fallbacks: {
-          simplifyAll: "off",
-          nextSlideOnWindowFocus: "off",
+          simplifyAll: 'off',
+          nextSlideOnWindowFocus: 'off',
           disableFocusListener: false,
         },
-      });
+      })
   }
-}); /*ready*/
+}) /*ready*/

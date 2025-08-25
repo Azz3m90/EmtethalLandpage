@@ -24,7 +24,7 @@ website:    http://www.themepunch.com
   background: #000;
 }
 .hephaistos.tparrows:before {
-  font-family: "revicons";
+  font-family: 'revicons';
   font-size: 18px;
   color: #fff;
   display: block;
@@ -32,11 +32,11 @@ website:    http://www.themepunch.com
   text-align: center;
 }
 .hephaistos.tparrows.tp-leftarrow:before {
-  content: "\e82c";
+  content: '\e82c';
   margin-left: -2px;
 }
 .hephaistos.tparrows.tp-rightarrow:before {
-  content: "\e82d";
+  content: '\e82d';
   margin-right: -2px;
 }
 
@@ -44,7 +44,7 @@ website:    http://www.themepunch.com
 .hephaistos.tp-bullets {
 }
 .hephaistos.tp-bullets:before {
-  content: " ";
+  content: ' ';
   position: absolute;
   width: 100%;
   height: 100%;

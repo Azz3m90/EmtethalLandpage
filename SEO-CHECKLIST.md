@@ -72,7 +72,6 @@ This comprehensive SEO checklist ensures Emtethal achieves top search engine ran
 ### 1. 🔍 Search Console Setup
 
 - [ ] **Submit to Google Search Console**
-
   1. Go to [Google Search Console](https://search.google.com/search-console)
   2. Add property: `https://www.emtethal.com`
   3. Upload `google-site-verification.html` with your verification code

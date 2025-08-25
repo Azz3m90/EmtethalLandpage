@@ -22,17 +22,17 @@ body {
   font-family:
     system-ui,
     -apple-system,
-    "Segoe UI",
+    'Segoe UI',
     Roboto,
-    "Helvetica Neue",
+    'Helvetica Neue',
     Arial,
-    "Noto Sans",
-    "Liberation Sans",
+    'Noto Sans',
+    'Liberation Sans',
     sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji';
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -42,7 +42,7 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-[tabindex="-1"]:focus:not(:focus-visible) {
+[tabindex='-1']:focus:not(:focus-visible) {
   outline: 0 !important;
 }
 
@@ -216,7 +216,7 @@ code,
 kbd,
 samp {
   font-family:
-    SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+    SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
   font-size: 1em;
   direction: ltr /* rtl:ignore */;
@@ -324,7 +324,7 @@ select {
   text-transform: none;
 }
 
-[role="button"] {
+[role='button'] {
   cursor: pointer;
 }
 
@@ -337,15 +337,15 @@ select {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 button:not(:disabled),
-[type="button"]:not(:disabled),
-[type="reset"]:not(:disabled),
-[type="submit"]:not(:disabled) {
+[type='button']:not(:disabled),
+[type='reset']:not(:disabled),
+[type='submit']:not(:disabled) {
   cursor: pointer;
 }
 
@@ -396,7 +396,7 @@ legend + * {
   height: auto;
 }
 
-[type="search"] {
+[type='search'] {
   outline-offset: -2px;
   -webkit-appearance: textfield;
 }

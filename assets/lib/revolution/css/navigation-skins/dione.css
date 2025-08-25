@@ -182,7 +182,7 @@ website:    http://www.themepunch.com
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#777777", GradientType=0 );
 }
 .dione .tp-bullet-title:after {
-  content: " ";
+  content: ' ';
   position: absolute;
   left: 50%;
   margin-left: -8px;

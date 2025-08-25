@@ -1,0 +1,24 @@
+{
+  "name": "emtethallandpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "google-analytics.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "vite",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azz3m90/EmtethalLandpage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Azz3m90/EmtethalLandpage/issues"
+  },
+  "homepage": "https://github.com/Azz3m90/EmtethalLandpage#readme",
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}

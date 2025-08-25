@@ -14,7 +14,7 @@
 }
 
 .rsaddon-panorama.rsaddon-panorama-drag {
-  cursor: url("//www.google.com/intl/en_ALL/mapfiles/openhand.cur"), all-scroll;
+  cursor: url('//www.google.com/intl/en_ALL/mapfiles/openhand.cur'), all-scroll;
   cursor: -webkit-grab;
   cursor: -moz-grab;
   cursor: -o-grab;
@@ -24,7 +24,7 @@
 
 .rsaddon-panorama.rsaddon-panorama-dragging {
   cursor:
-    url("//www.google.com/intl/en_ALL/mapfiles/closedhand.cur"), all-scroll;
+    url('//www.google.com/intl/en_ALL/mapfiles/closedhand.cur'), all-scroll;
   cursor: -webkit-grabbing;
   cursor: -moz-grabbing;
   cursor: -o-grabbing;
