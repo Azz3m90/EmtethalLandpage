@@ -750,7 +750,7 @@ footer .copyright {
   background-color: #50aa3e;
 }
 .secondary-bg {
-  background-color: #5a6268;
+  background-color: #959a9f;
 }
 @media (max-width: 575.98px) {
   section#home {
@@ -2056,5 +2056,148 @@ p {
   }
   .rtl-align {
     text-align: right;
+  }
+}
+
+/* ========== CTA Buttons Styling ========== */
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.cta-btn,
+.cta-btn-outline {
+  font-family: "Cairo", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  white-space: nowrap;
+  text-align: center;
+  min-width: 180px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cta-btn {
+  background: linear-gradient(135deg, #50aa3e 0%, #28a745 100%);
+  color: #ffffff;
+  border-color: #50aa3e;
+  box-shadow: 0 4px 15px rgba(80, 170, 62, 0.3);
+}
+
+.cta-btn:hover {
+  background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(80, 170, 62, 0.4);
+  text-decoration: none;
+  opacity: 1;
+}
+
+.cta-btn-outline {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.cta-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+  opacity: 1;
+}
+
+.cta-btn i,
+.cta-btn-outline i {
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+/* ========== Hero Section Enhanced Styling ========== */
+#home .content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+#home .slide {
+  text-align: center;
+  max-width: 800px;
+  color: #ffffff;
+}
+
+#home .slide .title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: "Cairo", sans-serif;
+}
+
+#home .slide .description {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-family: "Cairo", sans-serif;
+  opacity: 0.95;
+}
+
+/* ========== Responsive Design for CTA Buttons ========== */
+@media (max-width: 768px) {
+  .cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-btn,
+  .cta-btn-outline {
+    min-width: 200px;
+    font-size: 15px;
+    padding: 12px 25px;
+  }
+
+  #home .slide .title {
+    font-size: 2.5rem;
+  }
+
+  #home .slide .description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-btn,
+  .cta-btn-outline {
+    min-width: 100%;
+    font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  #home .slide .title {
+    font-size: 2rem;
+  }
+
+  #home .slide .description {
+    font-size: 1rem;
   }
 }
