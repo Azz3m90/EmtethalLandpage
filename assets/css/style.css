@@ -1140,7 +1140,7 @@ footer .copyright {
   background-color: #50aa3e;
 }
 .secondary-bg {
-  background-color: #5a6268;
+  background-color: #959a9f;
 }
 @media (max-width: 575.98px) {
   section#home {
@@ -2352,10 +2352,10 @@ p {
 /* ========== CTA Buttons Styling ========== */
 .cta-buttons {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 5px;
   flex-wrap: wrap;
 }
 

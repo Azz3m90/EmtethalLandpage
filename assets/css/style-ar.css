@@ -2062,10 +2062,10 @@ p {
 /* ========== CTA Buttons Styling ========== */
 .cta-buttons {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 5px;
   flex-wrap: wrap;
 }
 
@@ -2200,4 +2200,8 @@ p {
   #home .slide .description {
     font-size: 1rem;
   }
+}
+/* Option 1: Add this to your CSS file */
+.rtl-align.smaller-text {
+  font-size: 14px; /* Adjust this value as needed */
 }

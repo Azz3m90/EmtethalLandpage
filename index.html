@@ -796,7 +796,7 @@
               <div class="statistics-container counter-section py-5">
                 <div class="row justify-content-center align-items-center">
                   <!-- Statistic 1 -->
-<!-- Statistic 1 -->
+
 <div class="col-12 col-md-3">
   <div class="statistic-item text-center">
     <div
@@ -939,60 +939,229 @@
             <div class="herotext align-items-center text-center">
               <h4 class="pb-3">التحديات الرئيسية</h4>
             </div>
-          </div>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <div class="blockproblemsToSolve">
-              <div class="front-content">
-                <div class="icon"><i class="las la-file-alt"></i></div>
-                <h2>ضعف التوثيق</h2>
-                <p>سجلات يدوية أو غير متسقة</p>
-              </div>
-              <div class="back-content">
-                تعتمد الكثير من المنشآت على سجلات يدوية أو غير متسقة، مما يؤدي
-                إلى فقدان المعلومات أو صعوبة تتبّع العمليات بشكل دقيق. غياب
-                التوثيق المنظم يعوق القدرة على اتخاذ قرارات مبنية على بيانات
-                واضحة.
-              </div>
-            </div>
-            <div class="blockproblemsToSolve">
-              <div class="front-content">
-                <div class="icon"><i class="las la-users-cog"></i></div>
-                <h2>تشتت الفرق</h2>
-                <p>مسؤوليات غير واضحة</p>
-              </div>
-              <div class="back-content">
-                تفتقر بعض الفرق إلى توزيع واضح للمسؤوليات والمهام، مما يؤدي إلى
-                تداخل الأدوار أو ترك فجوات في سير العمل. هذا التشتت يُضعف
-                الكفاءة التشغيلية ويزيد من احتمالية وقوع الأخطاء.
-              </div>
-            </div>
-            <div class="blockproblemsToSolve">
-              <div class="front-content">
-                <div class="icon"><i class="las la-bolt"></i></div>
-                <h2>تأخر الكشف</h2>
-                <p>اكتشاف الأخطاء متأخرًا</p>
-              </div>
-              <div class="back-content">
-                غالبًا ما تُكتشف الأخطاء أو المخالفات بعد فوات الأوان، إما عند
-                التفتيش أو بعد وقوع مشكلة تؤثر على سمعة المنشأة. هذا التأخر
-                يُقلل من فرص المعالجة السريعة ويزيد من التكاليف التشغيلية.
-              </div>
-            </div>
-            <div class="blockproblemsToSolve">
-              <div class="front-content">
-                <div class="icon"><i class="las la-chart-line"></i></div>
-                <h2>ثغرات الامتثال</h2>
-                <p>النمو السريع يولّد ثغرات في الجودة</p>
-              </div>
-              <div class="back-content">
-                مع النمو السريع للمنشآت، تظهر فجوات في الالتزام بمعايير الجودة
-                والاشتراطات التنظيمية. وتؤدي هذه الثغرات إلى مخاطر محتملة في
-                السلامة والامتثال، ما يهدد استمرارية العمل ويُعرّض المنشأة
-                للغرامات أو الإغلاق.
+              <!-- Add the video element here -->
+            <div class="col-12 mb-4">
+              <div class="ratio ratio-16x9">
+                <video class="shadow-lg rounded" controls poster="assets/video/emtethal-poster.png">
+                  <source src="assets/video/Pre-comp 3_7-720p.mp4" type="video/mp4">
+                  المتصفح لا يدعم تشغيل الفيديو.
+                </video>
               </div>
             </div>
           </div>
-        </div>
+          </div>
+<style>
+  /* Make all five cards fit in one row */
+  .challenges-row .blockproblemsToSolve {
+    flex: 0 0 calc(20% - 1rem);
+    max-width: calc(20% - 1rem);
+  }
+  
+  /* Smaller font size for h2 in challenge cards to fit on one line */
+  .blockproblemsToSolve .front-content h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1199.98px) {
+    .challenges-row .blockproblemsToSolve {
+      flex: 0 0 calc(33.333% - 1rem);
+      max-width: calc(33.333% - 1rem);
+    }
+  }
+  
+  @media (max-width: 991.98px) {
+    .challenges-row .blockproblemsToSolve {
+      flex: 0 0 calc(50% - 0.75rem);
+      max-width: calc(50% - 0.75rem);
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .challenges-row .blockproblemsToSolve {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    
+    .blockproblemsToSolve .front-content h2 {
+      font-size: 1.3rem; /* Slightly larger on mobile for better readability */
+    }
+  }
+</style>
+
+<div class="d-flex flex-wrap justify-content-center gap-3 challenges-row">
+  <div class="blockproblemsToSolve">
+    <div class="front-content">
+      <div class="icon"><i class="las la-file-alt"></i></div>
+      <h2>ضعف التوثيق</h2>
+      <p>سجلات غير منظمة وغير موثقة</p>
+    </div>
+    <div class="back-content">
+      تعاني المنشآت من ضعف في توثيق العمليات والإجراءات، مما يؤدي إلى صعوبة تتبع الأنشطة وإثبات الامتثال للمعايير المطلوبة عند التفتيش، ويزيد من مخاطر المخالفات والغرامات.
+    </div>
+  </div>
+  
+  <div class="blockproblemsToSolve">
+    <div class="front-content">
+      <div class="icon"><i class="las la-user-graduate"></i></div>
+      <h2>ضعف الوعي والتدريب</h2>
+      <p>نقص المعرفة باشتراطات الجودة</p>
+    </div>
+    <div class="back-content">
+      يفتقر العاملون إلى الوعي الكافي والتدريب المناسب على اشتراطات الجودة والمعايير التنظيمية، مما يؤدي إلى تكرار الأخطاء وعدم القدرة على تطبيق المعايير بشكل صحيح.
+    </div>
+  </div>
+  
+  <div class="blockproblemsToSolve">
+    <div class="front-content">
+      <div class="icon"><i class="las la-tasks"></i></div>
+      <h2>ضعف متابعة التنفيذ</h2>
+      <p>قصور في تطبيق معايير الامتثال</p>
+    </div>
+    <div class="back-content">
+      تواجه المنشآت صعوبة في متابعة تنفيذ معايير الامتثال بشكل مستمر ودقيق، مما يؤدي إلى تراكم المخالفات وعدم معالجة المشكلات في الوقت المناسب قبل زيارات التفتيش.
+    </div>
+  </div>
+  
+  <div class="blockproblemsToSolve">
+    <div class="front-content">
+      <div class="icon"><i class="las la-chart-bar"></i></div>
+      <h2>عدم القدرة على قياس الأداء</h2>
+      <p>صعوبة تقييم مستوى الامتثال</p>
+    </div>
+    <div class="back-content">
+      تفتقر المنشآت إلى أدوات فعالة لقياس أداء الامتثال وتقييم مستوى الجودة بشكل موضوعي، مما يجعل من الصعب تحديد مجالات التحسين وقياس التقدم في تطبيق المعايير المطلوبة.
+    </div>
+  </div>
+  
+  <div class="blockproblemsToSolve">
+    <div class="front-content">
+      <div class="icon"><i class="las la-sitemap"></i></div>
+      <h2>التحديات الإدارية</h2>
+      <p>ضعف الهيكلة وتوزيع المسؤوليات</p>
+    </div>
+    <div class="back-content">
+      تواجه المنشآت تحديات إدارية وتنظيمية تتعلق بتوزيع المسؤوليات وتحديد الأدوار، مما يؤدي إلى تداخل المهام أو إهمالها، وضعف التنسيق بين الأقسام المختلفة في تطبيق معايير الجودة.
+    </div>
+  </div>
+</div>
+
+<!-- New section: Consequences of Poor Compliance -->
+          <div class="row mt-5">
+            <div class="col-12">
+              <div class="herotext align-items-center text-center">
+                <h4 class="pb-3">عواقب ضعف الامتثال</h4>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              <!-- Custom style for single row layout -->
+              <style>
+                /* Override for this specific section to fit 5 cards in one row */
+                .consequences-row .blockproblemsToSolve {
+                  flex: 0 0 calc(20% - 1rem);
+                  max-width: calc(20% - 1rem);
+                }
+                
+                /* Smaller font size for h2 in consequences section */
+                .consequences-row .blockproblemsToSolve h2 {
+                  font-size: 1.2rem;
+                  margin-bottom: 0.5rem;
+                  font-weight: 600;
+                }
+                
+                @media (max-width: 1199.98px) {
+                  .consequences-row .blockproblemsToSolve {
+                    flex: 0 0 calc(33.333% - 1rem);
+                    max-width: calc(33.333% - 1rem);
+                  }
+                }
+                
+                @media (max-width: 991.98px) {
+                  .consequences-row .blockproblemsToSolve {
+                    flex: 0 0 calc(50% - 0.75rem);
+                    max-width: calc(50% - 0.75rem);
+                  }
+                }
+                
+                @media (max-width: 575.98px) {
+                  .consequences-row .blockproblemsToSolve {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                  }
+                  
+                  /* Return to normal size on mobile for better readability */
+                  .consequences-row .blockproblemsToSolve h2 {
+                    font-size: 1.5rem;
+                  }
+                }
+              </style>
+              
+              <div class="d-flex flex-wrap justify-content-center gap-3 consequences-row w-100">
+                <div class="blockproblemsToSolve">
+                  <div class="front-content">
+                    <div class="icon"><i class="las la-gavel"></i></div>
+                    <h2>إجراءات جزائية</h2>
+                    <p>غرامات كبيرة من الجهات الرقابية</p>
+                  </div>
+                  <div class="back-content">
+                    تطبيق إجراءات جزائية وغرامات كبيرة من قبل الجهات الحكومية الرقابية
+                  </div>
+                </div>
+                
+                <div class="blockproblemsToSolve">
+                  <div class="front-content">
+                    <div class="icon"><i class="las la-hand-holding-usd"></i></div>
+                    <h2>عقوبات مالية</h2>
+                    <p>تعويضات للعملاء المتضررين</p>
+                  </div>
+                  <div class="back-content">
+                    انزال عقوبات مالية بالتعويض لعملاء متضررين بسبب ضعف الامتثال والجودة
+                  </div>
+                </div>
+                
+                <div class="blockproblemsToSolve">
+                  <div class="front-content">
+                    <div class="icon"><i class="las la-chart-line fa-flip-vertical"></i></div>
+                    <h2>خسائر مالية</h2>
+                    <p>نتيجة تضرر السمعة</p>
+                  </div>
+                  <div class="back-content">
+                    خسائر مالية ضخمة نتيجة تضرر السمعة وفقدان ثقة العملاء في المنشأة وخدماتها
+                  </div>
+                </div>
+                
+                <div class="blockproblemsToSolve">
+                  <div class="front-content">
+                    <div class="icon"><i class="las la-comment-slash"></i></div>
+                    <h2>تضرر السمعة</h2>
+                    <p>فقدان ثقة العملاء</p>
+                  </div>
+                  <div class="back-content">
+                    تضرر سمعة المنشأة أمام عملائها وانتشار الآراء السلبية عنها في وسائل التواصل الاجتماعي
+                  </div>
+                </div>
+                
+                <div class="blockproblemsToSolve">
+                  <div class="front-content">
+                    <div class="icon"><i class="las la-user-graduate"></i></div>
+                    <h2>خسارة الكفاءات</h2>
+                    <p>هروب النخب عالية الكفاءة</p>
+                  </div>
+                  <div class="back-content">
+                    بيئة العمل في منشأة غير ممتثلة للمعايير تؤدي إلى خسارة النخب عالية الكفاءة وصعوبة استقطاب مواهب جديدة
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>   
+
       </div>
     </section>
     <!-- The Problem We Solve ENDS -->
@@ -1270,8 +1439,8 @@
                 <h4 class="rtl-align">
                   <i class="las la-file-alt"></i> بدون أوراق
                 </h4>
-                <p class="rtl-align" style="color: white">
-                  سير عمل مؤتمت بالكامل
+                <p class="rtl-align smaller-text" style="color: white">
+                  سير عمل الكتروني بالكامل
                 </p>
               </div>
               <ul class="col-12 pt-4 rtl-align">
@@ -1291,7 +1460,8 @@
                 <h4 class="rtl-align">
                   <i class="las la-map-marker-alt"></i> مصممة للسعودية
                 </h4>
-                <p class="rtl-align">متوافقة مع اللوائح المحلية</p>
+                <p class="rtl-align smaller-text"> متوافقة مع اللوائح المحلية والدولية
+  </p>
               </div>
               <ul class="col-12 pt-4 rtl-align">
                 <li>
@@ -1311,7 +1481,8 @@
                 <h4 class="rtl-align">
                   <i class="las la-brain"></i> أدوات ذكية
                 </h4>
-                <p class="rtl-align">تدريب وتقارير مدمجة</p>
+                <p class="rtl-align smaller-text">منصة الكترونية وتطبيق يعمل على كافة الأجهزة الذكية
+  </p>
               </div>
               <ul class="col-12 pt-4 rtl-align">
                 <li>
@@ -1392,7 +1563,7 @@
           <div class="col-12 col-lg-6 position-relative overflow-hidden">
             <div class="image-blur-wrapper">
               <img
-                src="assets/imgs/features/s4-min.webp"
+                src="assets/imgs/positions/positions.webp"
                 class="img-fluid w-100 h-100 object-fit-cover"
                 alt="موقعنا في السوق"
               />
@@ -1403,7 +1574,7 @@
             class="col-12 col-lg-6 d-flex align-items-center py-5 px-4 px-lg-5"
           >
 <div class="text-content w-100 text-end">
-  <h6 class="herotext text-uppercase mb-3" style="color: #666">
+  <h6 class="herotext text-uppercase mb-3 force-right" style="color: #666">
     /موقعنا في السوق
   </h6>
   <h2 class="mb-3">أين نقف؟ امتثال تتألق!</h2>
@@ -1809,6 +1980,166 @@
       </div>
     </section>
     <!-- /. ABOUT US ENDS -->
+<!-- DASHBOARD SHOWCASE SECTION STARTS -->
+<section class="dashboard-showcase py-5" id="dashboard">
+  <div class="container">
+    <div class="row align-items-center flex-row-reverse">
+
+<!-- Left side - Dashboard Image -->
+<div class="col-12 col-lg-6 mb-5 mb-lg-0">
+  <div class="dashboard-image-container position-relative">
+    <!-- Main dashboard image -->
+    <img 
+      src="assets/imgs/dashboard/report.png" 
+      alt="منصة امتثال - لوحة التحكم الرئيسية" 
+      class="img-fluid rounded-4  main-dashboard-img"
+    />
+    <!-- Secondary dashboard image (overlapping) -->
+    <img 
+      src="assets/imgs/dashboard/Visit report.png" 
+      alt="منصة امتثال - تقارير الأداء" 
+      class="img-fluid rounded-4  secondary-dashboard-img position-absolute"
+    />
+  </div>
+</div>
+
+<!-- Additional CSS for overlapping dashboard images -->
+<style>
+  .dashboard-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    min-height: 350px;
+    /* Add padding to contain the secondary image */
+    padding-right: 5%;
+    padding-bottom: 10%;
+   /* Add radial gradient background to just this container */
+    background: radial-gradient(circle at center, #e8f5e5 0%, #f8f9fa 100%);
+    border-radius: 20px; /* Add rounded corners */
+    overflow: hidden; /* Ensure gradient stays within rounded corners */
+  
+  }
+  
+  .main-dashboard-img {
+    width: 85%; /* Further reduced */
+    max-width: 520px;
+    z-index: 1;
+    position: relative;
+    margin-left: 5%; /* Shift slightly to the left */
+  }
+  
+  .secondary-dashboard-img {
+    width: 65%; /* Further reduced */
+    max-width: 400px;
+    bottom: 0; /* Reduced from -15% */
+    right: 0; /* Adjusted from -5% to 0 */
+    z-index: 2;
+   
+  }
+  
+  @media (max-width: 991.98px) {
+    .dashboard-image-container {
+      min-height: 320px;
+      padding-right: 3%;
+      padding-bottom: 8%;
+    }
+    
+    .secondary-dashboard-img {
+      width: 60%;
+      bottom: -8%;
+      right: 3%;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .dashboard-image-container {
+      min-height: 280px;
+      padding-right: 2%;
+      padding-bottom: 6%;
+    }
+    
+    .secondary-dashboard-img {
+      width: 55%;
+      bottom: -5%;
+      right: 5%;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .dashboard-image-container {
+      min-height: 230px;
+      padding-right: 0;
+      padding-bottom: 5%;
+    }
+    
+    .secondary-dashboard-img {
+      width: 50%;
+      bottom: -3%;
+      right: 8%;
+    }
+  }
+  
+  /* Add overflow control to the parent section if needed */
+  .dashboard-showcase {
+    background-color: #f8f9fa;
+    overflow: hidden;
+    position: relative;
+  }
+</style>
+
+
+            <!-- Right side - Text Content -->
+      <div class="col-12 col-lg-6">
+        <div class="dashboard-content text-end">
+          <h6 class="text-muted mb-2">/منصة امتثال</h6>
+          <h3 class="fw-bold mb-3">كل ما تحتاجه لإدارة الجودة والامتثال <br>في مكان واحد</h3>
+          <p class="lead mb-4 ">
+            من تتبع الزيارات والتقارير إلى إدارة المخاطر والفحص اللحظي، تجمع منصة امتثال أدوات فريقك في لوحة واحدة. لا مزيد من الجداول المبعثرة أو الأوراق — فقط رؤية واضحة وبيانات مباشرة تساعدك على اتخاذ القرار بثقة.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom CSS for Dashboard Section -->
+  <style>
+    .dashboard-showcase {
+      background-color: #f8f9fa;
+      overflow: hidden;
+    }
+    
+    .dashboard-image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    @media (max-width: 991.98px) {
+      .dashboard-content {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .row.flex-row-reverse {
+        flex-direction: column-reverse !important;
+      }
+    }
+    
+    @media (min-width: 992px) {
+      .dashboard-content h2 {
+        font-size: 2.5rem;
+      }
+      
+      .dashboard-content p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+    }
+  </style>
+</section>
+<!-- DASHBOARD SHOWCASE SECTION ENDS -->
 
     <!-- PARTNERS SECTION STARTS -->
     <section class="light-grey-bg py-5" id="partners">
