@@ -2,3 +2,4 @@
 .vscode/
 # Ignore Prettier configuration
 .prettierrc
+/TEMP/

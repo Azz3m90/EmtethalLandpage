@@ -22,7 +22,7 @@ website:    http://www.themepunch.com
 }
 
 .zeus.tparrows:before {
-  font-family: 'revicons';
+  font-family: "revicons";
   font-size: 20px;
   color: #fff;
   display: block;
@@ -32,10 +32,10 @@ website:    http://www.themepunch.com
   position: relative;
 }
 .zeus.tparrows.tp-leftarrow:before {
-  content: '\e824';
+  content: "\e824";
 }
 .zeus.tparrows.tp-rightarrow:before {
-  content: '\e825';
+  content: "\e825";
 }
 
 .zeus .tp-title-wrap {
@@ -98,7 +98,7 @@ website:    http://www.themepunch.com
   border: 2px solid #fff;
 }
 .zeus .tp-bullet:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -198,7 +198,7 @@ website:    http://www.themepunch.com
 }
 
 .zeus .tp-thumb-more:before {
-  font-family: 'revicons';
+  font-family: "revicons";
   font-size: 12px;
   color: #aaa;
   color: rgba(255, 255, 255, 0.75);
@@ -212,11 +212,11 @@ website:    http://www.themepunch.com
   z-index: 2;
 }
 .zeus .tp-thumb-more:before {
-  content: '\e825';
+  content: "\e825";
 }
 
 .zeus .tp-thumb-title {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   letter-spacing: 1px;
   font-size: 12px;
   color: #fff;
@@ -261,7 +261,7 @@ website:    http://www.themepunch.com
   display: block;
   text-align: center;
   background: rgba(0, 0, 0, 0.25);
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 700;
   font-size: 13px;
   line-height: 13px;

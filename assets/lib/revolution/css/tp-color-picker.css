@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 /*
   Default Picker Widget
@@ -31,7 +31,7 @@
 }
 
 .rev-colorpicker .rev-colorbtn {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 11px;
   padding: 0 6px 1px;
   background: #e5e5e5;
@@ -72,7 +72,7 @@
   top: 50%;
   left: 50%;
   margin: -198px 0 0 -305px;
-  font-family: 'Roboto', 'Open Sans';
+  font-family: "Roboto", "Open Sans";
   font-size: 13px;
   white-space: nowrap;
 }
@@ -90,7 +90,7 @@
   top: 0;
   left: 0;
   z-index: 2099998;
-  content: '';
+  content: "";
 }
 
 .rev-cpicker-wrap.onajax
@@ -106,13 +106,13 @@
 
 .rev-cpicker-wrap.onajaxdelete
   .rev-cpicker-section:not(#rev-cpicker-section-right):after {
-  content: 'Deleting Preset...';
+  content: "Deleting Preset...";
   margin-left: -135px;
 }
 
 .rev-cpicker-wrap.onajaxsave
   .rev-cpicker-section:not(#rev-cpicker-section-right):after {
-  content: 'Saving Preset...';
+  content: "Saving Preset...";
   margin-left: -123px;
 }
 
@@ -251,7 +251,7 @@
   left: 50%;
   margin-left: -3px;
   display: block;
-  content: '';
+  content: "";
 }
 
 #rev-cpicker-exit {
@@ -456,14 +456,14 @@
   display: none;
 }
 
-#rev-cpicker input[type='text'] {
+#rev-cpicker input[type="text"] {
   border: 1px solid #333;
   border-radius: 3px;
   font-size: 13px;
   padding-top: 4px;
 }
 
-#rev-cpicker input[type='text']:focus {
+#rev-cpicker input[type="text"]:focus {
   border: 1px solid #555 !important;
   box-shadow: none !important;
 }
@@ -569,7 +569,7 @@
   height: 13px;
   border-radius: 0 0 0 3px;
   background-color: #252525;
-  content: '';
+  content: "";
   display: none;
 }
 
@@ -780,7 +780,7 @@
 }
 
 .rev-cpicker-meta-row:after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -1020,7 +1020,7 @@
 }
 
 #rev-cpicker-scroller .ui-slider-handle:before {
-  content: ' ';
+  content: " ";
   position: absolute;
   left: -2px;
   right: -2px;

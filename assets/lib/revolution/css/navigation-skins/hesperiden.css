@@ -24,7 +24,7 @@ website:    http://www.themepunch.com
   background: #000;
 }
 .hesperiden.tparrows:before {
-  font-family: 'revicons';
+  font-family: "revicons";
   font-size: 20px;
   color: #fff;
   display: block;
@@ -32,11 +32,11 @@ website:    http://www.themepunch.com
   text-align: center;
 }
 .hesperiden.tparrows.tp-leftarrow:before {
-  content: '\e82c';
+  content: "\e82c";
   margin-left: -3px;
 }
 .hesperiden.tparrows.tp-rightarrow:before {
-  content: '\e82d';
+  content: "\e82d";
   margin-right: -3px;
 }
 
@@ -44,7 +44,7 @@ website:    http://www.themepunch.com
 .hesperiden.tp-bullets {
 }
 .hesperiden.tp-bullets:before {
-  content: ' ';
+  content: " ";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -137,7 +137,7 @@ website:    http://www.themepunch.com
   opacity: 1;
   padding: 10px;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   border-bottom: 1px solid #e5e5e5;
 }
 .hesperiden .tp-tab-image {

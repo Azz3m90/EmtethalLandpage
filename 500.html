@@ -18,7 +18,7 @@
       }
 
       body {
-        font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Cairo", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
         color: #333;
         min-height: 100vh;
@@ -291,62 +291,62 @@
 
     <script>
       // Set error time
-      document.getElementById('errorTime').textContent =
-        new Date().toLocaleString('ar-SA')
+      document.getElementById("errorTime").textContent =
+        new Date().toLocaleString("ar-SA");
 
       // Countdown timer
-      let countdown = 30
-      const countdownElement = document.getElementById('countdown')
+      let countdown = 30;
+      const countdownElement = document.getElementById("countdown");
 
       const timer = setInterval(() => {
-        countdown--
-        countdownElement.textContent = countdown
+        countdown--;
+        countdownElement.textContent = countdown;
 
         if (countdown <= 0) {
-          clearInterval(timer)
-          location.reload()
+          clearInterval(timer);
+          location.reload();
         }
-      }, 1000)
+      }, 1000);
 
       // Add interactivity
-      document.addEventListener('DOMContentLoaded', function () {
-        const logo = document.querySelector('.logo')
-        const errorCode = document.querySelector('.error-code')
+      document.addEventListener("DOMContentLoaded", function () {
+        const logo = document.querySelector(".logo");
+        const errorCode = document.querySelector(".error-code");
 
         // Animate elements on load
-        logo.style.opacity = '0'
-        logo.style.transform = 'translateY(-20px)'
+        logo.style.opacity = "0";
+        logo.style.transform = "translateY(-20px)";
 
         setTimeout(() => {
-          logo.style.transition = 'all 0.8s ease'
-          logo.style.opacity = '0.8'
-          logo.style.transform = 'translateY(0)'
-        }, 300)
+          logo.style.transition = "all 0.8s ease";
+          logo.style.opacity = "0.8";
+          logo.style.transform = "translateY(0)";
+        }, 300);
 
         // Add click effect to error code
-        errorCode.addEventListener('click', function () {
-          this.style.animation = 'none'
+        errorCode.addEventListener("click", function () {
+          this.style.animation = "none";
           setTimeout(() => {
-            this.style.animation = 'pulse 2s infinite'
-          }, 10)
-        })
+            this.style.animation = "pulse 2s infinite";
+          }, 10);
+        });
 
         // Check server status periodically
-        setInterval(checkServerStatus, 5000)
-      })
+        setInterval(checkServerStatus, 5000);
+      });
 
       function checkServerStatus() {
         // Simple fetch to check if server is back online
-        fetch('/', { method: 'HEAD', mode: 'no-cors' })
+        fetch("/", { method: "HEAD", mode: "no-cors" })
           .then(() => {
             // Server might be back online
-            clearInterval(timer)
-            location.reload()
+            clearInterval(timer);
+            location.reload();
           })
           .catch(() => {
             // Server still down, continue waiting
-            console.log('Server still experiencing issues...')
-          })
+            console.log("Server still experiencing issues...");
+          });
       }
     </script>
   </body>

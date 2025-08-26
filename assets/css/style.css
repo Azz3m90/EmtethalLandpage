@@ -1662,7 +1662,7 @@ footer .copyright {
   overflow: hidden;
 }
 .contact-us-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1748,7 +1748,7 @@ footer .copyright {
   overflow: hidden;
 }
 .contact-us-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;

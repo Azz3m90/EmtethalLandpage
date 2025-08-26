@@ -37,7 +37,7 @@
 }
 
 .mfp-container:before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 100%;
   vertical-align: middle;
@@ -218,7 +218,7 @@ button::-moz-focus-inner {
 .mfp-arrow:after,
 .mfp-arrow .mfp-b,
 .mfp-arrow .mfp-a {
-  content: '';
+  content: "";
   display: block;
   width: 0;
   height: 0;
@@ -318,7 +318,7 @@ img.mfp-img {
   line-height: 0;
 }
 .mfp-figure:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 40px;

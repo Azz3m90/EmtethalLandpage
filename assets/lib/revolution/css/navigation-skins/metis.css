@@ -127,7 +127,7 @@ website:    http://www.themepunch.com
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#777777", GradientType=0 );
 }
 .metis .tp-bullet-title:after {
-  content: ' ';
+  content: " ";
   position: absolute;
   left: 50%;
   margin-left: -8px;
@@ -145,7 +145,7 @@ website:    http://www.themepunch.com
   font-size: 40px;
   line-height: 30px;
   font-weight: 400;
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   width: 50px;
   margin-right: 17px;
   display: inline-block;
@@ -178,7 +178,7 @@ website:    http://www.themepunch.com
   font-size: 20px;
   line-height: 20px;
   font-weight: 400;
-  font-family: 'Playfair Display';
+  font-family: "Playfair Display";
   position: relative;
   padding-top: 10px;
   padding-left: 30px;
@@ -210,7 +210,7 @@ website:    http://www.themepunch.com
   padding-left: 50px;
 }
 .metis.tp-tabs:before {
-  content: ' ';
+  content: " ";
   height: 100%;
   width: 88px;
   background: rgba(0, 0, 0, 0.15);

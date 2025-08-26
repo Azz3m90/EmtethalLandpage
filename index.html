@@ -452,15 +452,17 @@
     </script>
     <script>
       document
-        .querySelectorAll('#navbarSupportedContent .nav-link')
+        .querySelectorAll("#navbarSupportedContent .nav-link")
         .forEach((link) => {
-          link.addEventListener('click', () => {
-            const collapseEl = document.getElementById('navbarSupportedContent')
-            if (collapseEl.classList.contains('show')) {
-              new bootstrap.Collapse(collapseEl).hide()
+          link.addEventListener("click", () => {
+            const collapseEl = document.getElementById(
+              "navbarSupportedContent",
+            );
+            if (collapseEl.classList.contains("show")) {
+              new bootstrap.Collapse(collapseEl).hide();
             }
-          })
-        })
+          });
+        });
     </script>
   </head>
 
@@ -584,20 +586,20 @@
               </a>
             </li>
             <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                const langSwitch = document.getElementById('language-switch')
-                const flagIcon = document.getElementById('language-flag')
-                const langText = document.getElementById('language-text')
-                const isEnglish = window.location.pathname.includes('-en')
+              document.addEventListener("DOMContentLoaded", function () {
+                const langSwitch = document.getElementById("language-switch");
+                const flagIcon = document.getElementById("language-flag");
+                const langText = document.getElementById("language-text");
+                const isEnglish = window.location.pathname.includes("-en");
                 if (isEnglish) {
-                  langSwitch.href = './index.html'
-                  flagIcon.className = 'fi fi-sa ms-2'
+                  langSwitch.href = "./index.html";
+                  flagIcon.className = "fi fi-sa ms-2";
                 } else {
-                  langSwitch.href = './index-en.html'
-                  flagIcon.className = 'fi fi-gb  ms-2'
+                  langSwitch.href = "./index-en.html";
+                  flagIcon.className = "fi fi-gb  ms-2";
                   //langText.textContent = "العربية";
                 }
-              })
+              });
             </script>
           </ul>
         </div>
@@ -688,52 +690,52 @@
       </div>
     </nav>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener("DOMContentLoaded", function () {
         // Language switch for desktop
-        const langSwitch = document.getElementById('language-switch')
-        const flagIcon = document.getElementById('language-flag')
-        const isEnglish = window.location.pathname.includes('-en')
+        const langSwitch = document.getElementById("language-switch");
+        const flagIcon = document.getElementById("language-flag");
+        const isEnglish = window.location.pathname.includes("-en");
         if (langSwitch && flagIcon) {
           if (isEnglish) {
-            langSwitch.href = './index.html'
-            flagIcon.className = 'fi fi-sa ms-2'
+            langSwitch.href = "./index.html";
+            flagIcon.className = "fi fi-sa ms-2";
           } else {
-            langSwitch.href = './index-en.html'
-            flagIcon.className = 'fi fi-gb ms-2'
+            langSwitch.href = "./index-en.html";
+            flagIcon.className = "fi fi-gb ms-2";
           }
         }
 
         // Language switch for mobile
         const langSwitchMobile = document.getElementById(
-          'language-switch-mobile',
-        )
-        const flagIconMobile = document.getElementById('language-flag-mobile')
+          "language-switch-mobile",
+        );
+        const flagIconMobile = document.getElementById("language-flag-mobile");
         if (langSwitchMobile && flagIconMobile) {
           if (isEnglish) {
-            langSwitchMobile.href = './index.html'
-            flagIconMobile.className = 'fi fi-sa me-2'
+            langSwitchMobile.href = "./index.html";
+            flagIconMobile.className = "fi fi-sa me-2";
           } else {
-            langSwitchMobile.href = './index-en.html'
-            flagIconMobile.className = 'fi fi-gb me-2'
+            langSwitchMobile.href = "./index-en.html";
+            flagIconMobile.className = "fi fi-gb me-2";
           }
         }
 
         document
-          .querySelectorAll('#navbarSupportedContentMobile .nav-link')
+          .querySelectorAll("#navbarSupportedContentMobile .nav-link")
           .forEach((link) => {
-            link.addEventListener('click', () => {
+            link.addEventListener("click", () => {
               const mobileMenu = document.getElementById(
-                'navbarSupportedContentMobile',
-              )
-              if (mobileMenu.classList.contains('show')) {
-                const bsCollapse = bootstrap.Collapse.getInstance(mobileMenu)
+                "navbarSupportedContentMobile",
+              );
+              if (mobileMenu.classList.contains("show")) {
+                const bsCollapse = bootstrap.Collapse.getInstance(mobileMenu);
                 if (bsCollapse) {
-                  bsCollapse.hide()
+                  bsCollapse.hide();
                 }
               }
-            })
-          })
-      })
+            });
+          });
+      });
     </script>
     <!-- NAVIGATION ENDS -->
     <!-- SLIDER STARTS -->
@@ -755,11 +757,11 @@
       </div>
     </section>
     <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        const video = document.getElementById('background-video')
-        video.setAttribute('autoplay', '')
-        video.load()
-      })
+      window.addEventListener("DOMContentLoaded", () => {
+        const video = document.getElementById("background-video");
+        video.setAttribute("autoplay", "");
+        video.load();
+      });
     </script>
     <!-- SLIDER ENDS -->
     <!-- The Problem We Solve STARTS -->
@@ -872,47 +874,47 @@
               </div>
               <script>
                 function animateCounter() {
-                  const counters = document.querySelectorAll('.counter-value')
-                  const speed = 200
+                  const counters = document.querySelectorAll(".counter-value");
+                  const speed = 200;
 
                   counters.forEach((counter) => {
-                    counter.setAttribute('data-current', 0)
+                    counter.setAttribute("data-current", 0);
 
                     const updateCount = () => {
-                      const target = +counter.getAttribute('data-target')
-                      const current = +counter.getAttribute('data-current')
-                      const increment = Math.ceil(target / speed)
-                      const next = current + increment
+                      const target = +counter.getAttribute("data-target");
+                      const current = +counter.getAttribute("data-current");
+                      const increment = Math.ceil(target / speed);
+                      const next = current + increment;
 
                       if (next < target) {
-                        counter.setAttribute('data-current', next)
-                        counter.innerText = next.toLocaleString('en-US')
-                        setTimeout(updateCount, 10)
+                        counter.setAttribute("data-current", next);
+                        counter.innerText = next.toLocaleString("en-US");
+                        setTimeout(updateCount, 10);
                       } else {
-                        counter.innerText = target.toLocaleString('en-US')
+                        counter.innerText = target.toLocaleString("en-US");
                       }
-                    }
+                    };
 
-                    counter.updateCount = updateCount
-                  })
+                    counter.updateCount = updateCount;
+                  });
 
                   const counterSection =
-                    document.querySelector('.counter-section')
+                    document.querySelector(".counter-section");
 
                   const observer = new IntersectionObserver(
                     (entries) => {
                       if (entries[0].isIntersecting) {
-                        counters.forEach((counter) => counter.updateCount())
-                        observer.disconnect()
+                        counters.forEach((counter) => counter.updateCount());
+                        observer.disconnect();
                       }
                     },
                     { threshold: 0.3 },
-                  )
+                  );
 
-                  observer.observe(counterSection)
+                  observer.observe(counterSection);
                 }
 
-                window.addEventListener('load', animateCounter)
+                window.addEventListener("load", animateCounter);
               </script>
             </div>
           </div>
@@ -1525,7 +1527,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-user-shield"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/work_audit.svg"
+                  alt="تدقيق السلامة والصحة المهنية "
+                />
               </div>
               <h6 class="targets-card-title">تدقيق السلامة والصحة المهنية</h6>
               <p class="targets-card-description">
@@ -1537,7 +1542,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-user-secret"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/anamous_shoping.svg"
+                  alt="تدقيق التسوق الخفي"
+                />
               </div>
               <h6 class="targets-card-title">تدقيق التسوق الخفي</h6>
               <p class="targets-card-description">
@@ -1549,7 +1557,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-faucet"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/water_healthy.svg"
+                  alt="تدقيق سلامة المياه"
+                />
               </div>
               <h6 class="targets-card-title">تدقيق سلامة المياه</h6>
               <p class="targets-card-description">
@@ -1561,7 +1572,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-bed"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/Capa_1.svg"
+                  alt="  تدقيق نظافة غرف النوم"
+                />
               </div>
               <h6 class="targets-card-title">تدقيق نظافة غرف الضيوف</h6>
               <p class="targets-card-description">
@@ -1573,7 +1587,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-utensils"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/FoodHealthy.svg"
+                  alt="  تدقيق نظافة غرف النوم"
+                />
               </div>
               <h6 class="targets-card-title">تدقيق امتثال سلامة الغذاء</h6>
               <p class="targets-card-description">
@@ -1588,7 +1605,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-briefcase"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/consulting.svg"
+                  alt="  الاستشارات في الجودة والامتثال"
+                />
               </div>
               <h6 class="targets-card-title">الاستشارات في الجودة والامتثال</h6>
               <p class="targets-card-description">
@@ -1600,7 +1620,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-drafting-compass"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/internal.svg"
+                  alt="   إعداد المخططات الداخلية  "
+                />
               </div>
               <h6 class="targets-card-title">إعداد المخططات الداخلية</h6>
               <p class="targets-card-description">
@@ -1612,7 +1635,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-file-contract"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/incharge.svg"
+                  alt=" الاعتراضات على المخالفات البلدية"
+                />
               </div>
               <h6 class="targets-card-title">
                 الاعتراضات على المخالفات البلدية
@@ -1626,7 +1652,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-hotel"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/mantion.svg"
+                  alt="  تدقيق امتثال المنشآت السياحية   "
+                />
               </div>
               <h6 class="targets-card-title">تدقيق امتثال المنشآت السياحية</h6>
               <p class="targets-card-description">
@@ -1638,7 +1667,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-check-circle"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/auditing.svg"
+                  alt="تدقيق أنظمة الجودة"
+                />
               </div>
               <h6 class="targets-card-title">تدقيق أنظمة الجودة</h6>
               <p class="targets-card-description">
@@ -1653,7 +1685,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-chalkboard-teacher"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/acadimic.svg"
+                  alt="التوعية بالاشتراطات الرقابية"
+                />
               </div>
               <h6 class="targets-card-title">التوعية بالاشتراطات الرقابية</h6>
               <p class="targets-card-description">
@@ -1665,7 +1700,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-microchip"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/cpu.svg"
+                  alt="تركيب أجهزة قراءة بيانات السلامة"
+                />
               </div>
               <h6 class="targets-card-title">
                 تركيب أجهزة قراءة بيانات السلامة
@@ -1679,7 +1717,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-award"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/certificate.svg"
+                  alt="شهادات (ISO & HACCP)"
+                />
               </div>
               <h6 class="targets-card-title">شهادات (ISO & HACCP)</h6>
               <p class="targets-card-description">
@@ -1691,7 +1732,10 @@
           <div class="targets-card">
             <div class="targets-card-content">
               <div class="targets-card-icon">
-                <i class="fas fa-robot"></i>
+                <img
+                  src="./assets/imgs/icons/QualityManagment/ai.svg"
+                  alt=" أنظمة المراقبة بالذكاء الصنعي"
+                />
               </div>
               <h6 class="targets-card-title">أنظمة المراقبة بالذكاء الصنعي</h6>
               <p class="targets-card-description">
@@ -2034,28 +2078,28 @@
             </form>
 
             <script>
-              let captchaToken = null
+              let captchaToken = null;
 
               function onTurnstileSuccess(token) {
-                captchaToken = token
+                captchaToken = token;
               }
 
-              const form = document.getElementById('ContactForm')
+              const form = document.getElementById("ContactForm");
 
-              form.addEventListener('submit', function (e) {
-                e.preventDefault()
+              form.addEventListener("submit", function (e) {
+                e.preventDefault();
 
-                const name = document.getElementById('name').value
-                const email = document.getElementById('email').value
-                const message = document.getElementById('message').value
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
 
                 if (!captchaToken) {
                   Swal.fire({
-                    icon: 'error',
-                    title: 'فشل التحقق',
-                    text: 'يرجى إكمال التحقق الأمني',
-                  })
-                  return
+                    icon: "error",
+                    title: "فشل التحقق",
+                    text: "يرجى إكمال التحقق الأمني",
+                  });
+                  return;
                 }
 
                 const data = {
@@ -2064,32 +2108,32 @@
                   message,
                   subscribe_to_newsletter: false,
                   captcha: captchaToken,
-                }
+                };
 
                 axios
-                  .post('http://localhost:8000/api/mails/contact/', data)
+                  .post("http://localhost:8000/api/mails/contact/", data)
                   .then(() => {
                     Swal.fire({
-                      icon: 'success',
-                      title: 'تم إرسال الرسالة',
-                      text: 'سوف نتواصل معك قريبًا',
-                    })
-                    form.reset()
-                    captchaToken = null
-                    turnstile.reset()
+                      icon: "success",
+                      title: "تم إرسال الرسالة",
+                      text: "سوف نتواصل معك قريبًا",
+                    });
+                    form.reset();
+                    captchaToken = null;
+                    turnstile.reset();
                   })
                   .catch((error) => {
-                    let msg = 'حدث خطأ أثناء الإرسال'
+                    let msg = "حدث خطأ أثناء الإرسال";
                     if (error.response && error.response.data) {
-                      msg = Object.values(error.response.data).flat().join(' ')
+                      msg = Object.values(error.response.data).flat().join(" ");
                     }
                     Swal.fire({
-                      icon: 'error',
-                      title: 'فشل في الإرسال',
+                      icon: "error",
+                      title: "فشل في الإرسال",
                       text: msg,
-                    })
-                  })
-              })
+                    });
+                  });
+              });
             </script>
           </div>
         </div>

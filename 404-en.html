@@ -19,7 +19,7 @@
       }
 
       body {
-        font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         color: #333;
         min-height: 100vh;
@@ -314,39 +314,39 @@
 
     <script>
       function searchSite(event) {
-        if (event.key === 'Enter') {
-          const query = event.target.value.trim()
+        if (event.key === "Enter") {
+          const query = event.target.value.trim();
           if (query) {
             // Simple search redirect - you can enhance this with actual search functionality
             window.location.href =
-              '/index-en.html?search=' + encodeURIComponent(query)
+              "/index-en.html?search=" + encodeURIComponent(query);
           }
         }
       }
 
       // Add some interactivity
-      document.addEventListener('DOMContentLoaded', function () {
-        const logo = document.querySelector('.logo')
-        const errorCode = document.querySelector('.error-code')
+      document.addEventListener("DOMContentLoaded", function () {
+        const logo = document.querySelector(".logo");
+        const errorCode = document.querySelector(".error-code");
 
         // Animate elements on load
-        logo.style.opacity = '0'
-        logo.style.transform = 'translateY(-20px)'
+        logo.style.opacity = "0";
+        logo.style.transform = "translateY(-20px)";
 
         setTimeout(() => {
-          logo.style.transition = 'all 0.8s ease'
-          logo.style.opacity = '0.8'
-          logo.style.transform = 'translateY(0)'
-        }, 300)
+          logo.style.transition = "all 0.8s ease";
+          logo.style.opacity = "0.8";
+          logo.style.transform = "translateY(0)";
+        }, 300);
 
         // Add click effect to error code
-        errorCode.addEventListener('click', function () {
-          this.style.animation = 'none'
+        errorCode.addEventListener("click", function () {
+          this.style.animation = "none";
           setTimeout(() => {
-            this.style.animation = 'bounce 1s'
-          }, 10)
-        })
-      })
+            this.style.animation = "bounce 1s";
+          }, 10);
+        });
+      });
     </script>
   </body>
 </html>

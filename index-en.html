@@ -559,20 +559,20 @@
               ></a>
             </li>
             <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                const langSwitch = document.getElementById('language-switch')
-                const flagIcon = document.getElementById('language-flag')
-                const langText = document.getElementById('language-text')
-                const isEnglish = window.location.pathname.includes('-en')
+              document.addEventListener("DOMContentLoaded", function () {
+                const langSwitch = document.getElementById("language-switch");
+                const flagIcon = document.getElementById("language-flag");
+                const langText = document.getElementById("language-text");
+                const isEnglish = window.location.pathname.includes("-en");
                 if (isEnglish) {
-                  langSwitch.href = './index.html'
-                  flagIcon.className = 'fi fi-sa ms-2'
+                  langSwitch.href = "./index.html";
+                  flagIcon.className = "fi fi-sa ms-2";
                 } else {
-                  langSwitch.href = './index-en.html'
-                  flagIcon.className = 'fi fi-gb  ms-2'
+                  langSwitch.href = "./index-en.html";
+                  flagIcon.className = "fi fi-gb  ms-2";
                   //langText.textContent = "العربية";
                 }
-              })
+              });
             </script>
           </ul>
         </div>
@@ -658,52 +658,52 @@
       </div>
     </nav>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
+      document.addEventListener("DOMContentLoaded", function () {
         // Language switch for desktop
-        const langSwitch = document.getElementById('language-switch')
-        const flagIcon = document.getElementById('language-flag')
-        const isEnglish = window.location.pathname.includes('-en')
+        const langSwitch = document.getElementById("language-switch");
+        const flagIcon = document.getElementById("language-flag");
+        const isEnglish = window.location.pathname.includes("-en");
         if (langSwitch && flagIcon) {
           if (isEnglish) {
-            langSwitch.href = './index.html'
-            flagIcon.className = 'fi fi-sa ms-2'
+            langSwitch.href = "./index.html";
+            flagIcon.className = "fi fi-sa ms-2";
           } else {
-            langSwitch.href = './index-en.html'
-            flagIcon.className = 'fi fi-gb ms-2'
+            langSwitch.href = "./index-en.html";
+            flagIcon.className = "fi fi-gb ms-2";
           }
         }
 
         // Language switch for mobile
         const langSwitchMobile = document.getElementById(
-          'language-switch-mobile',
-        )
-        const flagIconMobile = document.getElementById('language-flag-mobile')
+          "language-switch-mobile",
+        );
+        const flagIconMobile = document.getElementById("language-flag-mobile");
         if (langSwitchMobile && flagIconMobile) {
           if (isEnglish) {
-            langSwitchMobile.href = './index.html'
-            flagIconMobile.className = 'fi fi-sa me-2'
+            langSwitchMobile.href = "./index.html";
+            flagIconMobile.className = "fi fi-sa me-2";
           } else {
-            langSwitchMobile.href = './index-en.html'
-            flagIconMobile.className = 'fi fi-gb me-2'
+            langSwitchMobile.href = "./index-en.html";
+            flagIconMobile.className = "fi fi-gb me-2";
           }
         }
 
         document
-          .querySelectorAll('#navbarSupportedContentMobile .nav-link')
+          .querySelectorAll("#navbarSupportedContentMobile .nav-link")
           .forEach((link) => {
-            link.addEventListener('click', () => {
+            link.addEventListener("click", () => {
               const mobileMenu = document.getElementById(
-                'navbarSupportedContentMobile',
-              )
-              if (mobileMenu.classList.contains('show')) {
-                const bsCollapse = bootstrap.Collapse.getInstance(mobileMenu)
+                "navbarSupportedContentMobile",
+              );
+              if (mobileMenu.classList.contains("show")) {
+                const bsCollapse = bootstrap.Collapse.getInstance(mobileMenu);
                 if (bsCollapse) {
-                  bsCollapse.hide()
+                  bsCollapse.hide();
                 }
               }
-            })
-          })
-      })
+            });
+          });
+      });
     </script>
     <!--   NAVIGATION ENDS
 			=========================================================================   -->
@@ -731,11 +731,11 @@
       </div>
     </section>
     <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        const video = document.getElementById('background-video')
-        video.setAttribute('autoplay', '')
-        video.load()
-      })
+      window.addEventListener("DOMContentLoaded", () => {
+        const video = document.getElementById("background-video");
+        video.setAttribute("autoplay", "");
+        video.load();
+      });
     </script>
     <!--   /.. SLIDER ENDS
 			=========================================================================   -->
@@ -850,47 +850,47 @@
               </div>
               <script>
                 function animateCounter() {
-                  const counters = document.querySelectorAll('.counter-value')
-                  const speed = 200
+                  const counters = document.querySelectorAll(".counter-value");
+                  const speed = 200;
 
                   counters.forEach((counter) => {
-                    counter.setAttribute('data-current', 0)
+                    counter.setAttribute("data-current", 0);
 
                     const updateCount = () => {
-                      const target = +counter.getAttribute('data-target')
-                      const current = +counter.getAttribute('data-current')
-                      const increment = Math.ceil(target / speed)
-                      const next = current + increment
+                      const target = +counter.getAttribute("data-target");
+                      const current = +counter.getAttribute("data-current");
+                      const increment = Math.ceil(target / speed);
+                      const next = current + increment;
 
                       if (next < target) {
-                        counter.setAttribute('data-current', next)
-                        counter.innerText = next.toLocaleString('en-US')
-                        setTimeout(updateCount, 10)
+                        counter.setAttribute("data-current", next);
+                        counter.innerText = next.toLocaleString("en-US");
+                        setTimeout(updateCount, 10);
                       } else {
-                        counter.innerText = target.toLocaleString('en-US')
+                        counter.innerText = target.toLocaleString("en-US");
                       }
-                    }
+                    };
 
-                    counter.updateCount = updateCount
-                  })
+                    counter.updateCount = updateCount;
+                  });
 
                   const counterSection =
-                    document.querySelector('.counter-section')
+                    document.querySelector(".counter-section");
 
                   const observer = new IntersectionObserver(
                     (entries) => {
                       if (entries[0].isIntersecting) {
-                        counters.forEach((counter) => counter.updateCount())
-                        observer.disconnect()
+                        counters.forEach((counter) => counter.updateCount());
+                        observer.disconnect();
                       }
                     },
                     { threshold: 0.3 },
-                  )
+                  );
 
-                  observer.observe(counterSection)
+                  observer.observe(counterSection);
                 }
 
-                window.addEventListener('load', animateCounter)
+                window.addEventListener("load", animateCounter);
               </script>
             </div>
           </div>
@@ -1527,213 +1527,243 @@
     </section>
     <!-- /.. SERVICES ENDS -->
 
-    <!-- Quality Management Services STARTS -->
-    <section
-      class="home-services targets-section py-5"
-      id="targets"
-      style="background-color: #f8f9fa"
-    >
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center mb-5">
-            <h6 class="text-muted mb-2">Who We Serve</h6>
-            <h2 class="fw-bold text-dark mb-0">
-              Simple Quality Management for the Hospitality Sector
-            </h2>
-          </div>
-        </div>
+<!-- Quality Management Services STARTS -->
+<section
+  class="home-services targets-section py-5"
+  id="targets"
+  style="background-color: #f8f9fa"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center mb-5">
+        <h6 class="text-muted mb-2">/Who We Serve</h6>
+        <h2 class="fw-bold text-dark mb-0">
+          Quality Management Made Easy for the Hospitality Sector
+        </h2>
+      </div>
+    </div>
 
-        <div class="targets-row mb-4">
-          <!-- First Row: 5 cards -->
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-user-shield"></i>
-              </div>
-              <h6 class="targets-card-title">
-                Occupational Safety and Health Audit
-              </h6>
-              <p class="targets-card-description">
-                Inspection of safety requirements according to Ministry of Labor
-                standards
-              </p>
-            </div>
+    <div class="targets-row mb-4">
+      <!-- First Row: 5 cards -->
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/work_audit.svg"
+              alt="Occupational Safety and Health Audit"
+            />
           </div>
-
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-user-secret"></i>
-              </div>
-              <h6 class="targets-card-title">Mystery Shopping Audit</h6>
-              <p class="targets-card-description">
-                Evaluate customer experience confidentially according to global
-                guest standards
-              </p>
-            </div>
-          </div>
-
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-faucet"></i>
-              </div>
-              <h6 class="targets-card-title">Water Safety Audit</h6>
-              <p class="targets-card-description">
-                Ensure water quality and suitability for use
-              </p>
-            </div>
-          </div>
-
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-bed"></i>
-              </div>
-              <h6 class="targets-card-title">Guest Room Cleanliness Audit</h6>
-              <p class="targets-card-description">
-                Evaluate cleanliness and comfort standards in rooms
-              </p>
-            </div>
-          </div>
-
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-utensils"></i>
-              </div>
-              <h6 class="targets-card-title">Food Safety Compliance Audit</h6>
-              <p class="targets-card-description">
-                Comprehensive review to ensure food quality and safety
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="targets-row mb-4">
-          <!-- Second Row: 5 cards -->
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <h6 class="targets-card-title">
-                Quality and Compliance Consulting
-              </h6>
-              <p class="targets-card-description">
-                Technical and advisory support to achieve top quality standards
-              </p>
-            </div>
-          </div>
-
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-drafting-compass"></i>
-              </div>
-              <h6 class="targets-card-title">Facility Layout Planning</h6>
-              <p class="targets-card-description">
-                Design layouts for facilities according to government
-                requirements
-              </p>
-            </div>
-          </div>
-
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-file-contract"></i>
-              </div>
-              <h6 class="targets-card-title">Municipal Violation Appeals</h6>
-              <p class="targets-card-description">
-                Draft and submit appeals against municipal violations
-              </p>
-            </div>
-          </div>
-
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-hotel"></i>
-              </div>
-              <h6 class="targets-card-title">
-                Tourism Facility Compliance Audit
-              </h6>
-              <p class="targets-card-description">
-                Review compliance of tourism facilities with Ministry of Tourism
-                standards
-              </p>
-            </div>
-          </div>
-
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-check-circle"></i>
-              </div>
-              <h6 class="targets-card-title">Quality Systems Audit</h6>
-              <p class="targets-card-description">
-                Review and evaluate quality systems and global certifications
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="targets-row">
-          <!-- Third Row: 4 cards centered -->
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-chalkboard-teacher"></i>
-              </div>
-              <h6 class="targets-card-title">Regulatory Awareness Training</h6>
-              <p class="targets-card-description">
-                Training and education on government requirements
-              </p>
-            </div>
-          </div>
-
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-microchip"></i>
-              </div>
-              <h6 class="targets-card-title">
-                Installation of Safety Data Readers
-              </h6>
-              <p class="targets-card-description">
-                Smart devices to read data from vital equipment
-              </p>
-            </div>
-          </div>
-
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-award"></i>
-              </div>
-              <h6 class="targets-card-title">ISO & HACCP Certifications</h6>
-              <p class="targets-card-description">
-                Prepare facilities to obtain recognized certifications
-              </p>
-            </div>
-          </div>
-
-          <div class="targets-card">
-            <div class="targets-card-content">
-              <div class="targets-card-icon">
-                <i class="fas fa-robot"></i>
-              </div>
-              <h6 class="targets-card-title">AI-Powered Monitoring Systems</h6>
-              <p class="targets-card-description">
-                Monitor and analyze behaviors to improve safety
-              </p>
-            </div>
-          </div>
+          <h6 class="targets-card-title">Occupational Safety and Health Audit</h6>
+          <p class="targets-card-description">
+            Inspect safety requirements according to Ministry of Labor standards
+          </p>
         </div>
       </div>
-    </section>
-    <!-- /.. Quality Management Services ENDS -->
+
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/anamous_shoping.svg"
+              alt="Mystery Shopping Audit"
+            />
+          </div>
+          <h6 class="targets-card-title">Mystery Shopping Audit</h6>
+          <p class="targets-card-description">
+            Evaluate customer experience confidentially, based on global guest standards
+          </p>
+        </div>
+      </div>
+
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/water_healthy.svg"
+              alt="Water Safety Audit"
+            />
+          </div>
+          <h6 class="targets-card-title">Water Safety Audit</h6>
+          <p class="targets-card-description">
+            Ensure water quality and suitability for use
+          </p>
+        </div>
+      </div>
+
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/Capa_1.svg"
+              alt="Guest Room Cleanliness Audit"
+            />
+          </div>
+          <h6 class="targets-card-title">Guest Room Cleanliness Audit</h6>
+          <p class="targets-card-description">
+            Assess cleanliness and comfort standards in guest rooms
+          </p>
+        </div>
+      </div>
+
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/FoodHealthy.svg"
+              alt="Food Safety Compliance Audit"
+            />
+          </div>
+          <h6 class="targets-card-title">Food Safety Compliance Audit</h6>
+          <p class="targets-card-description">
+            Comprehensive inspection to ensure food quality and safety
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="targets-row mb-4">
+      <!-- Second Row: 5 cards -->
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/consulting.svg"
+              alt="Quality and Compliance Consulting"
+            />
+          </div>
+          <h6 class="targets-card-title">Quality and Compliance Consulting</h6>
+          <p class="targets-card-description">
+            Technical support and advisory to achieve the highest quality standards
+          </p>
+        </div>
+      </div>
+
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/internal.svg"
+              alt="Internal Layout Design"
+            />
+          </div>
+          <h6 class="targets-card-title">Internal Layout Design</h6>
+          <p class="targets-card-description">
+            Design facility floor plans in compliance with government regulations
+          </p>
+        </div>
+      </div>
+
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/incharge.svg"
+              alt="Municipal Violation Appeals"
+            />
+          </div>
+          <h6 class="targets-card-title">Municipal Violation Appeals</h6>
+          <p class="targets-card-description">
+            Drafting and submitting appeals against municipal violations
+          </p>
+        </div>
+      </div>
+
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/mantion.svg"
+              alt="Tourism Facility Compliance Audit"
+            />
+          </div>
+          <h6 class="targets-card-title">Tourism Facility Compliance Audit</h6>
+          <p class="targets-card-description">
+            Review tourism facilities' compliance with Ministry of Tourism standards
+          </p>
+        </div>
+      </div>
+
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/auditing.svg"
+              alt="Quality Systems Audit"
+            />
+          </div>
+          <h6 class="targets-card-title">Quality Systems Audit</h6>
+          <p class="targets-card-description">
+            Review and evaluation of quality systems and international certifications
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="targets-row">
+      <!-- Third Row: 4 cards centered -->
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/acadimic.svg"
+              alt="Regulatory Requirements Awareness"
+            />
+          </div>
+          <h6 class="targets-card-title">Regulatory Requirements Awareness</h6>
+          <p class="targets-card-description">
+            Training and education on government regulatory requirements
+          </p>
+        </div>
+      </div>
+
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/cpu.svg"
+              alt="Safety Data Monitoring Devices Installation"
+            />
+          </div>
+          <h6 class="targets-card-title">Installation of Safety Data Monitoring Devices</h6>
+          <p class="targets-card-description">
+            Smart devices for monitoring critical equipment data
+          </p>
+        </div>
+      </div>
+
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/certificate.svg"
+              alt="ISO & HACCP Certifications"
+            />
+          </div>
+          <h6 class="targets-card-title">ISO & HACCP Certifications</h6>
+          <p class="targets-card-description">
+            Prepare facilities to obtain accredited certifications
+          </p>
+        </div>
+      </div>
+
+      <div class="targets-card">
+        <div class="targets-card-content">
+          <div class="targets-card-icon">
+            <img
+              src="./assets/imgs/icons/QualityManagment/ai.svg"
+              alt="AI-Powered Surveillance Systems"
+            />
+          </div>
+          <h6 class="targets-card-title">AI-Powered Surveillance Systems</h6>
+          <p class="targets-card-description">
+            Monitor and analyze behaviors to enhance safety and security
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Quality Management Services ENDS -->
 
     <!--   ABOUT US STARTS
 =========================================================================   -->
@@ -1910,28 +1940,28 @@
 
             <!-- Script -->
             <script>
-              let captchaToken = null
+              let captchaToken = null;
 
               function onTurnstileSuccess(token) {
-                captchaToken = token
+                captchaToken = token;
               }
 
-              const form = document.getElementById('ContactForm')
+              const form = document.getElementById("ContactForm");
 
-              form.addEventListener('submit', function (e) {
-                e.preventDefault()
+              form.addEventListener("submit", function (e) {
+                e.preventDefault();
 
-                const name = document.getElementById('name').value.trim()
-                const email = document.getElementById('email').value.trim()
-                const message = document.getElementById('message').value.trim()
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const message = document.getElementById("message").value.trim();
 
                 if (!captchaToken) {
                   Swal.fire({
-                    icon: 'error',
-                    title: 'Verification failed',
-                    text: 'Please complete the security check',
-                  })
-                  return
+                    icon: "error",
+                    title: "Verification failed",
+                    text: "Please complete the security check",
+                  });
+                  return;
                 }
 
                 const data = {
@@ -1940,32 +1970,32 @@
                   message,
                   subscribe_to_newsletter: false,
                   captcha: captchaToken,
-                }
+                };
 
                 axios
-                  .post('http://localhost:8000/api/mails/contact/', data)
+                  .post("http://localhost:8000/api/mails/contact/", data)
                   .then(() => {
                     Swal.fire({
-                      icon: 'success',
-                      title: 'Message sent',
-                      text: 'We will contact you soon',
-                    })
-                    form.reset()
-                    captchaToken = null
-                    turnstile.reset()
+                      icon: "success",
+                      title: "Message sent",
+                      text: "We will contact you soon",
+                    });
+                    form.reset();
+                    captchaToken = null;
+                    turnstile.reset();
                   })
                   .catch((error) => {
-                    let msg = 'An error occurred while sending'
+                    let msg = "An error occurred while sending";
                     if (error.response && error.response.data) {
-                      msg = Object.values(error.response.data).flat().join(' ')
+                      msg = Object.values(error.response.data).flat().join(" ");
                     }
                     Swal.fire({
-                      icon: 'error',
-                      title: 'Failed to send',
+                      icon: "error",
+                      title: "Failed to send",
                       text: msg,
-                    })
-                  })
-              })
+                    });
+                  });
+              });
             </script>
           </div>
         </div>

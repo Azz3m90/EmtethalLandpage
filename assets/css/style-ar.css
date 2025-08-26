@@ -311,7 +311,7 @@ button.btn.btn-link.btn-block.text-left.collapsed:hover {
   outline: 0;
 }
 button.btn.btn-link.btn-block.text-left.collapsed::before {
-  content: '+';
+  content: "+";
   padding-right: 8px;
 }
 button.btn.btn-link.btn-block.text-left {
@@ -321,7 +321,7 @@ button.btn.btn-link.btn-block.text-left {
   outline: 0;
 }
 button.btn.btn-link.btn-block.text-left::before {
-  content: '-';
+  content: "-";
   padding-right: 8px;
 }
 .home-features {
@@ -1272,7 +1272,7 @@ footer .copyright {
   overflow: hidden;
 }
 .contact-us-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1352,7 +1352,7 @@ footer .copyright {
   overflow: hidden;
 }
 .contact-us-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -1591,13 +1591,13 @@ footer .copyright {
 .override-right {
   text-align: right !important;
 }
-[dir='rtl'] .text-md-end {
+[dir="rtl"] .text-md-end {
   text-align: left !important;
 }
-[dir='rtl'] .justify-content-md-end {
+[dir="rtl"] .justify-content-md-end {
   justify-content: flex-start !important;
 }
-[dir='rtl'] .me-md-2 {
+[dir="rtl"] .me-md-2 {
   margin-right: 0 !important;
   margin-left: 0.5rem !important;
 }

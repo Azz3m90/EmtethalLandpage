@@ -21,7 +21,7 @@ website:    http://www.themepunch.com
 .ares.tparrows:hover {
 }
 .ares.tparrows:before {
-  font-family: 'revicons';
+  font-family: "revicons";
   font-size: 25px;
   color: #aaa;
   display: block;
@@ -34,10 +34,10 @@ website:    http://www.themepunch.com
   position: relative;
 }
 .ares.tparrows.tp-leftarrow:before {
-  content: '\e81f';
+  content: "\e81f";
 }
 .ares.tparrows.tp-rightarrow:before {
-  content: '\e81e';
+  content: "\e81e";
 }
 .ares.tparrows:hover:before {
   color: #000;
@@ -104,7 +104,7 @@ website:    http://www.themepunch.com
 .ares.tp-bullets {
 }
 .ares.tp-bullets:before {
-  content: ' ';
+  content: " ";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -152,7 +152,7 @@ website:    http://www.themepunch.com
   border-style: solid;
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent rgba(255, 255, 255, 0.75);
-  content: ' ';
+  content: " ";
   position: absolute;
   right: -10px;
   top: 0px;
@@ -182,7 +182,7 @@ website:    http://www.themepunch.com
   opacity: 1;
   padding: 10px;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   border-bottom: 1px solid #e5e5e5;
 }
 .ares .tp-tab-image {

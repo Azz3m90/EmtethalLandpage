@@ -14,7 +14,7 @@
   right: 15px;
   top: 45%;
 }
-.owl-theme .owl-controls .owl-nav [class*='owl-'] {
+.owl-theme .owl-controls .owl-nav [class*="owl-"] {
   color: #fff;
   font-size: 26px;
   padding-top: 10px;
@@ -28,7 +28,7 @@
   background-color: #ff493b;
   margin-top: -24px;
 }
-.owl-theme .owl-controls .owl-nav [class*='owl-']:hover {
+.owl-theme .owl-controls .owl-nav [class*="owl-"]:hover {
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.325);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.325);
 }
