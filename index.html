@@ -792,166 +792,210 @@
                 الغرامات والملاحظات الرقابية في تزايد مستمر
               </h2>
 
-              <!-- Statistics Section -->
-              <div class="statistics-container counter-section py-5">
-                <div class="row justify-content-center align-items-center">
-                  <!-- Statistic 1 -->
+   <!-- Google Fonts: Cairo -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet"/>
 
-                  <div class="col-12 col-md-3">
-                    <div class="statistic-item text-center">
-                      <div
-                        class="statistic-number display-4 fw-bold mb-2"
-                        style="color: #2c3e50; font-size: 3rem"
-                      >
-                        <span
-                          class="counter counter-value"
-                          data-target="532000000"
-                          >0</span
-                        >
-                      </div>
-                      <div
-                        class="statistic-title text-muted"
-                        style="font-size: 0.9rem"
-                      >
-                        الغرامات المفروضة من 1 \ 8 \2024 الى 1 \8 \2025
-                      </div>
-                    </div>
-                  </div>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
 
-                  <!-- Vertical Divider 1 -->
-                  <div class="col-auto d-none d-md-block px-4">
-                    <div
-                      class="vertical-divider"
-                      style="
-                        width: 2px;
-                        height: 80px;
-                        background-color: #50aa3e;
-                      "
-                    ></div>
-                  </div>
+    .stats-container {
+      padding: 3rem 1rem;
+      text-align: center;
+    }
 
-                  <!-- Statistic 2 -->
-                  <div class="col-12 col-md-3">
-                    <div class="statistic-item text-center">
-                      <div
-                        class="statistic-number display-4 fw-bold mb-2"
-                        style="color: #2c3e50; font-size: 3rem"
-                      >
-                        <span class="counter counter-value" data-target="541000"
-                          >0</span
-                        >
-                      </div>
-                      <div
-                        class="statistic-title text-muted"
-                        style="font-size: 0.9rem"
-                      >
-                        زيارات التفتيش - النصف الثاني من 2024
-                      </div>
-                    </div>
-                  </div>
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 2.5rem;
+    }
 
-                  <!-- Vertical Divider 2 -->
-                  <div class="col-auto d-none d-md-block px-4">
-                    <div
-                      class="vertical-divider"
-                      style="
-                        width: 2px;
-                        height: 80px;
-                        background-color: #50aa3e;
-                      "
-                    ></div>
-                  </div>
+    .stat-item {
+      flex: 1;
+      min-width: 220px;
+      padding: 1.5rem 1rem;
+    }
 
-                  <!-- Statistic 3 -->
-                  <div class="col-12 col-md-3">
-                    <div class="statistic-item text-center">
-                      <div
-                        class="statistic-number display-4 fw-bold mb-2"
-                        style="color: #2c3e50; font-size: 3rem"
-                      >
-                        <span class="counter counter-value" data-target="10000"
-                          >0</span
-                        >
-                      </div>
-                      <div
-                        class="statistic-title text-muted"
-                        style="font-size: 0.9rem"
-                      >
-                        المخالفات - الربع الأول من 2024
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <script>
-                function animateCounter() {
-                  const counters = document.querySelectorAll(".counter-value");
-                  const speed = 200;
+    .stat-value {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #1a5d3a;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
 
-                  counters.forEach((counter) => {
-                    counter.setAttribute("data-current", 0);
+    .stat-label {
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.5;
+      font-weight: 400;
+    }
 
-                    const updateCount = () => {
-                      const target = +counter.getAttribute("data-target");
-                      const current = +counter.getAttribute("data-current");
-                      const increment = Math.ceil(target / speed);
-                      const next = current + increment;
+    .divider {
+      width: 2px;
+      height: 80px;
+      background-color: #50aa3e;
+      margin: auto 0;
+    }
 
-                      if (next < target) {
-                        counter.setAttribute("data-current", next);
-                        counter.innerText = next.toLocaleString("en-US");
-                        setTimeout(updateCount, 10);
-                      } else {
-                        counter.innerText = target.toLocaleString("en-US");
-                      }
-                    };
+    /* Responsive: Mobile First - Stack in 3 rows */
+    @media (max-width: 992px) {
+      .stats-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem; /* Vertical spacing between items */
+      }
 
-                    counter.updateCount = updateCount;
-                  });
+      .divider {
+        display: none; /* Hide dividers on all small screens */
+      }
 
-                  const counterSection =
-                    document.querySelector(".counter-section");
+      .stat-item {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+      }
 
-                  const observer = new IntersectionObserver(
-                    (entries) => {
-                      if (entries[0].isIntersecting) {
-                        counters.forEach((counter) => counter.updateCount());
-                        observer.disconnect();
-                      }
-                    },
-                    { threshold: 0.3 },
-                  );
+      .stat-value {
+        font-size: 2.3rem;
+      }
 
-                  observer.observe(counterSection);
-                }
+      .stat-label {
+        font-size: 0.95rem;
+        text-align: center;
+      }
+    }
 
-                window.addEventListener("load", animateCounter);
-              </script>
-            </div>
-          </div>
+    @media (max-width: 768px) {
+      .stats-container {
+        padding: 2rem 1rem;
+      }
+
+      .stat-value {
+        font-size: 2rem;
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stat-value {
+        font-size: 1.8rem;
+      }
+      .stats-container {
+        padding: 1.5rem 0.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Statistics Section -->
+  <section class="stats-container">
+    <div class="stats-row">
+
+      <!-- Stat 1: Fines (532 مليون ريال) -->
+      <div class="stat-item">
+        <div class="stat-value counter-value" data-target="532000000">0</div>
+        <div class="stat-label">
+          قيمة الغرامات المفروضة فقط داخل المدينة المنورة<br>
+          خلال الفترة من 1/8/2024 إلى 1/8/2025
         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Stat 2: Violations (181,557) -->
+      <div class="stat-item">
+        <div class="stat-value counter-value" data-target="181557">0</div>
+        <div class="stat-label">
+          عدد المخالفات فقط داخل المدينة المنورة<br>
+          خلال الفترة من 1/8/2024 إلى 1/8/2025
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Stat 3: Q1 2024 (10,000) -->
+      <div class="stat-item">
+        <div class="stat-value counter-value" data-target="10000">0</div>
+        <div class="stat-label">
+          عدد المخالفات - الربع الأول من 2024
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Counter Animation Script -->
+  <script>
+    function animateCounters() {
+      const counters = document.querySelectorAll('.counter-value');
+      const speed = 200;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const counter = entry.target;
+              const target = parseInt(counter.getAttribute('data-target'));
+              const increment = Math.ceil(target / speed);
+              let current = 0;
+
+              const updateCounter = () => {
+                current += increment;
+
+                if (current < target) {
+                  // Special formatting for 532 million
+                  if (target === 532000000) {
+                    const millions = Math.floor(current / 1000000);
+                    counter.textContent = millions.toLocaleString('en-US') + ' مليون ريال';
+                  } else {
+                    counter.textContent = current.toLocaleString('en-US');
+                  }
+                  requestAnimationFrame(updateCounter);
+                } else {
+                  // Final value
+                  if (target === 532000000) {
+                    counter.textContent = '532 مليون ريال';
+                  } else {
+                    counter.textContent = target.toLocaleString('en-US');
+                  }
+                }
+              };
+
+              updateCounter();
+              observer.unobserve(counter);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      counters.forEach((counter) => {
+        observer.observe(counter);
+      });
+    }
+
+    window.addEventListener('load', animateCounters);
+  </script>
 
         <div class="row">
           <div class="col-12">
             <div class="herotext align-items-center text-center">
               <h4 class="pb-3">التحديات الرئيسية</h4>
             </div>
-            <!-- Add the video element here -->
-            <div class="col-12 mb-4">
-              <div class="ratio ratio-16x9">
-                <video
-                  class="shadow-lg rounded"
-                  controls
-                  poster="assets/video/emtethal-poster.png"
-                >
-                  <source
-                    src="assets/video/Pre-comp 3_7-480p.mp4"
-                    type="video/mp4"
-                  />
-                  المتصفح لا يدعم تشغيل الفيديو.
-                </video>
-              </div>
-            </div>
+
           </div>
         </div>
         <style>
@@ -1190,7 +1234,95 @@
       </div>
     </section>
     <!-- The Problem We Solve ENDS -->
+<!-- Video Section -->
+<section class="emtethal-video-section py-6 bg-light" style="background-color: #f7f9fc;">
+  <div class="container">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-5 px-3">
+      <h2 class="h1 fw-bold" style="color: #1a5d3a; font-size: 2.5rem;">
+        شاهد كيف تُحدث <span style="color: #50aa3e;">امتثال</span> الفرق
+      </h2>
+      <p class="lead text-muted mb-0" style="font-size: 1.1rem;">
+        فيديو توضيحي يُظهر كيف تُبسّط منصتنا إدارة الجودة والامتثال وتُقلل المخالفات والغرامات
+      </p>
+    </div>
 
+    <!-- Video Frame -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10 col-xl-8">
+        <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden border border-light" 
+             style="box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12) !important;">
+          <video
+            class="w-100 h-100"
+            controls
+            preload="metadata"
+            poster="assets/imgs/dashboard/Visit report.svg"
+            style="object-fit: cover; transition: transform 0.3s ease;"
+            onplay="this.style.transform='scale(1.02)';"
+            onpause="this.style.transform='scale(1)';"
+          >
+            <source src="assets/video//Pre-comp 3_7-720p.mp4" type="video/mp4" />
+            عذرًا، لا يدعم متصفحك تشغيل هذا الفيديو. يُرجى التحديث أو استخدام متصفح حديث.
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <!-- Caption / CTA -->
+    <div class="text-center mt-4">
+      <small class="text-muted d-block mb-3">
+        <i class="fas fa-clock me-1"></i> المدة: 1:48 دقيقة | المصدر: فريق امتثال – 2024
+      </small>
+      <a href="#contact" class="btn btn-success px-5 py-3 fs-5 shadow-sm" 
+         style="background-color: #50aa3e; border: none; border-radius: 50px; font-weight: 600;">
+        اطلب عرضًا تجريبيًا
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Custom Styles -->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+  .emtethal-video-section {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    text-align: center;
+  }
+
+  .emtethal-video-section h2,
+  .emtethal-video-section p {
+    line-height: 1.4;
+  }
+
+  .emtethal-video-section .btn-success:hover {
+    background-color: #469637 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(80, 170, 62, 0.3);
+  }
+
+  .emtethal-video-section .ratio {
+    transition: all 0.3s ease;
+  }
+
+  .emtethal-video-section .ratio:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18) !important;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .emtethal-video-section h1 {
+      font-size: 2rem;
+    }
+    .emtethal-video-section .btn {
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+    }
+  }
+</style>
     <!-- FEATURES STARTS -->
     <section class="contact-us-section py-5" id="platform">
       <div class="container">
@@ -1448,91 +1580,140 @@
         </div>
       </div>
     </section>
-    <!-- Key Differentiators STARTS -->
-    <section class="pricing" id="Keys">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="herotext text-center">
-              <h6>/نقاط التميز</h6>
-              <h2>لماذا امتثال مختلفة</h2>
-              <h5 class="pt-2">
-                بنيت للامتثال، مدعومة بالأتمتة، مدفوعة بالرؤى
-              </h5>
-            </div>
-          </div>
-        </div>
-
-        <div class="row pt-5 g-0 g-lg-5 d-flex mobile-rtl">
-          <div class="col-12 col-md-4">
-            <div class="block rtl-align">
-              <div class="col-12 herotext secondary-bg p-4">
-                <h4 class="rtl-align">
-                  <i class="las la-file-alt"></i> بدون أوراق
-                </h4>
-                <p class="rtl-align smaller-text" style="color: white">
-                  سير عمل الكتروني بالكامل
-                </p>
-              </div>
-              <ul class="col-12 pt-4 rtl-align">
-                <li>
-                  <i class="lar la-check-circle"></i> لا قوائم تفتيش يدوية
-                </li>
-                <li>
-                  <i class="lar la-check-circle"></i> تنبيهات وتتبع تلقائي
-                </li>
-                <li><i class="lar la-check-circle"></i> توثيق فوري</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="block rtl-align">
-              <div class="col-12 herotext primary-bg p-4">
-                <h4 class="rtl-align">
-                  <i class="las la-map-marker-alt"></i> مصممة للسعودية
-                </h4>
-                <p class="rtl-align smaller-text">
-                  متوافقة مع اللوائح المحلية والدولية
-                </p>
-              </div>
-              <ul class="col-12 pt-4 rtl-align">
-                <li>
-                  <i class="lar la-check-circle"></i> متوافقة مع لوائح هيئة
-                  الغذاء والدواء
-                </li>
-                <li>
-                  <i class="lar la-check-circle"></i> واجهة جاهزة بالعربية
-                </li>
-                <li><i class="lar la-check-circle"></i> صيغ تدقيق محلية</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-12 col-md-4">
-            <div class="block rtl-align">
-              <div class="col-12 herotext secondary-bg p-4">
-                <h4 class="rtl-align">
-                  <i class="las la-brain"></i> أدوات ذكية
-                </h4>
-                <p class="rtl-align smaller-text">
-                  منصة الكترونية وتطبيق يعمل على كافة الأجهزة الذكية
-                </p>
-              </div>
-              <ul class="col-12 pt-4 rtl-align">
-                <li>
-                  <i class="lar la-check-circle"></i> تعليمات توجيهية مدمجة
-                </li>
-                <li><i class="lar la-check-circle"></i> لوحات تحكم لحظية</li>
-                <li>
-                  <i class="lar la-check-circle"></i> آمنة وسهلة الاستخدام
-                </li>
-              </ul>
-            </div>
-          </div>
+<!-- Key Differentiators Section -->
+<section class="pricing" id="Keys">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="herotext text-center">
+          <h6 style="color: #50aa3e; font-weight: 600;">/ نقاط التميز</h6>
+          <h2>لماذا امتثال مختلفة</h2>
+          <h5 class="pt-2">بنيت للامتثال، مدعومة بالأتمتة، مدفوعة بالرؤى</h5>
         </div>
       </div>
-      <br /><br />
-    </section>
-    <!-- /.. Key Differentiators ENDS -->
+    </div>
+
+    <!-- Features Grid -->
+    <div class="row pt-5 g-0 g-md-4 mobile-rtl">
+
+      <!-- 1. بدون أوراق -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="block rtl-align h-100 d-flex flex-column">
+          <div class="herotext secondary-bg p-4">
+            <h4 class="rtl-align">
+              <i class="las la-file-alt"></i> بدون أوراق
+            </h4>
+            <p class="rtl-align smaller-text" style="color: white">
+              سير عمل الكتروني بالكامل
+            </p>
+          </div>
+          <ul class="pt-4 px-4 rtl-align" style="flex: 1;">
+            <li><i class="lar la-check-circle"></i> لا قوائم تفتيش يدوية</li>
+            <li><i class="lar la-check-circle"></i> تنبيهات وتتبع تلقائي</li>
+            <li><i class="lar la-check-circle"></i> توثيق فوري</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2. مصممة للسعودية -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="block rtl-align h-100 d-flex flex-column">
+          <div class="herotext primary-bg p-4">
+            <h4 class="rtl-align">
+              <i class="las la-map-marker-alt"></i> مصممة للسعودية
+            </h4>
+            <p class="rtl-align smaller-text">
+              متوافقة مع اللوائح المحلية والدولية
+            </p>
+          </div>
+          <ul class="pt-4 px-4 rtl-align" style="flex: 1;">
+            <li><i class="lar la-check-circle"></i> متوافقة مع لوائح هيئة الغذاء والدواء</li>
+            <li><i class="lar la-check-circle"></i> واجهة جاهزة بالعربية</li>
+            <li><i class="lar la-check-circle"></i> صيغ تدقيق محلية</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 3. أدوات ذكية -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="block rtl-align h-100 d-flex flex-column">
+          <div class="herotext secondary-bg p-4">
+            <h4 class="rtl-align">
+              <i class="las la-brain"></i> أدوات ذكية
+            </h4>
+            <p class="rtl-align smaller-text">
+              منصة الكترونية وتطبيق يعمل على كافة الأجهزة الذكية
+            </p>
+          </div>
+          <ul class="pt-4 px-4 rtl-align" style="flex: 1;">
+            <li><i class="lar la-check-circle"></i> تعليمات توجيهية مدمجة</li>
+            <li><i class="lar la-check-circle"></i> لوحات تحكم لحظية</li>
+            <li><i class="lar la-check-circle"></i> آمنة وسهلة الاستخدام</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4. متابعة الأداء -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="block rtl-align h-100 d-flex flex-column">
+          <div class="herotext primary-bg p-4">
+            <h4 class="rtl-align">
+              <i class="las la-chart-line"></i> متابعة الأداء
+            </h4>
+            <p class="rtl-align smaller-text">
+              تتبع مؤشرات الأداء، تحليل النتائج، واكتشاف الثغرات
+            </p>
+          </div>
+          <ul class="pt-4 px-4 rtl-align" style="flex: 1;">
+            <li><i class="lar la-check-circle"></i> رصد أداء الفروع</li>
+            <li><i class="lar la-check-circle"></i> تقارير تحليلية ذكية</li>
+            <li><i class="lar la-check-circle"></i> تحديد نقاط الضعف تلقائيًا</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 5. تدريب ودعم فني -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="block rtl-align h-100 d-flex flex-column">
+          <div class="herotext secondary-bg p-4">
+            <h4 class="rtl-align">
+              <i class="las la-user-graduate"></i> تدريب ودعم فني
+            </h4>
+            <p class="rtl-align smaller-text" style="color: white">
+              دورات تدريبية احترافية واستشارات في الامتثال
+            </p>
+          </div>
+          <ul class="pt-4 px-4 rtl-align" style="flex: 1;">
+            <li><i class="lar la-check-circle"></i> برامج تدريبية مخصصة</li>
+            <li><i class="lar la-check-circle"></i> دعم فني مباشر</li>
+            <li><i class="lar la-check-circle"></i> استشارات دورية في مجالات الامتثال</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 6. سهولة الاستخدام -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="block rtl-align h-100 d-flex flex-column">
+          <div class="herotext primary-bg p-4">
+            <h4 class="rtl-align">
+              <i class="las la-star"></i> سهولة الاستخدام
+            </h4>
+            <p class="rtl-align smaller-text">
+              منصة تتميز بالوضوح وتبسيط المعايير
+            </p>
+          </div>
+          <ul class="pt-4 px-4 rtl-align" style="flex: 1;">
+            <li><i class="lar la-check-circle"></i> واجهة بسيطة وواضحة</li>
+            <li><i class="lar la-check-circle"></i> تبسيط المعايير المعقدة</li>
+            <li><i class="lar la-check-circle"></i> تجربة مستخدم ممتازة</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br /><br />
+</section>
     <!-- Our Roadmap STARTS -->
     <section class="home-services light-grey-bg" id="roadmap">
       <div class="container">
@@ -2046,32 +2227,33 @@
           </div>
         </div>
         <div class="row pt-2 gx-4 gy-4">
-          <div class="col-12 col-md-6 block">
-            <div
-              class="d-flex justify-content-end text-end align-items-start gap-3 flex-row-reverse"
-            >
-              <div class="detail pt-2 sm:pt-0.5">
-                <h4>الرؤية:</h4>
-                <p>
-                  نطمح لنكون المؤشر الإقليمي للجودة ونجعل الضيافة وخدمات الطعام
-                  أكثر أماناً وموثوقية
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6 block">
-            <div
-              class="d-flex justify-content-end text-end align-items-start gap-3 flex-row-reverse"
-            >
-              <div class="detail pt-2 sm:pt-0.5">
-                <h4>الرسالة:</h4>
-                <p>
-                  نمكن المنشآت من إدارة الجودة والامتثال للمعايير الحكومية
-                  بفاعلية ودقة وشفافية  وكفاءة مستدامة
-                </p>
-              </div>
-            </div>
-          </div>
+          <div class="col-12 col-md-6 block mb-3 mb-md-4">
+  <div
+    class="d-flex justify-content-end text-end align-items-start gap-3 flex-row-reverse"
+  >
+    <div class="detail pt-2 sm:pt-0.5">
+      <h4>الرؤية:</h4>
+      <p>
+        نطمح لنكون المؤشر الإقليمي للجودة ونجعل الضيافة وخدمات الطعام
+        أكثر أماناً وموثوقية
+      </p>
+    </div>
+  </div>
+</div>
+<div class="col-12 col-md-6 block">
+  <div
+    class="d-flex justify-content-end text-end align-items-start gap-3 flex-row-reverse"
+  >
+    <div class="detail pt-2 sm:pt-0.5">
+      <h4>الرسالة:</h4>
+      <p>
+        نمكن المنشآت من إدارة الجودة والامتثال للمعايير الحكومية
+        بفاعلية ودقة وشفافية وكفاءة مستدامة
+      </p>
+    </div>
+  </div>
+</div>
+
         </div>
       </div>
     </section>
@@ -2085,13 +2267,13 @@
             <div class="dashboard-image-container position-relative">
               <!-- Main dashboard image -->
               <img
-                src="assets/imgs/dashboard/report.png"
+                src="assets/imgs/dashboard/Frame1597882511.svg"
                 alt="منصة امتثال - لوحة التحكم الرئيسية"
                 class="img-fluid rounded-4 main-dashboard-img"
               />
               <!-- Secondary dashboard image (overlapping) -->
               <img
-                src="assets/imgs/dashboard/Visit report.png"
+                src="assets/imgs/dashboard/Visit report.svg"
                 alt="منصة امتثال - تقارير الأداء"
                 class="img-fluid rounded-4 secondary-dashboard-img position-absolute"
               />
