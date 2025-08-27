@@ -1323,186 +1323,324 @@
     }
   }
 </style>
-    <!-- FEATURES STARTS -->
-    <section class="contact-us-section py-5" id="platform">
-      <div class="container">
-        <div
-          class="row justify-content-between align-items-start g-4 force-right"
-        >
-          <div class="col-12 col-lg-6">
-            <div class="herotext">
-              <h6 class="text-uppercase mb-3 text-light text-end">
-                /خصائص ذكية حسب موقعك في الفريق
-              </h6>
-              <h2 class="mb-3 text-light text-end">
-                أدوات مصممة لكل موظف في فريقك
-              </h2>
-              <h5 class="fw-normal mb-0 text-light text-end">
-                كل شخص يحصل على الأدوات اللي يحتاجها للتشغيل، المراقبة، وتحسين
-                الجودة والامتثال لحظيًا
-              </h5>
+<!-- FEATURES STARTS -->
+<section class="contact-us-section py-5" id="platform">
+  <style>
+    .features-text {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 32px;
+    }
+
+    .features-text h6,
+    .features-text h2,
+    .features-text h5 {
+      color: #fff;
+    }
+
+    .accordion-button {
+      font-weight: 600;
+      border-radius: 8px !important;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #f8f9fa;
+      color: #1a1a1a;
+    }
+
+    .accordion-body ul {
+      padding-right: 10px;
+    }
+
+    .accordion-body li {
+      margin-bottom: 8px;
+    }
+
+    .accordion-body i {
+      font-size: 0.875rem;
+    }
+
+    /* إخفاء أحد الأكورديونين على الجوال حسب الحاجة */
+    @media (max-width: 991.98px) {
+      .accordion-left,
+      .accordion-right {
+        display: none;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .accordion-mobile {
+        display: none;
+      }
+    }
+  </style>
+
+  <div class="container">
+    <!-- النص في المنتصف -->
+    <div class="row justify-content-center mb-0">
+      <div class="col-12 text-center">
+        <div class="features-text">
+          <h6 class="text-uppercase text-light mb-3">/خصائص ذكية حسب موقعك في الفريق</h6>
+          <h2 class="mb-3 text-light">أدوات مصممة لكل موظف في فريقك</h2>
+          <h5 class="fw-normal text-light">
+            كل شخص يحصل على الأدوات اللي يحتاجها للتشغيل، المراقبة، وتحسين الجودة والامتثال لحظيًا
+          </h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- الأكورديونات في صف منفصل -->
+    <div class="row justify-content-center g-5 mt-0">
+      <!-- الأكورديون الأيسر (على الشاشات الكبيرة) -->
+      <div class="col-12 col-lg-5 accordion-left">
+        <div class="accordion" id="accordionLeft">
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header" id="headingLeftOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseLeftOne"
+                aria-expanded="true"
+                aria-controls="collapseLeftOne"
+              >
+                مدير المنشأة
+              </button>
+            </h2>
+            <div
+              id="collapseLeftOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingLeftOne"
+              data-bs-parent="#accordionLeft"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mb-0">
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> إعداد هيكلية المنشأة</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> صلاحيات مرنة</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> لوحة تحكم مركزية</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-lg-6 col-xl-5">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingLeftTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseLeftTwo"
+                aria-expanded="false"
+                aria-controls="collapseLeftTwo"
+              >
+                موظف الجودة
+              </button>
+            </h2>
             <div
-              class="accordion pt-lg-2 pt-4"
-              id="accordionExample"
-              style="max-width: 100%"
+              id="collapseLeftTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingLeftTwo"
+              data-bs-parent="#accordionLeft"
             >
-              <div class="accordion-item mb-3">
-                <h2 class="accordion-header" id="headingOne">
-                  <button
-                    class="accordion-button"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseOne"
-                    aria-expanded="true"
-                    aria-controls="collapseOne"
-                  >
-                    مدير المنشأة
-                  </button>
-                </h2>
-                <div
-                  id="collapseOne"
-                  class="accordion-collapse collapse show"
-                  aria-labelledby="headingOne"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body">
-                    <ul class="list-unstyled mb-0">
-                      <li>
-                        <i class="fas fa-check-circle text-success ms-2"></i
-                        >إعداد هيكلية المنشأة
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle text-success ms-2"></i
-                        >صلاحيات مرنة
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle text-success ms-2"></i
-                        >لوحة تحكم مركزية
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-3">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseTwo"
-                    aria-expanded="false"
-                    aria-controls="collapseTwo"
-                  >
-                    مدير الجودة
-                  </button>
-                </h2>
-                <div
-                  id="collapseTwo"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingTwo"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body">
-                    <ul class="list-unstyled mb-0">
-                      <li>
-                        <i class="fas fa-check-circle text-success ms-2"></i
-                        >تعيين المهام
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle text-success ms-2"></i
-                        >تتبع الأداء
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle text-success ms-2"></i
-                        >تحليل الاتجاهات
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item mb-3">
-                <h2 class="accordion-header" id="headingThree">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseThree"
-                    aria-expanded="false"
-                    aria-controls="collapseThree"
-                  >
-                    موظف الجودة
-                  </button>
-                </h2>
-                <div
-                  id="collapseThree"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingThree"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body">
-                    <ul class="list-unstyled mb-0">
-                      <li>
-                        <i class="fas fa-check-circle text-success ms-2"></i
-                        >تنفيذ التفتيشات
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle text-success ms-2"></i
-                        >تسجيل الملاحظات
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle text-success ms-2"></i>رفع
-                        المخالفات
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                  <button
-                    class="accordion-button collapsed"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseFour"
-                    aria-expanded="false"
-                    aria-controls="collapseFour"
-                  >
-                    الموظف
-                  </button>
-                </h2>
-                <div
-                  id="collapseFour"
-                  class="accordion-collapse collapse"
-                  aria-labelledby="headingFour"
-                  data-bs-parent="#accordionExample"
-                >
-                  <div class="accordion-body">
-                    <ul class="list-unstyled mb-0">
-                      <li>
-                        <i class="fas fa-check-circle text-success ms-2"></i>عرض
-                        المهام بوضوح
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle text-success ms-2"></i
-                        >تحديث حالة المهام
-                      </li>
-                      <li>
-                        <i class="fas fa-check-circle text-success ms-2"></i
-                        >التفاعل مع ملاحظات التفتيش
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+              <div class="accordion-body">
+                <ul class="list-unstyled mb-0">
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> تنفيذ التفتيشات</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> تسجيل الملاحظات</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> رفع المخالفات</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- /.. FEATURES ENDS -->
+
+      <!-- الأكورديون الأيمن (على الشاشات الكبيرة) -->
+      <div class="col-12 col-lg-5 accordion-right">
+        <div class="accordion" id="accordionRight">
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header" id="headingRightOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseRightOne"
+                aria-expanded="true"
+                aria-controls="collapseRightOne"
+              >
+                مدير الجودة
+              </button>
+            </h2>
+            <div
+              id="collapseRightOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingRightOne"
+              data-bs-parent="#accordionRight"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mb-0">
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> تعيين المهام</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> تتبع الأداء</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> تحليل الاتجاهات</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingRightTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseRightTwo"
+                aria-expanded="false"
+                aria-controls="collapseRightTwo"
+              >
+                الموظف
+              </button>
+            </h2>
+            <div
+              id="collapseRightTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingRightTwo"
+              data-bs-parent="#accordionRight"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mb-0">
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> عرض المهام بوضوح</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> تحديث حالة المهام</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> التفاعل مع ملاحظات التفتيش</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- الأكورديون الموحّد (يظهر فقط على الجوال) -->
+      <div class="col-12 col-xl-8 accordion-mobile">
+        <div class="accordion" id="accordionMobile">
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header" id="headingMobileOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseMobileOne"
+                aria-expanded="true"
+                aria-controls="collapseMobileOne"
+              >
+                مدير المنشأة
+              </button>
+            </h2>
+            <div
+              id="collapseMobileOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingMobileOne"
+              data-bs-parent="#accordionMobile"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mb-0">
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> إعداد هيكلية المنشأة</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> صلاحيات مرنة</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> لوحة تحكم مركزية</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header" id="headingMobileTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseMobileTwo"
+                aria-expanded="false"
+                aria-controls="collapseMobileTwo"
+              >
+                موظف الجودة
+              </button>
+            </h2>
+            <div
+              id="collapseMobileTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingMobileTwo"
+              data-bs-parent="#accordionMobile"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mb-0">
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> تنفيذ التفتيشات</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> تسجيل الملاحظات</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> رفع المخالفات</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header" id="headingMobileThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseMobileThree"
+                aria-expanded="false"
+                aria-controls="collapseMobileThree"
+              >
+                مدير الجودة
+              </button>
+            </h2>
+            <div
+              id="collapseMobileThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingMobileThree"
+              data-bs-parent="#accordionMobile"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mb-0">
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> تعيين المهام</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> تتبع الأداء</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> تحليل الاتجاهات</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingMobileFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseMobileFour"
+                aria-expanded="false"
+                aria-controls="collapseMobileFour"
+              >
+                الموظف
+              </button>
+            </h2>
+            <div
+              id="collapseMobileFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingMobileFour"
+              data-bs-parent="#accordionMobile"
+            >
+              <div class="accordion-body">
+                <ul class="list-unstyled mb-0">
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> عرض المهام بوضوح</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> تحديث حالة المهام</li>
+                  <li><i class="fas fa-check-circle text-success ms-2"></i> التفاعل مع ملاحظات التفتيش</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- FEATURES ENDS -->
     <!-- How it works STARTS -->
     <section class="home-services light-grey-bg" id="howItWorks">
       <div class="container">
@@ -2189,75 +2327,103 @@
     </section>
 
     <!-- Quality Management Services ENDS -->
-    <!-- ABOUT US STARTS -->
-    <section class="home-intro light-grey-bg" id="about">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-12 col-lg-5">
-            <div class="herotext" style="direction: rtl; text-align: right">
-              <h6 style="text-align: right">/من نحن</h6>
-              <h2 style="text-align: right">
-                امتثال: شريكك في الامتثال للضيافة
-              </h2>
-              <h5 class="pt-2" style="text-align: right; line-height: 1.8">
-                تأسست امتثال في 2024 في قلب الرياض، كمنصة سعودية رقمية رائدة
-                بخبرات عالمية لإدارة الجودة والامتثال في قطاع الضيافة وقطاع
-                خدمات الطعام والصناعات الغذائية. حلولنا تساعد شركاءنا على تحقيق
-                أعلى المعايير بكفاءة. انطلقنا من احتياج حقيقي في السوق لتبسيط
-                التفتيش والتوثيق، وحوّلنا العمليات الورقية إلى
-                تجربة مؤتمتة وسلسة.
-              </h5>
-            </div>
-          </div>
-          <div class="col-12 col-lg-7 pt-4 pt-lg-0 text-center">
-            <img
-              src="assets/imgs/about/about-us.svg"
-              class="img-fluid"
-              alt="عن امتثال"
-              style="
-                width: 585px;
-                height: 246px;
-                border-radius: 16px;
-                transform: rotate(0deg);
-                opacity: 1;
-                max-width: 100%;
-                object-fit: contain;
-              "
-            />
-          </div>
-        </div>
-        <div class="row pt-2 gx-4 gy-4">
-          <div class="col-12 col-md-6 block mb-3 mb-md-4">
-  <div
-    class="d-flex justify-content-end text-end align-items-start gap-3 flex-row-reverse"
-  >
-    <div class="detail pt-2 sm:pt-0.5">
-      <h4>الرؤية:</h4>
-      <p>
-        نطمح لنكون المؤشر الإقليمي للجودة ونجعل الضيافة وخدمات الطعام
-        أكثر أماناً وموثوقية
-      </p>
-    </div>
-  </div>
-</div>
-<div class="col-12 col-md-6 block">
-  <div
-    class="d-flex justify-content-end text-end align-items-start gap-3 flex-row-reverse"
-  >
-    <div class="detail pt-2 sm:pt-0.5">
-      <h4>الرسالة:</h4>
-      <p>
-        نمكن المنشآت من إدارة الجودة والامتثال للمعايير الحكومية
-        بفاعلية ودقة وشفافية وكفاءة مستدامة
-      </p>
-    </div>
-  </div>
-</div>
-
+<!-- ABOUT US STARTS -->
+<section class="home-intro light-grey-bg" id="about">
+  <div class="container">
+    <!-- Main About Us Content -->
+    <div class="row align-items-center">
+      <!-- Text Content -->
+      <div class="col-12 col-lg-5">
+        <div class="herotext" style="direction: rtl; text-align: right">
+          <h6 style="text-align: right">/من نحن</h6>
+          <h2 style="text-align: right">
+            امتثال: شريكك في الامتثال للضيافة
+          </h2>
+          <h5 class="pt-2" style="text-align: right; line-height: 1.8">
+            تأسست امتثال في 2024 في قلب الرياض، كمنصة سعودية رقمية رائدة
+            بخبرات عالمية لإدارة الجودة والامتثال في قطاع الضيافة وقطاع
+            خدمات الطعام والصناعات الغذائية. حلولنا تساعد شركاءنا على تحقيق
+            أعلى المعايير بكفاءة. انطلقنا من احتياج حقيقي في السوق لتبسيط
+            التفتيش والتوثيق، وحوّلنا العمليات الورقية إلى
+            تجربة مؤتمتة وسلسة.
+          </h5>
         </div>
       </div>
-    </section>
-    <!-- /. ABOUT US ENDS -->
+      
+      <!-- Image Content -->
+      <div class="col-12 col-lg-7 pt-4 pt-lg-0 text-center">
+        <img
+          src="assets/imgs/about/about-us.svg"
+          class="img-fluid"
+          alt="عن امتثال"
+          style="
+            width: 585px;
+            height: 246px;
+            border-radius: 16px;
+            transform: rotate(0deg);
+            opacity: 1;
+            max-width: 100%;
+            object-fit: contain;
+          "
+        />
+      </div>
+    </div>
+    
+    <!-- Vision and Mission Section with Improved Spacing -->
+    <div class="row pt-4 mt-2">
+      <!-- Vision Block -->
+      <div class="col-12 col-md-6 mb-md-0">
+        <div class="vision-mission-block p-3 h-100">
+          <div class="d-flex justify-content-end text-end align-items-start gap-3 flex-row-reverse">
+            <div class="detail">
+              <h4 class="mb-2">الرؤية:</h4>
+              <p class="mb-0">
+                نطمح لنكون المؤشر الإقليمي للجودة ونجعل الضيافة وخدمات الطعام
+                أكثر أماناً وموثوقية
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mission Block -->
+      <div class="col-12 col-md-6 mt-3 mt-md-0">
+        <div class="vision-mission-block p-3 h-100">
+          <div class="d-flex justify-content-end text-end align-items-start gap-3 flex-row-reverse">
+            <div class="detail">
+              <h4 class="mb-2">الرسالة:</h4>
+              <p class="mb-0">
+                نمكن المنشآت من إدارة الجودة والامتثال للمعايير الحكومية
+                بفاعلية ودقة وشفافية وكفاءة مستدامة
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Add this custom CSS in a style tag in the head or in your CSS file -->
+    <style>
+
+      @media (max-width: 767.98px) {
+        .vision-mission-block {
+          text-align: center;
+        }
+        
+        .vision-mission-block .d-flex {
+          justify-content: center !important;
+        }
+        
+        /* This ensures proper spacing on mobile */
+        .mt-3 {
+          margin-top: 1rem !important;
+        }
+      }
+    </style>
+  </div>
+</section>
+<!-- /. ABOUT US ENDS -->
+
     <!-- DASHBOARD SHOWCASE SECTION STARTS -->
     <section class="dashboard-showcase py-5" id="dashboard">
       <div class="container">
@@ -2424,168 +2590,216 @@
     </section>
     <!-- DASHBOARD SHOWCASE SECTION ENDS -->
 
-    <!-- PARTNERS SECTION STARTS -->
-    <section class="light-grey-bg py-5" id="partners">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center mb-5">
-            <h6 class="text-muted mb-2">/شركائنا</h6>
-            <h3 class="section-title fw-bold">نفخر بشراكاتنا الاستراتيجية</h3>
-          </div>
+<!-- PARTNERS & CUSTOMERS SECTION STARTS -->
+<section class="py-5" id="partners-customers">
+  <style>
+    /* مشترك بين الشركاء والعملاء */
+    .logo-item {
+      transition: all 0.3s ease;
+      opacity: 0.8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-item:hover {
+      opacity: 1;
+      transform: scale(1.08) translateY(-3px);
+      z-index: 1;
+    }
+
+    .logo-item img {
+      max-height: 60px;
+      object-fit: contain;
+      filter: brightness(1);
+    }
+
+    /* تخصيص للخلفية */
+    .light-grey-bg {
+      background-color: #f8f9fa;
+    }
+
+    .white-bg {
+      background-color: #ffffff;
+    }
+
+    /* تخصيص العناوين */
+    .section-title {
+      font-size: 1.8rem;
+      color: #1a1a1a;
+    }
+
+    /* استجابة للأجهزة */
+    @media (max-width: 767.98px) {
+      .logo-item {
+        margin: 12px 15px !important;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .logo-item {
+        margin: 10px 12px !important;
+        max-width: 140px;
+      }
+
+      .logo-item img {
+        max-height: 50px;
+      }
+    }
+  </style>
+
+  <!-- PARTNERS SECTION -->
+  <section class="light-grey-bg py-5" id="partners">
+    <div class="container">
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 text-center">
+          <h6 class="text-muted mb-2">/شركائنا</h6>
+          <h3 class="section-title fw-bold">نفخر بشراكاتنا الاستراتيجية</h3>
         </div>
+      </div>
 
-        <!-- Partners Logos -->
-        <div class="row justify-content-center align-items-center">
-          <div class="col-12">
-            <div
-              class="partners-logo-container d-flex flex-wrap justify-content-center align-items-center"
-            >
-              <!-- Misk -->
-              <div class="partner-logo mx-4 my-3">
-                <a href="https://hub.misk.org.sa/ar" target="_blank">
-                  <img
-                    src="assets/imgs/partners/misk-hub-arabic-white-fixed.svg"
-                    alt="Misk"
-                    class="img-fluid"
-                    style="max-height: 60px"
-                  />
-                </a>
-              </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+            <!-- Misk -->
+            <div class="logo-item mx-4 my-3">
+              <a href="https://hub.misk.org.sa/ar" target="_blank" aria-label="شريك استراتيجي: منصة مسك">
+                <img src="assets/imgs/partners/misk-hub-arabic-white-fixed.svg" alt="منصة مسك" class="img-fluid">
+              </a>
+            </div>
 
-              <!-- Draper Ventures -->
-              <div class="partner-logo mx-4 my-3">
-                <a href="https://draperuniversity.com/" target="_blank">
-                  <img
-                    src="assets/imgs/partners/darper.svg"
-                    alt="Draper Ventures"
-                    class="img-fluid"
-                    style="max-height: 60px"
-                  />
-                </a>
-              </div>
+            <!-- Draper University -->
+            <div class="logo-item mx-4 my-3">
+              <a href="https://draperuniversity.com/" target="_blank" aria-label="شريك استراتيجي: Draper University">
+                <img src="assets/imgs/partners/darper.svg" alt="Draper Ventures" class="img-fluid">
+              </a>
+            </div>
 
-              <!-- The Space -->
-              <div class="partner-logo mx-4 my-3">
-                <a href="https://the-space.me/" target="_blank">
-                  <img
-                    src="assets/imgs/partners/the-space-logo.png"
-                    alt="The Space"
-                    class="img-fluid"
-                    style="max-height: 60px"
-                  />
-                </a>
-              </div>
+            <!-- The Space -->
+            <div class="logo-item mx-4 my-3">
+              <a href="https://the-space.me/" target="_blank" aria-label="شريك استراتيجي: The Space">
+                <img src="assets/imgs/partners/the-space-logo.png" alt="The Space" class="img-fluid">
+              </a>
+            </div>
 
-              <!-- MISA -->
-              <div class="partner-logo mx-4 my-3">
-                <a href="https://misa.gov.sa/" target="_blank">
-                  <img
-                    src="assets/imgs/partners/Ministry_of_Investment_Logo-white.svg"
-                    alt="MISA"
-                    class="img-fluid"
-                    style="max-height: 60px"
-                  />
-                </a>
-              </div>
+            <!-- MISA -->
+            <div class="logo-item mx-4 my-3">
+              <a href="https://misa.gov.sa/" target="_blank" aria-label="شريك استراتيجي: وزارة الاستثمار السعودية">
+                <img src="assets/imgs/partners/Ministry_of_Investment_Logo-white.svg" alt="MISA - وزارة الاستثمار" class="img-fluid">
+              </a>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Custom CSS for Partners Section -->
-      <style>
-        .partner-logo {
-          transition: all 0.3s ease;
-          opacity: 0.8;
-        }
+<!-- CUSTOMERS SECTION STARTS -->
+<section class="white-bg py-5" id="customers">
+  <style>
+    .customer-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 0 20px 30px;
+      text-decoration: none;
+      color: inherit;
+    }
 
-        .partner-logo:hover {
-          opacity: 1;
-          transform: scale(1.05);
-        }
+    .customer-logo img {
+      max-height: 60px;
+      object-fit: contain;
+      opacity: 0.8;
+      transition: all 0.3s ease;
+    }
 
-        /* Responsive adjustments */
-        @media (max-width: 767.98px) {
-          .partner-logo {
-            margin: 0 15px 20px;
-          }
-        }
-      </style>
-    </section>
-    <!-- PARTNERS SECTION ENDS -->
+    .customer-item:hover img {
+      opacity: 1;
+      transform: scale(1.05);
+    }
 
-    <!-- CUSTOMERS SECTION STARTS -->
-    <section class="white-bg py-5" id="customers">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center mb-5">
-            <h6 class="text-muted mb-2">/عملائنا</h6>
-            <h3 class="section-title fw-bold">نفخر بثقة عملائنا</h3>
-          </div>
-        </div>
+    .customer-name {
+      font-weight: bold;
+      color: #1a1a1a;
+      margin: 8px 0 4px;
+      font-size: 1.05rem;
+    }
 
-        <!-- Customers Logos -->
-        <div class="row justify-content-center align-items-center">
-          <div class="col-12">
-            <div
-              class="customers-logo-container d-flex flex-wrap justify-content-center align-items-center"
-            >
-              <!-- شركة إسناد لخدمات تفويج الحجاج -->
-              <div class="customer-logo mx-4 my-3">
-                <a href="https://esnadmutakamel.sa" target="_blank">
-                  <img
-                    src="assets/imgs/customers/esnad-logo.png"
-                    alt="شركة إسناد لخدمات تفويج الحجاج"
-                    class="img-fluid"
-                    style="max-height: 60px"
-                  />
-                </a>
-              </div>
+    .customer-title {
+      font-size: 0.9rem;
+      color: #6c757d;
+    }
 
-              <!-- شركة أبراج المحمدية  -->
-              <div class="customer-logo mx-4 my-3">
-                <a href="#" target="_blank">
-                  <img
-                    src="assets/imgs/customers/user_15310413.png"
-                    alt=" شركة أبراج المحمدية  "
-                    class="img-fluid"
-                    style="max-height: 60px"
-                  />
-                </a>
-              </div>
+    /* استجابة */
+    @media (max-width: 767.98px) {
+      .customer-item {
+        margin: 0 15px 25px;
+      }
+      .customer-name {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .customer-item {
+        margin: 0 12px 20px;
+      }
+      .customer-logo img {
+        max-height: 50px;
+      }
+      .customer-name {
+        font-size: 0.95rem;
+      }
+      .customer-title {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+
+  <div class="container">
+    <!-- العنوان الرئيسي -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-12 text-center">
+        <h6 class="text-muted mb-2">/عملائنا</h6>
+        <h3 class="section-title fw-bold">نفخر بثقة عملائنا</h3>
+      </div>
+    </div>
+
+    <!-- العملاء - كل عنصر رابط كامل -->
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="d-flex flex-wrap justify-content-center align-items-start">
+
+          <!-- عميل: شركة إسناد -->
+          <a href="https://esnadmutakamel.sa" target="_blank" class="customer-item" aria-label="زيارة شركة إسناد لخدمات تفويج الحجاج">
+            <div class="customer-logo mb-2">
+              <img src="assets/imgs/customers/esnad-logo.png" alt="شركة إسناد لخدمات تفويج الحجاج" class="img-fluid">
             </div>
-          </div>
+            <h5 class="customer-name">شركة إسناد</h5>
+            <p class="customer-title">مزوّد خدمات تفويج الحجاج والمعتمرين</p>
+          </a>
+
+          <!-- عميل: شركة أبراج المحمدية -->
+          <a href="#" target="_blank" class="customer-item" aria-label="زيارة شركة أبراج المحمدية">
+            <div class="customer-logo mb-2">
+              <img src="assets/imgs/customers/user_15310413.png" alt="شركة أبراج المحمدية" class="img-fluid">
+            </div>
+            <h5 class="customer-name">أبراج المحمدية</h5>
+            <p class="customer-title">تطوير عقاري رائد في مكة المكرمة</p>
+          </a>
+
         </div>
       </div>
-
-      <!-- Custom CSS for Customers Section -->
-      <style>
-        .customer-logo {
-          transition: all 0.3s ease;
-          opacity: 0.8;
-        }
-
-        .customer-logo:hover {
-          opacity: 1;
-          transform: scale(1.05);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 767.98px) {
-          .customer-logo {
-            margin: 0 15px 20px;
-          }
-        }
-
-        /* For very small screens */
-        @media (max-width: 575.98px) {
-          .customer-logo {
-            margin: 0 10px 15px;
-          }
-        }
-      </style>
-    </section>
-    <!-- CUSTOMERS SECTION ENDS -->
+    </div>
+  </div>
+</section>
+<!-- CUSTOMERS SECTION ENDS -->
+<!-- PARTNERS & CUSTOMERS SECTION ENDS -->
 
     <!-- CONTACT US STARTS -->
     <section class="contact-us light-grey-bg" id="contact">
